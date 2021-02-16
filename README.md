@@ -1,3 +1,4 @@
 # test-landing-page
-my test html css bootstrap landing page + mailing chimplist
+testing hosting via github
+simplest landing page (html css bootstrap) + link to mailing list on chimp
 https://nsokolov114.github.io/test-landing-page/
