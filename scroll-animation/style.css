@@ -20,7 +20,7 @@ h1 {
 }
 
 .box {
-  background-color: steelblue;
+  background-color: sandybrown;
   color: #fff;
   display: flex;
   align-items: center;
@@ -36,6 +36,7 @@ h1 {
 
 .box:nth-of-type(even) {
   transform: translateX(400%);
+  background-color: darkolivegreen;
 }
 
 .box.show {
