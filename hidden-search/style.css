@@ -13,6 +13,7 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  /* background-color: aquamarine; */
 }
 
 .search {
@@ -22,7 +23,10 @@ body {
 
 .search .input {
   background-color:  #fff;
-  border: 0;
+  border: 2px solid black;
+  border-right: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   font-size: 18px;
   padding: 15px;
   height: 50px;
@@ -32,7 +36,9 @@ body {
 
 .btn {
   background-color: #fff;
-  border: 0;
+  border: 2px solid black;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   cursor: pointer;
   font-size: 24px;
   position: absolute;
