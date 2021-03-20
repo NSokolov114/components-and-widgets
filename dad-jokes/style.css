@@ -7,7 +7,7 @@
 
 /* using flexbox from the start, aligning everything in column and center, 100vh -> 100% of the view, overflow hidden - hides the scrollbar! */
 body {
-    background-color: #676de0;
+    background-color: #07201a;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@ body {
 }
 
 .container  {
-    background-color: white;
+    background-color: rgb(133, 133, 133);
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
     padding: 50px 20px;
@@ -44,11 +44,12 @@ h3 {
 }
 
 .btn {
-    background-color: #676de0;
+    background-color: #184438;
     border: 0;
     font-weight: 600;
+    letter-spacing: 2px;
     border-radius: 10px;
-    color: white;
+    color: rgb(189, 189, 189);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
     padding: 15px 45px;
     font-size: 16px;
