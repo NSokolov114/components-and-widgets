@@ -5,8 +5,9 @@
 }
 
 body {
-  background-color: #e1e1e1;
+  background-color: #a0c4f3;
   font-family: 'Muli', sans-serif;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,6 +37,6 @@ body {
   left: 0;
   text-align: center;
   width: 100%;
-  color: #555;
+  color: black;
   font-size: 14px;
 }
