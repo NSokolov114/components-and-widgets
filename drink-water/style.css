@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* adding padding or whatever doesn't affect the width of the element */
+* { 
+    box-sizing: border-box;
+}
+
+/* using flexbox from the start, aligning everything in column and center, 100vh -> 100% of the view, overflow hidden - hides the scrollbar! */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
