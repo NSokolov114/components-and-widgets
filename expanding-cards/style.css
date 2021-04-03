@@ -15,6 +15,7 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 0;
+    background-color: #333333;
 }
 
 /* putting children in a raw, width 90% of the screen*/
