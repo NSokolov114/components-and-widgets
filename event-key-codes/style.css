@@ -5,8 +5,10 @@
 }
 
 body {
-  background-color: #a0c4f3;
+  background-color: #bdbbbb;
   font-family: 'Muli', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
   color: #000;
   display: flex;
   align-items: center;
@@ -20,7 +22,7 @@ body {
 .key {
   border: 1px solid #999;
   background-color: #eee;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
   display: inline-flex;
   align-items: center;
   font-size: 20px;
@@ -29,8 +31,13 @@ body {
   margin: 10px;
   min-width: 150px;
   position: relative;
+  
 }
 
+.key:hover {
+  background-color: #999;
+  transition: 0.25s ease;
+}
 .key small {
   position: absolute;
   top: -24px;
