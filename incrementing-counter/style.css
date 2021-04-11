@@ -5,7 +5,8 @@
 }
 
 body {
-  background-color: #4c4c4d;
+  background: #524343;
+  background: linear-gradient(90deg, #5a3d3d 0,#3c4261 58%);
   color: #fff;
   font-family: 'Roboto Mono', sans-serif;
   display: flex;
@@ -34,4 +35,9 @@ body {
   body {
     flex-direction: column;
   }
+}
+
+.fab:hover {
+  color: aqua;
+  opacity: 50%;
 }
