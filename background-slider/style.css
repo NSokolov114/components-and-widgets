@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --left-bg-color: rgba(253, 210, 101, 0.5);
+  --right-bg-color: rgba(70, 55, 18, 0.5);
+  --left-btn-hover-color: rgb(253, 219, 133);
+  --right-btn-hover-color: rgb(34, 27, 9);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
