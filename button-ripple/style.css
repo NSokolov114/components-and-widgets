@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:wght@400;600&display=swap');
 
 :root {
-    --border-color: #144fc6;
-    --fill-color: #6ab3f8;
+    --button-color: #144fc6;
+    --background-color: #6ab3f8;
 }
 
 * { 
@@ -10,12 +10,51 @@
 }
 
 body {
-    background-color: #3494e4;
+    background-color: var(--background-color);
     color: white;
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
+    justify-content: center;
+    margin-bottom: 0;
+    height: 100vh;
+    
 }
 
+button {
+    background-color: var(--button-color);
+    color: whitesmoke;
+    cursor: pointer;
+    border: 1px darkblue solid;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+    font-weight: bold;
+    position: relative;
+}
+
+button:focus {
+    outline: none;
+}
+
+button .circle {
+    position: absolute;
+    background-color: darkgray;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
