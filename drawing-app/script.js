@@ -3,6 +3,8 @@ const ctx = canvas.getContext('2d')
 
 let size = 20
 let color = 'black'
+let x
+let y
 
 
 function drawCircle(x,y) {
@@ -12,4 +14,15 @@ function drawCircle(x,y) {
     ctx.fill()
 }
 
-drawCircle(100,200)
+function drawLine(x1,y1,x2,y2) {
+    ctx.beginPath()
+    ctx.moveTo(x1,y1)
+    ctx.lineTo(x2,y2)
+    ctx.strokeStyle = color
+    ctx.lineWidth = size
+    ctx.stroke()
+}
+
+drawCircle(300,300)
+drawCircle(500,500)
+drawLine(300,300,500,500)
