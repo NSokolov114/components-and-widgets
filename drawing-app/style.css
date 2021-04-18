@@ -18,22 +18,28 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 0;
+    background-color: bisque;
 }
 
 canvas {
-    border: 2px solid steelblue;
+    border: 2px solid rgb(82, 82, 82);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: white;
 }
 
 .toolbox {
-    background-color: steelblue;
-    border: 1px solid slateblue;
+    background-color: rgb(145, 145, 145);
+    border: 2px solid rgb(82, 82, 82);
     display: flex;
     width: 804px;
     padding: 1rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .toolbox > * {
-    background-color: white;
+    background-color: bisque;
     border: none;
     display: inline-flex;
     align-items: center;
