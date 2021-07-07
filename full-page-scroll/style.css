@@ -1,0 +1,28 @@
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    border: 3px dashed blue;
+    /* scroll-snap-align: proximity; */
+}
+
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+/* .fill {
+  background-image: url('https://source.unsplash.com/random/150x150');
+  height: 145px;
+  width: 145px;
+  cursor: pointer;
+} */
+
