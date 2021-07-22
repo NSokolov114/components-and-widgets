@@ -26,3 +26,68 @@ body {
   height: 630px;
   width: 480px;
 }
+
+form {
+  width: 90%;
+}
+
+.form-group {
+  height: 65px;
+}
+
+label {
+  bottom: 3px;
+  position: relative;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 34px;
+  padding: 5px;
+  outline: none;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+input:valid {
+  border: 1px solid green;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+button {
+  color: #fff;
+  cursor: pointer;
+  background: #000;
+  border: none;
+  border-radius: 5px;
+  font-family: Sen, san-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  height: 50px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+button:hover {
+  background: rgb(25, 25, 25);
+  filter: brightness(200%);
+}
+
+button:focus {
+  outline: none;
+}
+
+.message-container {
+  border: 1px solid #000;
+  border-radius: 5px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 90%;
+}
