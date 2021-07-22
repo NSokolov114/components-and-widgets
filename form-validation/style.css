@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html {
   box-sizing: border-box;
@@ -6,11 +6,11 @@ html {
 
 body {
   align-items: center;
-  background: #c9ced3;
+  background: #bacada;
   display: flex;
   justify-content: center;
   letter-spacing: 2px;
-  font-family: Sen, san-serif;
+  font-family: Roboto, san-serif;
   margin: 0;
   min-height: 100vh;
   padding: 0;
@@ -18,7 +18,7 @@ body {
 
 .container {
   align-items: center;
-  background: #fff;
+  background: rgb(216, 216, 216);
   border-radius: 10px;
   box-shadow: 0 5px 25px 10px rgba(0, 0, 0, 0.4);
   display: flex;
@@ -65,7 +65,7 @@ button {
   background: #000;
   border: none;
   border-radius: 5px;
-  font-family: Sen, san-serif;
+  font-family: Roboto, san-serif;
   font-size: 20px;
   letter-spacing: 2px;
   height: 50px;
