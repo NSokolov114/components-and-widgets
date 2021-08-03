@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 :root {
-  --button-color: #678fdf;
-  --background-color: #000000;
+  --color1: #fff;
+  --color2: #000;
+  --color3: #666;
 }
 
 * {
@@ -12,8 +13,8 @@
 }
 
 body {
-  background-color: var(--background-color);
-  color: white;
+  background-color: var(--color2);
+  color: var(--color1);
   font-family: 'Open Sans', sans-serif;
   height: 100vh;
 }
@@ -30,6 +31,7 @@ body {
   left: 0;
   position: absolute;
   top: 0;
+  transition: transform 0.6s ease-in-out;
   width: 35%;
 }
 
@@ -53,6 +55,7 @@ body {
   left: 35%;
   position: absolute;
   top: 0;
+  transition: transform 0.6s ease-in-out;
   width: 65%;
 }
 .right-slide > div {
@@ -64,33 +67,41 @@ body {
 }
 
 .slider-container .action-buttons button {
-  background-color: var(--button-color);
+  background-color: var(--color1);
   border: none;
-
-  color: #333;
+  color: var(--color3);
   cursor: pointer;
   font-size: 16px;
   left: 35%;
   padding: 25px 15px;
   position: absolute;
   top: 50%;
+  transition: all 0.15s;
   z-index: 2;
 }
 
 .slider-container .action-buttons button:hover,
 .slider-container .action-buttons button:focus {
-  color: #000000;
+  color: var(--color2);
   outline: none;
 }
 
 .slider-container .action-buttons .down-button {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  transform: translateX(-100%);
+  transform: translateX(-100%) translateY(0);
 }
 
 .slider-container .action-buttons .up-button {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   transform: translateY(-100%);
+}
+
+.slider-container .action-buttons .down-button:active {
+  transform: translateX(-100%) translateY(15%);
+}
+
+.slider-container .action-buttons .up-button:active {
+  transform: translateY(-115%);
 }
