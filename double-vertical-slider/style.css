@@ -1,24 +1,96 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 :root {
-    --button-color: #144fc6;
-    --background-color: #6ab3f8;
+  --button-color: #678fdf;
+  --background-color: #000000;
 }
 
-* { 
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: var(--background-color);
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0;
-    height: 100vh;
-    
+  background-color: var(--background-color);
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
 }
 
+.slider-container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.left-slide {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 35%;
+}
+
+.left-slide > div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.left-slide h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+
+.right-slide {
+  height: 100%;
+  left: 35%;
+  position: absolute;
+  top: 0;
+  width: 65%;
+}
+.right-slide > div {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.slider-container .action-buttons button {
+  background-color: var(--button-color);
+  border: none;
+
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
+  left: 35%;
+  padding: 25px 15px;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+}
+
+.slider-container .action-buttons button:hover,
+.slider-container .action-buttons button:focus {
+  color: #000000;
+  outline: none;
+}
+
+.slider-container .action-buttons .down-button {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  transform: translateX(-100%);
+}
+
+.slider-container .action-buttons .up-button {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transform: translateY(-100%);
+}
