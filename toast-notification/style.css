@@ -1,19 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  align-items: center;
+  background-color: rgba(57, 168, 168, 0.3);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  font-family: 'Poppins', sans-serif;
   height: 100vh;
+  justify-content: center;
   overflow: hidden;
   margin: 0;
-  background-position: center center;
-  background-size: cover;
-  transition: 0.3s ease;
+}
+
+.btn {
+  background-color: #777;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 15px 25px;
+}
+
+.btn:focus {
+  outline: none;
+  color: rgba(87, 255, 255, 0.7);
+}
+
+.btn:active {
+  transform: scale(1.02);
+}
+
+#toasts {
+  align-items: flex-end;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 10px;
+}
+
+.toast {
+  background-color: #fff;
+  border-radius: 5px;
+  color: rgba(63, 189, 189, 0.9);
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  margin: 5px;
 }
