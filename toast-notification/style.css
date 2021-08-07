@@ -49,8 +49,20 @@ body {
 .toast {
   background-color: #fff;
   border-radius: 5px;
-  color: rgba(63, 189, 189, 0.9);
+
   letter-spacing: 1px;
   padding: 10px 20px;
   margin: 5px;
+}
+
+.toast.info {
+  color: rgba(63, 189, 189, 0.9);
+}
+
+.toast.success {
+  color: green;
+}
+
+.toast.error {
+  color: red;
 }
