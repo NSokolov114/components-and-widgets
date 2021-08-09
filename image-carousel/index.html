@@ -8,9 +8,33 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="./style.css" />
-    <title>Click to Like</title>
+    <title>Image Carousel</title>
   </head>
   <body>
+    <div class="carousel">
+      <div class="image-container" id="imgs">
+        <img
+          src="https://images.unsplash.com/photo-1628530469276-ec56f8fc34c8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1834&q=80"
+          alt="vans in the wild"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1605530967244-1f03ed27f61e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80"
+          alt="van in the forest"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1441080621622-e886ad73e3db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80"
+          alt="van near the lake"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1579279218938-a46994417a8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80"
+          alt="van in the town"
+        />
+      </div>
+      <div class="buttons-container">
+        <button id="left">Prev</button>
+        <button id="right">Next</button>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

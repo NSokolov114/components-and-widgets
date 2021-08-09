@@ -8,11 +8,62 @@ body {
   align-items: center;
   background-color: rgba(57, 168, 168, 0.3);
   display: flex;
-  flex-direction: column;
   font-family: 'Poppins', sans-serif;
   height: 100vh;
   justify-content: center;
-  overflow: hidden;
   margin: 0;
-  text-align: center;
+}
+
+.carousel {
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  height: 750px;
+  overflow: hidden;
+  position: relative;
+  width: 500px;
+}
+
+.image-container {
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+img {
+  height: auto;
+  object-fit: cover;
+  width: 500px;
+}
+
+.buttons-container {
+  bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  margin: 0 15px;
+  position: absolute;
+  width: calc(100% - 30px);
+}
+
+button {
+  background-color: rgba(57, 168, 168, 0.6);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  outline: none;
+  padding: 15px 50px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+button:focus,
+button:hover {
+  background-color: rgba(57, 168, 168, 0.9);
+}
+
+button:active {
+  transform: translateY(-2px);
 }
