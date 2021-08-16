@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 400px;
+  max-width: 600px;
 }
 
 .square {
