@@ -70,13 +70,13 @@ body {
   margin: 0;
 }
 
-.user .role {
+.user .user-role {
   font-weight: normal;
   margin: 0;
 }
 
 .progress-bar {
-  animation: grow 10s linear infinite;
+  animation: grow 5s ease-in-out infinite;
   background-color: rgba(0, 0, 0, 0.3);
   height: 5px;
   margin-bottom: 10px;
