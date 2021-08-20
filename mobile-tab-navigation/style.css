@@ -16,6 +16,7 @@ body {
 }
 
 .phone {
+  background-color: antiquewhite;
   border: 3px solid antiquewhite;
   border-radius: 15px;
   height: 600px;
@@ -42,17 +43,16 @@ body {
 nav {
   bottom: 0;
   left: 0;
-  margin-top: -5px;
   position: absolute;
   width: 100%;
 }
 
 nav ul {
-  background-color: antiquewhite;
   display: flex;
   list-style-type: none;
   height: 60px;
   margin: 0;
+
   padding: 0;
 }
 nav li {
