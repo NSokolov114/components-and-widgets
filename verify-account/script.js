@@ -6,6 +6,7 @@ function ready() {
     container = document.querySelector('.container'),
     title = container.querySelector('h2'),
     subtitle = container.querySelector('p');
+  let timer = 16;
 
   codes[0].focus();
 
@@ -30,12 +31,23 @@ function ready() {
     if (full > 5) {
       for (let i = 0; i < codes.length; i++) {
         codes[i].disabled = true;
-        container.style.borderColor = 'green';
-        title.innerHTML = 'Your email was successfully verified!';
-        title.style.color = 'green';
-        subtitle.innerHTML =
-          'Congratulations! You will be redirected to the home page in _999_ seconds.';
       }
+      container.style.borderColor = 'green';
+      title.innerHTML = 'Your email was successfully verified!';
+      title.style.color = 'green';
+      finalCountdown();
     }
+  }
+
+  function finalCountdown() {
+    setTimeout(() => {
+      timer--;
+      subtitle.innerHTML = `Congratulations! You will be redirected to the home page in ${timer} seconds.`;
+      if (timer > 0) {
+        finalCountdown();
+      } else {
+        location.reload();
+      }
+    }, 1000);
   }
 }
