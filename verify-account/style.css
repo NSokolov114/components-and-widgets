@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Heebo');
+@import url('https://fonts.googleapis.com/css?family=Muli:300,700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -8,12 +8,77 @@
 
 body {
   align-items: center;
-  background-color: #333;
-  color: antiquewhite;
+  background-color: antiquewhite;
+  color: #333;
   display: flex;
   flex-direction: column;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Muli', sans-serif;
   height: 100vh;
   justify-content: center;
   overflow: hidden;
+}
+
+.container {
+  background-color: aliceblue;
+  border: 3px #333 solid;
+  border-radius: 10px;
+  max-width: 1024px;
+  padding: 30px;
+  text-align: center;
+}
+
+.code-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.code {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  font-size: 75px;
+  font-weight: 300;
+  height: 120px;
+  margin: 1%;
+  text-align: center;
+  transition: all 0.4s linear;
+  width: 100px;
+}
+
+.code::-webkit-outer-spin-button,
+.code::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.code:valid {
+  border-color: #3498db;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25);
+}
+
+.code:disabled {
+  background-color: rgba(76, 105, 52, 0.3);
+}
+
+.info {
+  background-color: #eaeeaa;
+  border-radius: 6px;
+  color: #333;
+  display: inline-block;
+  line-height: 20px;
+  min-width: 400px;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .code-container {
+    flex-wrap: wrap;
+  }
+
+  .code {
+    height: 80px;
+    font-size: 60px;
+    max-width: 70px;
+  }
 }
