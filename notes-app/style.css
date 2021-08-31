@@ -19,7 +19,8 @@ body {
   padding-top: 3rem;
 }
 
-.add {
+.add,
+.clear {
   background-color: var(--secondary-color);
   border: none;
   border-radius: 5px;
@@ -27,8 +28,29 @@ body {
   cursor: pointer;
   padding: 0.5rem 1rem;
   position: fixed;
-  right: 1rem;
   top: 1rem;
+  transition: all 0.2s linear;
+}
+
+.add i,
+.clear i {
+  margin-right: 0.5rem;
+}
+
+.add {
+  left: 2rem;
+}
+
+.add:hover {
+  filter: brightness(1.2);
+}
+
+.clear {
+  right: 2rem;
+}
+
+.clear:hover {
+  background-color: red;
 }
 
 .note {

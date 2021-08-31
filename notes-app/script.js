@@ -2,8 +2,14 @@
 
 document.addEventListener('DOMContentLoaded', ready);
 function ready() {
-  const addBtn = document.getElementById('add');
+  const addBtn = document.getElementById('add'),
+    clearBtn = document.getElementById('clear'),
+    notes = JSON.parse(localStorage.getItem('notes'));
+
+  if (notes) notes.forEach(note => addNewNote(note));
+
   addBtn.addEventListener('click', () => addNewNote());
+  clearBtn.addEventListener('click', () => deleteAll());
 
   function addNewNote(text = '') {
     const note = document.createElement('div');
@@ -35,11 +41,31 @@ function ready() {
 
     deleteBtn.addEventListener('click', () => {
       note.remove();
+      updateLS();
     });
     textArea.addEventListener('input', e => {
       const { value } = e.target;
       main.innerHTML = marked(value);
+      updateLS();
     });
     document.body.appendChild(note);
+  }
+
+  function updateLS() {
+    const notesText = document.querySelectorAll('textarea'),
+      notes = [];
+    notesText.forEach(note => notes.push(note.value));
+    localStorage.setItem('notes', JSON.stringify(notes));
+  }
+
+  function deleteAll() {
+    const check = window.prompt(
+      'Type "YES" if you want to delete all your notes: '
+    );
+    if (check.toLowerCase() === 'yes') {
+      localStorage.clear();
+      const currentNotes = document.querySelectorAll('.note');
+      for (let i = 0; i < currentNotes.length; i++) currentNotes[i].remove();
+    }
   }
 }
