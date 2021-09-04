@@ -14,13 +14,38 @@
 }
 
 body {
-  align-items: center;
   background-color: var(--secondary-color);
-  display: flex;
-  flex-wrap: wrap;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   height: 100vh;
-  justify-content: center;
   overflow: hidden;
+}
+
+.counter {
+  left: 50%;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.counter.hide {
+  animation: hide 0.2s ease-out;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.final {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes hide {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
 }
