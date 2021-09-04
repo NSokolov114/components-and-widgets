@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:500&display=swap');
 
 :root {
-  --primary-color: rgba(19, 211, 77, 0.288);
+  --primary-color: rgba(19, 211, 77, 0.747);
   --secondary-color: #c4edf8;
   --secondary-color-dark: #b4dce7;
   --dark-gray-color: #777;
@@ -14,13 +14,18 @@
 }
 
 body {
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   height: 100vh;
   overflow: hidden;
 }
 
+h4 {
+  font-size: 20px;
+  margin: 5px;
+  text-transform: uppercase;
+}
 .counter {
   left: 50%;
   position: fixed;
@@ -38,7 +43,66 @@ body {
   left: 50%;
   position: fixed;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.final.show {
+  animation: show 0.2s ease-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.numbers {
+  color: var(--primary-color);
+  font-size: 40px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  width: 250px;
+}
+
+.numbers span {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(120deg);
+  transform-origin: bottom center;
+}
+
+.numbers span.in {
+  animation: goOut 0.5s ease-in-out;
+  transform: translate(-50%, -50%) rotate(0);
+}
+
+.numbers span.out {
+  animation: goIn 0.5s ease-in-out;
+  /* transform: translate(-50%, -50%) rotate(0); */
+}
+
+@keyframes goIn {
+  0% {
+    transform: translate(-50%, -50%) rotate(120deg);
+  }
+  30% {
+    transform: translate(-50%, -50%) rotate(-20deg);
+  }
+  60% {
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+}
+
+@keyframes goOut {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  60% {
+    transform: translate(-50%, -50%) rotate(20deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-120deg);
+  }
 }
 
 @keyframes hide {
@@ -47,5 +111,17 @@ body {
   }
   100% {
     transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
   }
 }
