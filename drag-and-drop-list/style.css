@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:500&display=swap');
 
 :root {
-  --primary-color: rgba(19, 211, 77, 0.747);
+  --primary-color: #3e07a3;
   --secondary-color: #c4edf8;
-  --secondary-color-dark: #b4dce7;
+  --secondary-color-dark: #8dd2e6;
   --dark-gray-color: #777;
 }
 
@@ -14,9 +14,101 @@
 }
 
 body {
-  /* background-color: var(--secondary-color); */
+  align-items: center;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  height: 100vh;
-  overflow: hidden;
+  justify-content: center;
+  min-height: 100vh;
+
+  /* overflow: hidden; */
+}
+
+h1 {
+  padding-top: 25px;
+}
+
+h1,
+p {
+  margin-bottom: 25px;
+}
+.draggable-list {
+  /* border: 2px solid var(--secondary-color-dark); */
+  color: var(--primary-color);
+  list-style-type: none;
+  margin-bottom: 25px;
+}
+
+.draggable-list li {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  display: flex;
+  flex: 1;
+}
+
+.draggable-list li:not(:last-of-type) {
+  /* border-bottom: 2px solid var(--secondary-color-dark); */
+  margin-bottom: 5px;
+}
+
+.draggable-list li.right {
+  background-color: greenyellow;
+}
+
+.draggable-list li.wrong {
+  background-color: violet;
+}
+
+.draggable-list li.over .draggable {
+  background-color: var(--secondary-color);
+}
+
+.draggable-list .number {
+  align-items: center;
+  background-color: var(--secondary-color-dark);
+  border-radius: 50%;
+  display: flex;
+  font-size: 28px;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+}
+
+.draggable-list .person-name {
+  margin: 0 20px 0 0;
+}
+
+.draggable {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 15px;
+}
+
+.check-btn {
+  background-color: var(--secondary-color-dark);
+  border: none;
+  border-radius: 10px;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 25px;
+  padding: 10px 30px;
+  transition: all 0.2s linear;
+}
+
+.check-btn:active {
+  transform: scale(0.98);
+}
+
+.check-btn:focus,
+.check-btn:hover {
+  filter: brightness(0.9);
+  outline: none;
 }
