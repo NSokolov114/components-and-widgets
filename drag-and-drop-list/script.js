@@ -42,5 +42,51 @@ function ready() {
         listItems.push(listItem);
         draggable_list.appendChild(listItem);
       });
+    addEventListeners();
+  }
+
+  function dragStart() {
+    dragStartIndex = +this.closest('li').getAttribute('data-index');
+  }
+
+  function dragEnter() {
+    this.classList.add('over');
+  }
+
+  function dragLeave() {
+    this.classList.remove('over');
+  }
+
+  function dragOver(e) {
+    e.preventDefault();
+  }
+
+  function dragDrop() {
+    const dragEndIndex = +this.getAttribute('data-index');
+    swapItems(dragStartIndex, dragEndIndex);
+    this.classList.remove('over');
+  }
+
+  function swapItems(fromIndex, toIndex) {
+    const item1 = listItems[fromIndex].querySelector('.draggable');
+    const item2 = listItems[toIndex].querySelector('.draggable');
+    listItems[fromIndex].appendChild(item2);
+    listItems[toIndex].appendChild(item1);
+  }
+
+  function addEventListeners() {
+    const draggables = document.querySelectorAll('.draggable');
+    const dragListItems = document.querySelectorAll('.draggable-list li');
+
+    draggables.forEach(draggable => {
+      draggable.addEventListener('dragstart', dragStart);
+    });
+
+    dragListItems.forEach(item => {
+      item.addEventListener('dragover', dragOver);
+      item.addEventListener('drop', dragDrop);
+      item.addEventListener('dragenter', dragEnter);
+      item.addEventListener('dragleave', dragLeave);
+    });
   }
 }

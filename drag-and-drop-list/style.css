@@ -63,7 +63,7 @@ p {
   background-color: violet;
 }
 
-.draggable-list li.over .draggable {
+.draggable-list li.over {
   background-color: var(--secondary-color);
 }
 
