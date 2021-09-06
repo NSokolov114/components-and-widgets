@@ -74,6 +74,29 @@ function ready() {
     listItems[toIndex].appendChild(item1);
   }
 
+  function checkOrder() {
+    listItems.forEach((listItem, index) => {
+      const personName = listItem.querySelector('.draggable').innerText.trim();
+
+      if (personName !== richestPeople[index]) {
+        listItem.classList.remove('right');
+        listItem.classList.add('wrong');
+      } else {
+        listItem.classList.remove('wrong');
+        listItem.classList.add('right');
+      }
+      allRight();
+    });
+  }
+
+  function allRight() {
+    const rightAnswers = document.querySelectorAll('.right').length;
+    if (rightAnswers === 10) {
+      check.innerText = 'CONGRATULATIONS';
+      check.removeEventListener();
+    }
+  }
+
   function addEventListeners() {
     const draggables = document.querySelectorAll('.draggable');
     const dragListItems = document.querySelectorAll('.draggable-list li');
@@ -89,4 +112,6 @@ function ready() {
       item.addEventListener('dragleave', dragLeave);
     });
   }
+
+  check.addEventListener('click', checkOrder);
 }

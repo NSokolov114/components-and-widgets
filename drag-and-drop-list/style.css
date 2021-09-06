@@ -56,11 +56,11 @@ p {
 }
 
 .draggable-list li.right {
-  background-color: greenyellow;
+  background-color: rgba(62, 241, 86, 0.651);
 }
 
 .draggable-list li.wrong {
-  background-color: violet;
+  background-color: rgba(243, 104, 243, 0.616);
 }
 
 .draggable-list li.over {
