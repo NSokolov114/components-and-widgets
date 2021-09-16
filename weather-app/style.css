@@ -15,12 +15,7 @@
 
 body {
   align-items: center;
-  background-color: var(--secondary-color);
-  background-image: linear-gradient(
-    315deg,
-    var(--secondary-color) 0%,
-    var(--secondary-color-dark) 100%
-  );
+  background-color: var(--white);
   display: flex;
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
@@ -31,37 +26,53 @@ body {
 
 .container {
   align-items: center;
-  background-color: rgba(222, 222, 222, 0.7);
+  background-color: var(--secondary-color);
+  background-image: linear-gradient(
+    315deg,
+    var(--secondary-color) 0%,
+    var(--secondary-color-dark) 100%
+  );
+  border: 1px dashed black;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-width: 300px;
   margin: 10px;
+  padding: 20px;
 }
 
 .location {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
   margin-bottom: 10px;
   padding: 10px;
+  transition: all 0.3s;
   width: 100%;
+}
+
+.location img {
+  margin-left: 20px;
 }
 
 .temp {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-
   display: flex;
   flex-direction: column;
-
   padding: 10px;
+  transition: all 0.3s;
+}
+
+.location:hover,
+.temp:hover {
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .temp-degree {
-  cursor: pointer;
   margin-bottom: 20px;
 }
