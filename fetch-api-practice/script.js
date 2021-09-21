@@ -41,21 +41,21 @@ const countriesContainer = document.querySelector('.countries');
 
 const renderCountry = function (data) {
   const html = `
-  <article class="country">
-    <img class="country__img" src="${data.flag}" />
-    <div class="country__data">
-      <h3 class="country__name">${data.name}</h3>
-      <h4 class="country__region">${data.region}</h4>
-      <p class="country__row"><span>👫</span>${(
-        +data.population / 1000000
-      ).toFixed(1)} people</p>
-      <p class="country__row"><span>🗣️</span>${data.languages[0].name}</p>
-      <p class="country__row"><span>💰</span>${data.currencies[0].name}</p>
-    </div>
-  </article>
-`;
+    <article class="country">
+      <img class="country__img" src="${data.flag}" />
+      <div class="country__data">
+        <h3 class="country__name">${data.name}</h3>
+        <h4 class="country__region">${data.region}</h4>
+        <p class="country__row"><span>👫</span>${(
+          +data.population / 1000000
+        ).toFixed(1)} people</p>
+        <p class="country__row"><span>🗣️</span>${data.languages[0].name}</p>
+        <p class="country__row"><span>💰</span>${data.currencies[0].name}</p>
+      </div>
+    </article>
+  `;
   countriesContainer.insertAdjacentHTML('beforeend', html);
-  // countriesContainer.style.opacity = 1;
+  countriesContainer.style.opacity = 1;
 };
 
 // const getCountryAndNeighbour = function (country) {
@@ -192,18 +192,80 @@ const renderCountry = function (data) {
 
 // PART 1
 // 1. Create a function 'whereAmI' which takes as inputs a latitude value (lat) and a longitude value (lng) (these are GPS coordinates, examples are below).
-function getLocation(coords) {
-  fetch(`https://geocode.xyz/${coords[0]},${coords[1]}?geoit=json`)
-    .then(response => response.json())
-    .then(data => console.log(`${data.city}, ${data.country}`));
-}
+
+// const getCountryData = function (country) {
+//   fetch(`https://restcountries.eu/rest/v2/name/${country}?fullText=true`)
+//     .then(response => {
+//       console.log(response);
+//       if (!response.ok) {
+//         throw new Error(`Country not found (${response.status})`);
+//       }
+//       return response.json();
+//     })
+//     .then(data => {
+//       renderCountry(data[0]);
+//       // country 2
+//       const neighbour = data[0].borders[0];
+//       return fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
+//     })
+//     .then(response => {
+//       if (!response.ok) {
+//         throw new Error(`Country not found (${response.status})`);
+//       }
+//       response.json();
+//     })
+//     .then(data => renderCountry(data))
+//     .catch(err => console.error(err))
+//     .finally(() => {
+//       countriesContainer.style.opacity = 1;
+//     });
+// };
+// let country;
+// function getLocation(coords) {
+//   fetch(
+//     `https://nominatim.openstreetmap.org/reverse?lat=${coords[0]}&lon=${coords[1]}&format=json`
+//   )
+//     .then(response => response.json())
+//     .then(data => {
+//       console.log(`Your address is: ${data.display_name}`);
+//       country = data.address.country_code;
+//       getCountryData(country);
+//     })
+//     .catch(err => console.log(`There's some kind of error: ${err}`));
+// }
 
 function whereAmI(lat, lng) {
   const coords = [lat, lng];
-  getLocation(coords);
+  fetch(
+    `https://nominatim.openstreetmap.org/reverse?lat=${coords[0]}&lon=${coords[1]}&format=json`
+  )
+    .then(response => {
+      if (!response.ok)
+        throw new Error(`Problem with geocoding ${response.status}`);
+      return response.json();
+    })
+    .then(data => {
+      console.log(`Your address is: ${data.display_name}`);
+      return fetch(
+        `https://restcountries.eu/rest/v2/name/${data.address.country_code}?fullText=true`
+      );
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Country not found (${response.status})`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      renderCountry(data[0]);
+    })
+    .catch(err => console.log(`There's some kind of error: ${err.message}`));
 }
 
-whereAmI(51, -0.1);
+whereAmI(51, 0);
+whereAmI(19, 73);
+whereAmI(-33, 18);
+
 // 2. Do 'reverse geocoding' of the provided coordinates. Reverse geocoding means to convert coordinates to a meaningful location, like a city and country name. Use this API to do reverse geocoding: https://geocode.xyz/api.
 // The AJAX call will be done to a URL with this format: https://geocode.xyz/52.508,13.381?geoit=json. Use the fetch API and promises to get the data. Do NOT use the getJSON function we created, that is cheating 😉
 // 3. Once you have the data, take a look at it in the console to see all the attributes that you recieved about the provided location. Then, using this data, log a messsage like this to the console: 'You are in Berlin, Germany'
@@ -220,182 +282,25 @@ whereAmI(51, -0.1);
 
 // GOOD LUCK 😀
 
-const test = {
-  statename: {},
-  distance: '0.000',
-  elevation: '20',
-  osmtags: {
-    wikipedia: 'en:City of Westminster',
-    wikidata: 'Q179351',
-    website: 'https://www.westminster.gov.uk/',
-    name: 'City of Westminster',
-    ISO3166_2: 'GB-WSM',
-    ref_gss: 'E09000033',
-    ons_code: '00BK',
-    admin_level: '8',
-    designation: 'inner_london_borough',
-    boundary: 'administrative',
-    council_name: 'Westminster City Council',
-    type: 'boundary',
-    source_ons_code: 'OS_OpenData_CodePoint Codelist.txt',
+const sample = {
+  place_id: 134656441,
+  licence:
+    'Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright',
+  osm_type: 'way',
+  osm_id: 181267193,
+  lat: '54.43983945293409',
+  lon: '36.45831273281098',
+  display_name:
+    'Ахлебинино, сельское поселение Село Ахлебинино, Peremyshlsky District, Kaluga Oblast, Central Federal District, 249812, Russia',
+  address: {
+    village: 'Ахлебинино',
+    municipality: 'сельское поселение Село Ахлебинино',
+    county: 'Peremyshlsky District',
+    state: 'Kaluga Oblast',
+    region: 'Central Federal District',
+    postcode: '249812',
+    country: 'Russia',
+    country_code: 'ru',
   },
-  state: 'UK',
-  latt: '51.50354',
-  city: 'LONDON',
-  prov: 'UK',
-  intersection: {
-    distance: '0.075',
-    xlat: '51.50287',
-    xlon: '-0.127725',
-    street2: 'Downing Street',
-    street1: 'KING CHARLES STREET',
-  },
-  geocode: 'LONDON-MCRXA',
-  geonumber: '3154700960970',
-  country: 'United Kingdom',
-  stnumber: '1',
-  staddress: 'DOWNING STREET',
-  inlatt: '51.50354',
-  alt: {
-    loc: {
-      staddress: 'DOWNING STREET',
-      stnumber: '1',
-      postal: 'SW1A2AA',
-      latt: '51.50354',
-      city: 'LONDON',
-      prov: 'UK',
-      longt: '-0.12768',
-      class: {},
-    },
-  },
-  timezone: 'Europe/London',
-  region: 'Greater London, England',
-  postal: 'SW1A2AA',
-  poi: {
-    website: 'http://www.westminster-abbey.org',
-    name_lt: 'Vestminsterio vienuolynas',
-    toilets_wheelchair: 'yes',
-    poilon: '-0.12752',
-    name_uk: 'Вестмінстерське абатство',
-    whc_criteria: 'i,ii,iv',
-    heritage_operator: 'whc',
-    id: '364313092',
-    name_en: 'Westminster Abbey',
-    name_cs: 'Westminsterské opatství',
-    name_he: 'מנזר וסטמינסטר',
-    name: 'Westminster Abbey',
-    denomination: 'anglican',
-    addr_postcode: 'SW1P 3PA',
-    name_gl: 'Abadía de Westminster',
-    layer: '1',
-    addr_housenumber: '20',
-    addr_city: 'London',
-    building: 'yes',
-    name_hi: 'वेस्ट्मिन्स्टर ऍबी',
-    wikimedia_commons: 'Category:Westminster_Abbey',
-    name_fr: 'Abbaye de Westminster',
-    wikipedia: 'en:Westminster Abbey',
-    name_ja: 'ウエストミンスター大寺院',
-    name_zh: '威斯敏斯特修道院（西敏寺）',
-    heritage: '1',
-    name_be: 'Вэстмінстэрскае абацтва',
-    name_ru: 'Вестминстерское аббатство',
-    ref_whc: '426',
-    wikidata: 'Q5933',
-    poilat: '51.49943',
-    tourism: 'attraction',
-    religion: 'christian',
-    opening_hours: 'Mo-Sa 09:30-16:00',
-    wheelchair: 'yes',
-    addr_housename: 'Westminster Abbey',
-    name_es: 'Abadía de Westminster.',
-    name_af: 'Westminster Abbey',
-    building_colour: '#dacaa8',
-    addr_street: "Dean's Yard",
-    note: 'heights estimated',
-    amenity: 'place_of_worship',
-    name_pl: 'Opactwo Westminsterskie',
-    poidist: '0.457',
-    name_cy: 'Abaty San Steffan',
-  },
-  longt: '-0.12768',
-  remaining_credits: {},
-  confidence: '1',
-  inlongt: '-0.12768',
-  class: {},
-  adminareas: {
-    admin6: {
-      name_be_tarask: 'Лёндан',
-      name_lt: 'Londonas',
-      name_uk: 'Лондон',
-      boundary: 'administrative',
-      is_in_iso_3166_2: 'GB-ENG',
-      name_en: 'London',
-      name_el: 'Λονδίνο',
-      int_name: 'London',
-      name_fi: 'Lontoo',
-      name: 'London',
-      name_gl: 'Londres',
-      level: '6',
-      type: 'boundary',
-      name_nl: 'Londen',
-      name_hi: 'लंदन',
-      name_fr: 'Londres',
-      wikipedia: 'en:London',
-      name_pt: 'Londres',
-      name_zh: '伦敦',
-      place: 'city',
-      name_be: 'Лондан',
-      name_ru: 'Лондон',
-      name_tzl: 'Londra',
-      name_vi: 'Luân Đôn',
-      name_fy: 'Londen',
-      wikidata: 'Q84',
-      name_fa: 'لندن',
-      name_es: 'Londres',
-      name_ca: 'Londres',
-      admin_level: '6',
-      name_szl: 'Lůndůn',
-      note: "This relation is for the 'county' of Greater London, which excludes the City of London",
-      name_pl: 'Londyn',
-      name_eo: 'Londono',
-    },
-    admin8: {
-      wikipedia: 'en:City of Westminster',
-      wikidata: 'Q179351',
-      website: 'https://www.westminster.gov.uk/',
-      name: 'City of Westminster',
-      ISO3166_2: 'GB-WSM',
-      ref_gss: 'E09000033',
-      ons_code: '00BK',
-      admin_level: '8',
-      designation: 'inner_london_borough',
-      level: '8',
-      boundary: 'administrative',
-      council_name: 'Westminster City Council',
-      type: 'boundary',
-      source_ons_code: 'OS_OpenData_CodePoint Codelist.txt',
-    },
-    admin5: {
-      wikipedia: 'en:Greater London',
-      name_de: 'Groß-London',
-      name_be_tarask: 'Вялікі Лёндан',
-      name_ru: 'Большой Лондон',
-      name_be: 'Вялікі Лондан',
-      name_lt: 'Didysis Londonas',
-      name_uk: 'Великий Лондон',
-      boundary: 'administrative',
-      name_en: 'Greater London',
-      wikidata: 'Q23306',
-      ref_nuts_1: 'UKI',
-      name: 'Greater London',
-      official_name: 'Greater London (incl. City of London)',
-      admin_level: '5',
-      note: 'This region relation includes the City of London',
-      level: '5',
-      type: 'boundary',
-      name_fr: 'Grand Londres',
-    },
-  },
-  altgeocode: 'SYNERGY-MCRXA',
+  boundingbox: ['54.4383009', '54.4428131', '36.4291136', '36.4660751'],
 };
