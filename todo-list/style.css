@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,400&display=swap');
 
 :root {
-  --primary-color: #fcfcfc;
-  --secondary-color: #6c8a42;
+  --primary-color: #333;
+  --secondary-color: #7bdaf3;
 }
 
 * {
@@ -12,9 +12,65 @@
 }
 
 body {
-  background-color: #7bdaf3;
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   font-family: 'Poppins', sans-serif;
-  padding-top: 3rem;
+  height: 100vh;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 10rem;
+  opacity: 0.5;
+  text-align: center;
+}
+
+form {
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+  max-width: 100%;
+  width: 400px;
+}
+
+.input {
+  border: none;
+  display: block;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: #ddd;
+}
+
+.input:focus {
+  outline-color: var(--secondary-color);
+}
+
+.todos {
+  background-color: #fff;
+  list-style-type: none;
+}
+
+.todos li {
+  border-top: 2px solid #eee;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.todos li.completed {
+  color: #b6b6b6;
+  text-decoration: line-through;
+}
+
+small {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  text-align: center;
 }

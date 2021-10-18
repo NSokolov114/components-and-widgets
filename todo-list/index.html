@@ -3,14 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    /> -->
+
     <link rel="stylesheet" href="./style.css" />
     <title>TODO list</title>
   </head>
   <body>
+    <h1>todos</h1>
+    <form id="form">
+      <input
+        type="text"
+        class="input"
+        id="input"
+        placeholder="Enter your todo"
+        autocomplete="off"
+      />
+      <ul class="todos" id="todos">
+        <li>my test to do 1</li>
+        <li>my test to do 2</li>
+      </ul>
+    </form>
+    <small
+      >Left click to toggle completed. Right click to delete an item.</small
+    >
     <script src="script.js"></script>
   </body>
 </html>
