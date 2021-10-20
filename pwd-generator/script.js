@@ -2,14 +2,14 @@
 
 document.addEventListener('DOMContentLoaded', ready);
 function ready() {
-  const resultEl = document.getElementById('result');
-  const lengthEl = document.getElementById('length');
-  const uppercaseEl = document.getElementById('uppercase');
-  const lowercaseEl = document.getElementById('lowercase');
-  const numbersEl = document.getElementById('numbers');
-  const symbolsEl = document.getElementById('symbols');
-  const generateEl = document.getElementById('generate');
-  const clipboardEl = document.getElementById('clipboard');
+  const resultEl = document.getElementById('result'),
+    lengthEl = document.getElementById('length'),
+    uppercaseEl = document.getElementById('uppercase'),
+    lowercaseEl = document.getElementById('lowercase'),
+    numbersEl = document.getElementById('numbers'),
+    symbolsEl = document.getElementById('symbols'),
+    generateEl = document.getElementById('generate'),
+    clipboardEl = document.getElementById('clipboard');
 
   const randomFunc = {
     lower: getRandomLower,
@@ -18,12 +18,29 @@ function ready() {
     symbol: getRandomSymbol,
   };
 
+  clipboardEl.addEventListener('click', () => {
+    const textarea = document.createElement('textarea');
+    const password = resultEl.innerText;
+
+    if (!password) {
+      return;
+    }
+
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+
+    alert('Password copied to clipboard');
+  });
+
   generateEl.addEventListener('click', () => {
-    const length = +lengthEl.value;
-    const hasLower = lowercaseEl.checked;
-    const hasUpper = uppercaseEl.checked;
-    const hasNumber = numbersEl.checked;
-    const hasSymbol = symbolsEl.checked;
+    const length = +lengthEl.value,
+      hasLower = lowercaseEl.checked,
+      hasUpper = uppercaseEl.checked,
+      hasNumber = numbersEl.checked,
+      hasSymbol = symbolsEl.checked;
 
     resultEl.innerText = generatePassword(
       hasLower,
@@ -40,7 +57,23 @@ function ready() {
     const typesArr = [{ lower }, { upper }, { number }, { symbol }].filter(
       item => Object.values(item)[0]
     );
-    console.log(typesArr);
+    // console.log(typesArr);
+
+    if (typesCount === 0) {
+      return '';
+    }
+
+    for (let i = 0; i < length; i += typesCount) {
+      typesArr.forEach(type => {
+        const funcName = Object.keys(type)[0];
+
+        generatedPassword += randomFunc[funcName]();
+      });
+    }
+
+    const finalPassword = generatedPassword.slice(0, length);
+
+    return finalPassword;
   }
 
   function getRandomLower() {
@@ -57,6 +90,7 @@ function ready() {
 
   function getRandomSymbol() {
     const symbols = '!@#$%^&*()[]{}=<>/.,';
+
     return symbols[Math.floor(Math.random() * symbols.length)];
   }
 }
