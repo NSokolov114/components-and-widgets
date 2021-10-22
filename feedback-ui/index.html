@@ -3,11 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Feedback UI</title>
   </head>
   <body>
+    <div id="panel" class="panel-container">
+      <strong
+        >How satisfied are you with our customer support perfomance?</strong
+      >
+      <div class="rating-container">
+        <div class="rating">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/743/743418.png"
+            alt="angry smile"
+          />
+          <small>Unhappy</small>
+        </div>
+
+        <div class="rating">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/983/983048.png"
+            alt="thinking smile"
+          />
+          <small>Neutral</small>
+        </div>
+
+        <div class="rating active">
+          <img
+            src="https://cdn-icons.flaticon.com/png/512/4439/premium/4439183.png?token=exp=1634920789~hmac=12dfd5615086e5fa690dbc75999bb35c"
+            alt="happy smile"
+          />
+          <small>Satisfied</small>
+        </div>
+      </div>
+      <button class="btn" id="send">Send Review</button>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
