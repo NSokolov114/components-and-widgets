@@ -25,16 +25,16 @@ body {
 }
 
 .panel-container {
+  align-items: center;
   background-color: var(--primary-color);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-  font-size: 90%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-size: 90%;
   justify-content: center;
-  padding: 30px;
   max-width: 400px;
+  padding: 30px;
   text-align: center;
 }
 
@@ -55,10 +55,10 @@ body {
 }
 
 .rating {
-  flex: 1;
   cursor: pointer;
-  padding: 20px;
+  flex: 1;
   margin: 10px 5px;
+  padding: 20px;
 }
 
 .rating small {
@@ -75,11 +75,11 @@ body {
 
 .btn {
   background-color: var(--secondary-color);
-  border: none;
   border-radius: 5px;
+  border: none;
   color: var(--primary-color);
-  padding: 15px 25px;
   cursor: pointer;
+  padding: 15px 25px;
 }
 
 .btn:focus {
