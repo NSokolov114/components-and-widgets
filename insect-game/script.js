@@ -2,17 +2,17 @@
 
 document.addEventListener('DOMContentLoaded', ready);
 function ready() {
-  const screens = document.querySelectorAll('.screen');
-  const choose_insect_btns = document.querySelectorAll('.choose-insect-btn');
-  const start_btn = document.querySelector('#start-btn');
-  const game_container = document.querySelector('.game-container');
-  const timeEl = document.querySelector('.time');
-  const scoreEl = document.querySelector('.score');
-  const message = document.querySelector('.message');
+  const screens = document.querySelectorAll('.screen'),
+    choose_insect_btns = document.querySelectorAll('.choose-insect-btn'),
+    start_btn = document.querySelector('#start-btn'),
+    game_container = document.querySelector('.game-container'),
+    timeEl = game_container.querySelector('.time'),
+    scoreEl = game_container.querySelector('.score'),
+    message = game_container.querySelector('.message');
 
-  let seconds = 0;
-  let score = 0;
-  let selected_insect = {};
+  let seconds = 0,
+    score = 0,
+    selected_insect = {};
 
   start_btn.addEventListener('click', () => {
     screens[0].classList.add('up');
@@ -20,9 +20,10 @@ function ready() {
 
   choose_insect_btns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const img = btn.querySelector('img');
-      const src = img.getAttribute('src');
-      const alt = img.getAttribute('alt');
+      const img = btn.querySelector('img'),
+        src = img.getAttribute('src'),
+        alt = img.getAttribute('alt');
+
       selected_insect = { src, alt };
       screens[1].classList.add('up');
       setTimeout(createInsect, 1000);
@@ -35,8 +36,9 @@ function ready() {
   }
 
   function increaseTime() {
-    let m = Math.floor(seconds / 60);
-    let s = seconds % 60;
+    let m = Math.floor(seconds / 60),
+      s = seconds % 60;
+
     m = m < 10 ? `0${m}` : m;
     s = s < 10 ? `0${s}` : s;
     timeEl.innerHTML = `Time: ${m}:${s}`;
@@ -45,22 +47,25 @@ function ready() {
 
   function createInsect() {
     const insect = document.createElement('div');
-    insect.classList.add('insect');
     const { x, y } = getRandomLocation();
+
+    insect.classList.add('insect');
     insect.style.top = `${y}px`;
     insect.style.left = `${x}px`;
     insect.innerHTML = `<img src="${selected_insect.src}" alt="${
       selected_insect.alt
     }" style="transform: rotate(${Math.random() * 360}deg)" />`;
     insect.addEventListener('click', catchInsect);
+
     game_container.appendChild(insect);
   }
 
   function getRandomLocation() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    const x = Math.random() * (width - 200) + 100;
-    const y = Math.random() * (height - 200) + 100;
+    const width = window.innerWidth,
+      height = window.innerHeight,
+      x = Math.random() * (width - 200) + 100,
+      y = Math.random() * (height - 200) + 100;
+
     return { x, y };
   }
 
@@ -78,7 +83,9 @@ function ready() {
 
   function increaseScore() {
     score++;
-    if (score > 20) message.classList.add('visible');
+    if (score > 20) {
+      message.classList.add('visible');
+    }
     scoreEl.innerHTML = `Score: ${score}`;
   }
 }

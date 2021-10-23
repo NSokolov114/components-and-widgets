@@ -4,7 +4,6 @@
   --primary-color: #fff;
   --secondary-color: #0d47b3;
   --tertiary-color: #083079;
-  --hover-color: rgb(8, 253, 253);
 }
 
 * {
@@ -16,11 +15,9 @@
 body {
   background-color: var(--secondary-color);
   color: var(--primary-color);
-
   font-family: 'Press Start 2P', sans-serif;
   height: 100vh;
   overflow: hidden;
-  /* padding: 10px; */
   text-align: center;
   width: 100vw;
 }
@@ -35,13 +32,13 @@ h1 {
 }
 
 .btn {
-  border: none;
   background-color: var(--primary-color);
-  color: var(--tertiary-color);
-  padding: 15px 25px;
-  font-family: inherit;
   border-radius: 2px;
+  border: none;
+  color: var(--tertiary-color);
   cursor: pointer;
+  font-family: inherit;
+  padding: 15px 25px;
 }
 
 .btn:focus {
@@ -51,14 +48,15 @@ h1 {
 .btn:hover {
   opacity: 0.85;
 }
+
 .screen {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
-  width: 100%;
+  justify-content: center;
   transition: margin 0.5s ease-out;
+  width: 100%;
 }
 
 .screen.up {
@@ -96,9 +94,9 @@ h1 {
 }
 
 .choose-insect-btn img {
-  width: 100px;
   height: 100px;
   object-fit: contain;
+  width: 100px;
 }
 
 .game-container {
@@ -122,17 +120,17 @@ h1 {
 }
 
 .message {
-  line-height: 1.7;
   background-color: var(--tertiary-color);
-  width: 100%;
+  line-height: 1.7;
+  opacity: 0;
   padding: 20px;
-  z-index: 2;
+  position: absolute;
   right: 0;
   text-align: center;
-  opacity: 0;
-  position: absolute;
   transform: translate(-50%, -150%);
   transition: all 0.5s ease-in-out;
+  width: 100%;
+  z-index: 2;
 }
 
 .message.visible {
@@ -141,16 +139,15 @@ h1 {
 }
 
 .insect {
+  align-items: center;
   cursor: pointer;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
   height: 100px;
+  justify-content: center;
   position: absolute;
-
   transform: translate(-50%, -50%) scale(1);
   transition: transform 0.3s ease-in-out;
+  width: 100px;
 }
 
 .insect.caught {
@@ -158,6 +155,6 @@ h1 {
 }
 
 .insect img {
-  width: 100px;
   height: 100px;
+  width: 100px;
 }
