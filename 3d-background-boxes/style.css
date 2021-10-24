@@ -13,32 +13,30 @@
 }
 
 body {
+  align-items: center;
   background-color: var(--secondary-color);
   color: var(--primary-color);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   height: 100vh;
+  justify-content: center;
   overflow: hidden;
   text-align: center;
-
   width: 100vw;
 }
 
 .magic {
   background-color: var(--tertiary-color);
-  cursor: pointer;
-  border: 0;
-  font-size: 30px;
   border-radius: 5px;
-  padding: 25px 40px;
-  font-family: 'Poppins', sans-serif;
-  text-transform: uppercase;
-  position: fixed;
-  top: 20px;
-  letter-spacing: 1px;
+  border: 0;
   box-shadow: 0 3px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin-top: 50px;
+  padding: 15px 30px;
+  text-transform: uppercase;
 }
 
 .magic:focus {
@@ -51,18 +49,18 @@ body {
 }
 
 .boxes {
-  height: 500px;
-  width: 500px;
   display: flex;
   flex-wrap: wrap;
+  height: 500px;
   justify-content: space-around;
   position: relative;
   transition: all 0.5s ease;
+  width: 500px;
 }
 
 .boxes.big {
-  width: 600px;
   height: 600px;
+  width: 600px;
 }
 
 .boxes.big .box {
@@ -73,30 +71,9 @@ body {
   background-image: url('https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif');
   background-repeat: no-repeat;
   background-size: 500px 500px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
   height: 125px;
-  width: 125px;
   position: relative;
   transition: all 0.5s ease;
-}
-
-.box::after {
-  content: '';
-  background-color: var(--tertiary-color);
-  position: absolute;
-  top: 8px;
-  right: -15px;
-  height: 100%;
-  width: 15px;
-  transform: skewY(45deg);
-}
-
-.box::before {
-  content: '';
-  background-color: var(--primary-color);
-  position: absolute;
-  bottom: -15px;
-  left: 8px;
-  height: 15px;
-  width: 100%;
-  transform: skewX(45deg);
+  width: 125px;
 }
