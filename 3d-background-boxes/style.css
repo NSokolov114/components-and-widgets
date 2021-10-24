@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Popp&display=swap');
 
 :root {
-  --primary-color: #fff;
-  --secondary-color: #0d47b3;
-  --tertiary-color: #083079;
+  --primary-color: rgb(27, 16, 128);
+  --secondary-color: #8aa5d6;
+  --tertiary-color: #0a79c4;
 }
 
 * {
@@ -15,9 +15,88 @@
 body {
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  font-family: 'Press Start 2P', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   overflow: hidden;
   text-align: center;
+
   width: 100vw;
+}
+
+.magic {
+  background-color: var(--tertiary-color);
+  cursor: pointer;
+  border: 0;
+  font-size: 30px;
+  border-radius: 5px;
+  padding: 25px 40px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  position: fixed;
+  top: 20px;
+  letter-spacing: 1px;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.magic:focus {
+  outline: none;
+}
+
+.magic:active {
+  box-shadow: none;
+  transform: translateY(3px);
+}
+
+.boxes {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.boxes.big {
+  width: 600px;
+  height: 600px;
+}
+
+.boxes.big .box {
+  transform: rotateZ(360deg);
+}
+
+.box {
+  background-image: url('https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  height: 125px;
+  width: 125px;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.box::after {
+  content: '';
+  background-color: var(--tertiary-color);
+  position: absolute;
+  top: 8px;
+  right: -15px;
+  height: 100%;
+  width: 15px;
+  transform: skewY(45deg);
+}
+
+.box::before {
+  content: '';
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: -15px;
+  left: 8px;
+  height: 15px;
+  width: 100%;
+  transform: skewX(45deg);
 }
