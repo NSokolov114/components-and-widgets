@@ -25,36 +25,112 @@ body {
 }
 
 .text {
+  font-size: 28px;
   text-transform: uppercase;
 }
 
 .nav-btn {
-  color: var(--tertiary-color);
-  border: none;
-  cursor: pointer;
   background-color: transparent;
+  border: none;
+  color: var(--tertiary-color);
+  cursor: pointer;
   font-size: 20px;
 }
 
 .open-btn {
+  left: 30px;
   position: fixed;
-  left: 10px;
-  top: 10px;
+  top: 30px;
 }
 
 .logo {
-  width: 150px;
+  width: 250px;
 }
 
 .nav {
+  height: 100vh;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
-  height: 100vh;
   transform: translateX(-100%);
   transition: all 0.4s ease-in-out;
 }
 
 .nav.visible {
   transform: translateX(0);
+}
+
+.nav-white {
+  background-color: var(--tertiary-color);
+  max-width: 480px;
+  min-width: 320px;
+  transition-delay: 0.6s;
+  width: 60%;
+}
+
+.nav-white.visible {
+  transition-delay: 0s;
+}
+
+.nav-red {
+  background-color: var(--secondary-color);
+  transition-delay: 0.3s;
+  width: 95%;
+}
+
+.nav-black {
+  background-color: var(--primary-color);
+  padding: 40px;
+  position: relative;
+  transition-delay: 0s;
+  width: 95%;
+}
+
+.nav-black.visible {
+  transition-delay: 0.6s;
+}
+
+.close-btn {
+  position: absolute;
+  right: 30px;
+  top: 40px;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.list a:link,
+.list a:visited {
+  color: inherit;
+}
+
+.list li {
+  border-radius: 5px;
+  display: block;
+  padding: 15px;
+  transition: all 0.25s linear;
+}
+
+.list li:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.list li a {
+  color: var(--tertiary-color);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.list ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.list ul li:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
