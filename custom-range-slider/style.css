@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 :root {
   --primary-color: #fff;
@@ -13,11 +13,114 @@
 }
 
 body {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  font-family: 'Poppins', sans-serif;
+  background-image: linear-gradient(
+    45deg,
+    var(--secondary-color) 0%,
+    var(--tertiary-color) 100%
+  );
+
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   overflow: hidden;
   text-align: center;
   width: 100vw;
+}
+
+h2 {
+  margin-bottom: 75px;
+}
+
+.range-container {
+  position: relative;
+}
+
+input[type='range'] {
+  width: 300px;
+  -webkit-appearance: none;
+
+  border-radius: 5px;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range'] + label {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  position: absolute;
+  top: -45px;
+  left: 110px;
+  width: 80px;
+  padding: 5px 0;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+/* CH, SF */
+input[type='range']::-webkit-slider-runnable-track {
+  background: var(--primary-color);
+
+  border-radius: 5px;
+  height: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  margin-top: -7px;
+  cursor: pointer;
+}
+
+/* FF */
+input[type='range']::-moz-range-track {
+  background: var(--primary-color);
+
+  border-radius: 5px;
+  height: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  margin-top: -7px;
+  cursor: pointer;
+}
+
+/* IE */
+input[type='range']::-ms-track {
+  background: var(--primary-color);
+
+  border-radius: 5px;
+  height: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+input[type='range']::-ms-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  margin-top: -7px;
+  cursor: pointer;
 }
