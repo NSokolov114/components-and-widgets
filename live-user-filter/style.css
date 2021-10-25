@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Popp&display=swap');
+
+:root {
+  --primary-color: rgb(201, 76, 18);
+  --secondary-color: rgb(121, 46, 11);
+  --tertiary-color: rgb(240, 200, 182);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  width: 100vw;
+}
