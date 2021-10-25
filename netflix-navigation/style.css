@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 :root {
-  --primary-color: #fcb7eb;
-  --secondary-color: #a5067d;
-  --tertiary-color: #570141;
-  --hover-color: #914c7f;
+  --primary-color: #000;
+  --secondary-color: #f00d0d;
+  --tertiary-color: #fff;
+  --hover-color: #be0101;
 }
 
 * {
@@ -15,11 +15,46 @@
 
 body {
   align-items: center;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
   display: flex;
   flex-direction: column;
   font-family: 'Muli', sans-serif;
   height: 100vh;
   justify-content: center;
+}
+
+.text {
+  text-transform: uppercase;
+}
+
+.nav-btn {
+  color: var(--tertiary-color);
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.open-btn {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: all 0.4s ease-in-out;
+}
+
+.nav.visible {
+  transform: translateX(0);
 }

@@ -3,18 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
       integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    /> -->
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Netflix Navigation</title>
   </head>
   <body>
+    <button class="nav-btn open-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+    <img
+      src="https://assets.brand.microsites.netflix.io/assets/493f5bba-81a4-11e9-bf79-066b49664af6_cm_1440w.png?v=30"
+      alt="Logo"
+      class="logo"
+    />
+
+    <p class="text">Mobile Navigation</p>
+
+    <div class="nav nav-black">
+      <div class="nav nav-red">
+        <div class="nav nav-white">
+          <button class="nav-btn close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+
+          <img
+            src="https://assets.brand.microsites.netflix.io/assets/493f5bba-81a4-11e9-bf79-066b49664af6_cm_1440w.png?v=30"
+            alt="Logo"
+            class="logo"
+          />
+
+          <ul class="list">
+            <li><a href="#">Teams</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Life at Netflix</a></li>
+            <li>
+              <ul>
+                <li><a href="#">Netflix culture memo</a></li>
+                <li><a href="#">Work life balance</a></li>
+                <li><a href="#">Inclusion & diversity</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
