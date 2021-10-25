@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Popp&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 :root {
   --primary-color: rgb(201, 76, 18);
@@ -14,13 +14,88 @@
 
 body {
   align-items: center;
-  background-color: var(--secondary-color);
+  background-color: var(--tertiary-color);
   color: var(--primary-color);
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: center;
-  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   width: 100vw;
+}
+
+.container {
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+  overflow-x: hidden;
+}
+
+.title {
+}
+
+.subtitle {
+  display: inline-block;
+  margin: 5px 0 20px;
+  opacity: 0.75;
+}
+
+.header {
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+  padding: 30px 20px;
+}
+
+.header input {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 50px;
+  color: var(--primary-color);
+  font-size: 14px;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.header input:focus {
+  outline: none;
+}
+
+.user-list {
+  background-color: white;
+  list-style-type: none;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.user-list li {
+  display: flex;
+  padding: 20px;
+}
+
+.user-list img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 50px;
+
+  width: 50px;
+}
+
+.user-list .user-info {
+  margin-left: 10px;
+}
+
+.user-list .user-info h4 {
+  margin-left: 0 0 10px;
+}
+
+.user-list .user-info p {
+  font-size: 12px;
+}
+
+.user-list li:not(:last-of-type) {
+  border-bottom: 1px solid var(--tertiary-color);
+}
+
+.user-list li.hide {
+  display: none;
 }
