@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #f00d0d;
+  --tertiary-color: #000;
+  --hover-color: #be0101;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+  justify-content: center;
+}
