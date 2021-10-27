@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Kaushan+Script&family=Oswald&display=swap');
+
 :root {
   --primary-color: rgb(255, 92, 92);
   --primary-variant: #ff2d2d;
@@ -28,6 +30,7 @@ body {
   /* background-color: var(--background); */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='%23646dc9' fill-opacity='0.17'%3E%3Cpath fill-rule='evenodd' d='M5 3.59L1.46.05.05 1.46 3.59 5 .05 8.54l1.41 1.41L5 6.41l3.54 3.54 1.41-1.41L6.41 5l3.54-3.54L8.54.05 5 3.59zM17 2h24v2H17V2zm0 4h24v2H17V6zM2 17h2v24H2V17zm4 0h2v24H6V17z'/%3E%3C/g%3E%3C/svg%3E");
   color: var(--on-background);
+  font-family: 'Comfortaa', sans-serif;
   margin: 0;
 }
 
@@ -40,11 +43,13 @@ section {
 }
 
 h1 {
+  font-family: 'Kaushan Script', sans-serif;
   font-size: 100px;
   margin-bottom: 0;
 }
 
 h2 {
+  color: var(--on-background-alt);
   font-size: 32px;
   font-weight: normal;
 }
@@ -52,6 +57,7 @@ h2 {
 /* Navigation */
 nav {
   background: rgb(255 255 255 / 50%);
+  font-family: 'Oswald', sans-serif;
   font-size: 24px;
   letter-spacing: 3px;
   padding: 25px;
