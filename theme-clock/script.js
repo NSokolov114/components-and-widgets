@@ -1,3 +1,5 @@
+'use strict';
+
 const hourEl = document.querySelector('.hour'),
   minuteEl = document.querySelector('.minute'),
   secondEl = document.querySelector('.second'),
@@ -14,6 +16,7 @@ const days = [
   'Friday',
   'Saturday',
 ];
+
 const months = [
   'Jan',
   'Feb',
