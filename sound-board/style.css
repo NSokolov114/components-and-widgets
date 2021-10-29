@@ -5,16 +5,16 @@
 }
 
 body {
+  align-items: center;
   background-color: rgb(109, 109, 109);
-  font-family: 'Poppins', sans-serif;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  font-family: 'Poppins', sans-serif;
   height: 100vh;
-  overflow: hidden;
+  justify-content: center;
   margin: 0;
+  overflow: hidden;
+  text-align: center;
 }
 
 .btn {
@@ -22,11 +22,12 @@ body {
   border-radius: 5px;
   border: none;
   color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.2rem;
   margin: 1rem;
   padding: 1.5rem 3rem;
-  font-size: 1.2rem;
-  font-family: inherit;
-  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .btn:hover {
@@ -35,4 +36,8 @@ body {
 
 .btn:focus {
   outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
 }
