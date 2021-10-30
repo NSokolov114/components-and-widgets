@@ -1,105 +1,101 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
-
 :root {
-    --line-border-fill: #3489db;
-    --line-border-empty: #e0e0e0;
+  --line-border-fill: #3489db;
+  --line-border-empty: #e0e0e0;
 }
 
-/* adding padding or whatever doesn't affect the width of the element */
-* { 
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-/* using flexbox from the start, aligning everything in column and center, 100vh -> 100% of the view, overflow hidden - hides the scrollbar! */
 body {
-    font-family: 'Muli', sans-serif;
-    background-color: #404041;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
+  align-items: center;
+  background-color: #404041;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Muli', sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
 }
 
 .container {
-    text-align: center;
+  text-align: center;
 }
 
 .progress-container {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    margin-bottom: 30px;
-    max-width: 100%;
-    width: 350px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  max-width: 100%;
+  position: relative;
+  width: 350px;
 }
 
 .progress-container::before {
-    content: "";
-    background-color: var(--line-border-empty);
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    height: 4px;
-    width: 100%;
-    z-index: -1;
+  background-color: var(--line-border-empty);
+  content: '';
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: -1;
 }
 
 .progress {
-    background-color: var(--line-border-fill);
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    height: 4px;
-    width: 0%;
-    z-index: -1;
-    transition: .4s ease;
+  background-color: var(--line-border-fill);
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.4s ease;
+  width: 0%;
+  z-index: -1;
 }
 
 .circle {
-    background-color: #fff;
-    color: #999;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid var(--line-border-empty);
-    transition: .4s ease;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 3px solid var(--line-border-empty);
+  color: #999;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  transition: 0.4s ease;
+  width: 30px;
 }
 
 .circle.active {
-    border-color: var(--line-border-fill);
+  border-color: var(--line-border-fill);
 }
 
 .btn {
-    background-color: var(--line-border-fill);
-    color: black;
-    border: 0;
-    border-radius: 6px;
-    cursor: pointer;
-    font-family: inherit;
-    padding: 8px 30px;
-    margin: 5px;
-    font-size: 16px;
+  background-color: var(--line-border-fill);
+  border-radius: 6px;
+  border: 0;
+  color: black;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  margin: 5px;
+  padding: 8px 30px;
 }
 
 .btn:active {
-    transform: scale(.98);
+  transform: scale(0.98);
 }
 
 .btn:focus {
-    outline: 0;
+  outline: 0;
 }
 
 .btn:disabled {
-    background-color: var(--line-border-empty);
-    cursor: not-allowed;
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
 }
