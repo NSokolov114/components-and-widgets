@@ -5,20 +5,20 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
   background-color: #333;
-  color: black;
-  overflow-x: hidden;
+  color: #000;
+  font-family: 'Lato', sans-serif;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .container {
   background-color: #fafafa;
+  min-height: 100vh;
+  padding: 50px;
   transform-origin: top left;
   transition: transform 0.5s linear;
   width: 100vw;
-  min-height: 100vh;
-  padding: 50px;
 }
 
 .container.show-nav {
@@ -26,18 +26,18 @@ body {
 }
 
 .circle-container {
+  left: -100px;
   position: fixed;
   top: -100px;
-  left: -100px;
 }
 
 .circle {
   background-color: #7b7bff;
-  height: 200px;
-  width: 200px;
   border-radius: 50%;
+  height: 200px;
   position: relative;
   transition: transform 0.5s linear;
+  width: 200px;
 }
 
 .container.show-nav .circle {
@@ -45,30 +45,30 @@ body {
 }
 
 .circle button {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 100px;
   background: transparent;
   border: 0;
-  font-size: 26px;
   color: #fff;
-  }
+  cursor: pointer;
+  font-size: 26px;
+  height: 100px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+}
 
-  .circle button:focus {
-    outline: none;
-  }
+.circle button:focus {
+  outline: none;
+}
 
-  .circle button#open {
-    left: 60%;
-  }
+.circle button#open {
+  left: 60%;
+}
 
-  .circle button#close {
-    top: 60%;
-    transform: rotate(90deg);
-    transform-origin: top left;
-  }
+.circle button#close {
+  top: 60%;
+  transform-origin: top left;
+  transform: rotate(90deg);
+}
 
 .container.show-nav + nav li {
   transform: translateX(0);
@@ -76,9 +76,9 @@ body {
 }
 
 nav {
-  position: fixed;
   bottom: 40px;
   left: 0;
+  position: fixed;
   z-index: 100;
 }
 
@@ -88,9 +88,9 @@ nav ul {
 }
 
 nav ul li {
-  text-transform: uppercase;
   color: #fff;
   margin: 40px 0;
+  text-transform: uppercase;
   transform: translateX(-100%);
   transition: transform 0.4s ease-in;
 }
@@ -101,25 +101,25 @@ nav ul li i {
 }
 
 nav ul li + li {
-  transform: translateX(-150%);
   margin-left: 15px;
+  transform: translateX(-150%);
 }
 
 nav ul li + li + li {
-  transform: translateX(-200%);
   margin-left: 30px;
+  transform: translateX(-200%);
 }
 
 img {
-  max-width: 75%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-width: 75%;
 }
 
 .content {
-  max-width: 1000px;
   margin: 50px auto;
+  max-width: 1000px;
 }
 
 .content small {
@@ -127,10 +127,11 @@ img {
   font-style: italic;
 }
 
-.content p, li {
+.content p,
+li {
   color: #333;
-  line-height: 1.5;
   font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 h3 {
