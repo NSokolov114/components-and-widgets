@@ -1,20 +1,20 @@
 'use strict';
 
-let secretNumber = generateSecretNumber();
-let score = 20;
-let highscore = 0;
+let secretNumber = generateSecretNumber(),
+  score = 20,
+  highscore = 0;
 
-//event handler function
+function generateSecretNumber() {
+  return Math.trunc(Math.random() * 20 + 1);
+}
+
 document.querySelector('.check').addEventListener('click', function () {
-  // take data from input field and convert it to number
   const guess = Number(document.querySelector('.guess').value);
-  // check if there's any number stored in guess
+
   if (!guess) {
     document.querySelector('.message').textContent = 'No number!';
   } else if (guess < 1 || guess > 20) {
     document.querySelector('.message').textContent = 'From 1 to 20, please...';
-
-    // when player wins
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = 'Correct Number!';
     document.querySelector('body').style.backgroundColor = '#60b347';
@@ -25,8 +25,6 @@ document.querySelector('.check').addEventListener('click', function () {
     }
     secretNumber = generateSecretNumber();
     document.querySelector('.number').textContent = secretNumber;
-
-    //guess is wrong
   } else {
     if (score > 1) {
       document.querySelector('.message').textContent =
@@ -39,8 +37,6 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 
-// AGAIN button
-
 document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.number').style.width = '15rem';
@@ -49,10 +45,5 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.message').textContent = 'Start guessing...';
   secretNumber = generateSecretNumber();
   document.querySelector('.number').textContent = '?';
-
   document.querySelector('.guess').value = '';
 });
-
-function generateSecretNumber() {
-  return Math.trunc(Math.random() * 20 + 1);
-}
