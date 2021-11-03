@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
 html {
   box-sizing: border-box;
@@ -8,9 +8,9 @@ body {
   align-items: center;
   background: #bacada;
   display: flex;
+  font-family: 'Muli', sans-serif;
   justify-content: center;
   letter-spacing: 2px;
-  font-family: Roboto, san-serif;
   margin: 0;
   min-height: 100vh;
   padding: 0;
@@ -18,7 +18,7 @@ body {
 
 .container {
   align-items: center;
-  background: rgb(216, 216, 216);
+  background: rgb(216, 244, 248);
   border-radius: 10px;
   box-shadow: 0 5px 25px 10px rgba(0, 0, 0, 0.4);
   display: flex;
@@ -41,17 +41,18 @@ label {
 }
 
 input {
-  border: 1px solid black;
   border-radius: 5px;
+  border: 1px solid black;
   box-sizing: border-box;
   height: 34px;
-  padding: 5px;
   outline: none;
+  padding: 5px;
   transition: all 0.3s;
   width: 100%;
 }
 
 input:valid {
+  background: rgb(216, 244, 248);
   border: 1px solid green;
 }
 
@@ -60,34 +61,41 @@ input:invalid {
 }
 
 button {
+  background: #000;
+  border-radius: 5px;
+  border: none;
   color: #fff;
   cursor: pointer;
-  background: #000;
-  border: none;
-  border-radius: 5px;
-  font-family: Roboto, san-serif;
+  font-family: 'Muli', sans-serif;
   font-size: 20px;
-  letter-spacing: 2px;
   height: 50px;
+  letter-spacing: 2px;
   margin-top: 5px;
+  transition: all 0.2s;
   width: 100%;
 }
 
 button:hover {
   background: rgb(25, 25, 25);
-  filter: brightness(200%);
+  color: rgb(216, 244, 248);
 }
 
 button:focus {
   outline: none;
 }
 
+button:active {
+  transform: scale(0.98);
+}
+
 .message-container {
-  border: 1px solid #000;
+  align-items: center;
   border-radius: 5px;
+  border: 1px solid #000;
   color: #000;
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  height: 50px;
   width: 90%;
 }

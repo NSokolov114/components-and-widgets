@@ -1,15 +1,18 @@
-const form = document.getElementById('form');
-const password1El = document.getElementById('password1');
-const password2El = document.getElementById('password2');
-const messageContainer = document.querySelector('.message-container');
-const message = document.getElementById('message');
+'use strict';
 
-let isValid = false; // form validation
-let passwordsMatch = false; // pwds matching
+const form = document.getElementById('form'),
+  password1El = document.getElementById('password1'),
+  password2El = document.getElementById('password2'),
+  messageContainer = document.querySelector('.message-container'),
+  message = document.getElementById('message');
+
+let isValid = false,
+  passwordsMatch = false;
 
 function validateForm() {
   // using constraint API
   isValid = form.checkValidity();
+
   // message error
   if (!isValid) {
     message.textContent = 'Please, fill out all fields.';
@@ -17,6 +20,7 @@ function validateForm() {
     messageContainer.style.borderColor = 'red';
     return;
   }
+
   // check matching pwds
   if (password1El.value === password2El.value) {
     passwordsMatch = true;
@@ -31,6 +35,7 @@ function validateForm() {
     password2El.style.borderColor = 'red';
     return;
   }
+
   // success msg
   if (isValid && passwordsMatch) {
     message.textContent = 'Successfully Registered!';
@@ -52,13 +57,14 @@ function storeFormData() {
 
 function processFormData(e) {
   e.preventDefault();
+
   // validate
   validateForm();
+
   // store data if valid
   if (isValid && passwordsMatch) {
     storeFormData();
   }
 }
 
-// event listener
 form.addEventListener('submit', processFormData);
