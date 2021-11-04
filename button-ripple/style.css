@@ -1,60 +1,70 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:wght@400;600&display=swap');
 
 :root {
-    --button-color: #144fc6;
-    --background-color: #6ab3f8;
+  --button-color: #144fc6;
+  --background-color: #6ab3f8;
+  --text-color: #fff;
 }
 
-* { 
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--background-color);
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0;
-    height: 100vh;
-    
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin-bottom: 0;
 }
 
 button {
-    background-color: var(--button-color);
-    color: whitesmoke;
-    cursor: pointer;
-    border: 1px darkblue solid;
-    font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 20px 30px;
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 10px 0;
-    font-weight: bold;
-    position: relative;
+  background-color: var(--button-color);
+  border-radius: 7px;
+  border: none;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 10px 0;
+  overflow: hidden;
+  padding: 30px 50px;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 0.1s;
 }
 
 button:focus {
-    outline: none;
+  outline: none;
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+button:active {
+  transform: translateY(2px);
 }
 
 button .circle {
-    position: absolute;
-    background-color: var(--background-color);
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    animation: scale 0.5s ease-out;
+  animation: scale 0.5s ease-out;
+  background-color: var(--background-color);
+  border-radius: 50%;
+  height: 100px;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100px;
 }
 
 @keyframes scale {
-    to {
-        transform: translate(-50%, -50%) scale(3);
-        opacity: 0;
-    }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3);
+  }
 }
