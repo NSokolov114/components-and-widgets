@@ -5,44 +5,28 @@
 }
 
 body {
-  font-family: 'Ubuntu', sans-serif;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  display: flex;
+  font-family: 'Ubuntu', sans-serif;
   height: 100vh;
-  overflow: hidden;
+  justify-content: center;
   margin: 0;
+  overflow: hidden;
 }
 
 .bg {
-  background: url('https://images.unsplash.com/photo-1616585349100-4e6d048fe441?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=939&q=80') no-repeat center center/cover;
+  background: url('https://images.unsplash.com/photo-1629907490830-2bcee3679981?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80')
+    no-repeat center center/cover;
+  filter: blur(50px);
+  height: calc(100vw + 60px);
+  left: -30px;
   position: absolute;
   top: -30px;
-  left: -30px;
   width: calc(100vw + 60px);
-  height: calc(100vw + 60px);
   z-index: -1;
-  filter: blur(50px);
 }
-
-/* .flex-container {
-  flex-direction: column;
-}
-
-hr {
-  width: 100px;  
-  height: 8px;  
-  background-color: pink;  
-  margin-bottom: 7px;  
-  margin-right: auto;  
-  margin-left: auto;  
-  margin-top: 9px;  
-  color: gray;
-  border-width: 4px;  
-  border-color: gray;  
-} */
 
 .loading-text {
-  font-size: 50px;
   color: #fff;
+  font-size: 50px;
 }
