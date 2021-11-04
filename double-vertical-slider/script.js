@@ -1,11 +1,11 @@
 'use strict';
 
-const sliderContainer = document.querySelector('.slider-container');
-const slideRight = document.querySelector('.right-slide');
-const slideLeft = document.querySelector('.left-slide');
-const upButton = document.querySelector('.up-button');
-const downButton = document.querySelector('.down-button');
-const slidesLength = slideRight.querySelectorAll('div').length;
+const sliderContainer = document.querySelector('.slider-container'),
+  slideRight = document.querySelector('.right-slide'),
+  slideLeft = document.querySelector('.left-slide'),
+  upButton = document.querySelector('.up-button'),
+  downButton = document.querySelector('.down-button'),
+  slidesLength = slideRight.querySelectorAll('div').length;
 
 let activeSlideIndex = 0;
 
@@ -16,6 +16,7 @@ downButton.addEventListener('click', () => changeSlide('down'));
 
 const changeSlide = direction => {
   const sliderHeight = sliderContainer.clientHeight;
+
   if (direction === 'up') {
     activeSlideIndex++;
     if (activeSlideIndex > slidesLength - 1) {
