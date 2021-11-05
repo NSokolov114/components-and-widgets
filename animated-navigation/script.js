@@ -1,5 +1,6 @@
-const toggle = document.getElementById('toggle')
-const nav = document.getElementById('nav')
+'use strict';
 
-toggle.addEventListener('click', () => 
-    nav.classList.toggle('active'))
+const toggle = document.getElementById('toggle'),
+  nav = document.getElementById('nav');
+
+toggle.addEventListener('click', () => nav.classList.toggle('active'));
