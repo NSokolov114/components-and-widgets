@@ -1,16 +1,17 @@
 'use strict';
 
-const button = document.getElementById('button');
-const toasts = document.getElementById('toasts');
+const button = document.getElementById('button'),
+  toasts = document.getElementById('toasts'),
+  messages = ['Message One', 'Message Two', 'Message Three', 'Message Four'],
+  types = ['info', 'success', 'error'];
 
-const messages = [
-  'Message One',
-  'Message Two',
-  'Message Three',
-  'Message Four',
-];
+function getRandomMessage() {
+  return messages[Math.floor(Math.random() * messages.length)];
+}
 
-const types = ['info', 'success', 'error'];
+function getRandomType() {
+  return types[Math.floor(Math.random() * types.length)];
+}
 
 button.addEventListener('click', () => createNotification());
 
@@ -23,12 +24,4 @@ function createNotification(message = null, type = null) {
   setTimeout(() => {
     notif.remove();
   }, 3000);
-}
-
-function getRandomMessage() {
-  return messages[Math.floor(Math.random() * messages.length)];
-}
-
-function getRandomType() {
-  return types[Math.floor(Math.random() * types.length)];
 }

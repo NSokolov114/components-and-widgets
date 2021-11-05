@@ -12,14 +12,14 @@ body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
   justify-content: center;
-  overflow: hidden;
   margin: 0;
+  overflow: hidden;
 }
 
 .btn {
   background-color: #777;
-  border: none;
   border-radius: 5px;
+  border: none;
   color: #fff;
   cursor: pointer;
   font-family: inherit;
@@ -29,8 +29,8 @@ body {
 }
 
 .btn:focus {
-  outline: none;
   color: rgba(87, 255, 255, 0.7);
+  outline: none;
 }
 
 .btn:active {
@@ -49,10 +49,9 @@ body {
 .toast {
   background-color: #fff;
   border-radius: 5px;
-
   letter-spacing: 1px;
-  padding: 10px 20px;
   margin: 5px;
+  padding: 10px 20px;
 }
 
 .toast.info {
