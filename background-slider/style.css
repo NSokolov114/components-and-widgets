@@ -5,49 +5,49 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
   background-position: center center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
   transition: 0.3s ease;
 }
 
 body::before {
+  background-color: rgba(0, 0, 0, 0.75);
   content: '';
+  height: 100vh;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100vh;
-  background-color: rgba(0,0,0,0.7);
   z-index: -1;
 }
 
 .slider-container {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,0,0.3);
-  height: 70vh;
-  width: 70vw;
-  position: relative;
-  overflow: hidden;
   border-radius: 25px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.3);
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+  width: 70vw;
 }
 
 .slide {
-  opacity: 0;
-  height: 100vh;
-  width: 100vw;
   background-position: center center;
   background-size: cover;
+  height: 100vh;
+  left: -15vw;
+  opacity: 0;
   position: absolute;
   top: -15vh;
-  left: -15vw;
   transition: 0.3s ease;
+  width: 100vw;
   z-index: 1;
 }
 
@@ -56,16 +56,18 @@ body::before {
 }
 
 .arrow {
-  position: fixed;
+  background-color: rgba(255, 255, 255, 0.15);
   background-color: transparent;
-  color: whitesmoke;
-  padding: 20px;
-  font-size: 30px;
-  border: 2px solid orange;
   border-radius: 5px;
+  border: 2px solid orange;
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 20px;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .arrow:focus {
@@ -73,9 +75,19 @@ body::before {
 }
 
 .left-arrow {
+  border-right: none;
   left: calc(15vw - 65px);
 }
 
+.left-arrow:active {
+  left: calc(15vw - 68px);
+}
+
 .right-arrow {
+  border-left: none;
   right: calc(15vw - 65px);
+}
+
+.right-arrow:active {
+  right: calc(15vw - 68px);
 }
