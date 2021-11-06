@@ -12,8 +12,8 @@ body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
   justify-content: center;
-  overflow: hidden;
   margin: 0;
+  overflow: hidden;
   text-align: center;
 }
 
@@ -53,7 +53,7 @@ small {
 
 @keyframes grow {
   to {
-    transform: translate(-50%, -50%) scale(10);
     opacity: 0;
+    transform: translate(-50%, -50%) scale(10);
   }
 }

@@ -1,15 +1,12 @@
 'use strict';
 
-const images = document.querySelectorAll('.image-container img');
-console.log(images);
-const carousel = document.querySelector('.image-container');
-const leftBtn = document.querySelector('#left');
-const rightBtn = document.querySelector('#right');
+const images = document.querySelectorAll('.image-container img'),
+  carousel = document.querySelector('.image-container'),
+  leftBtn = document.querySelector('#left'),
+  rightBtn = document.querySelector('#right');
 
-// rightBtn.style.backgroundColor = 'green';
-let idx = 0;
-
-let interval = setInterval(run, 4500);
+let idx = 0,
+  interval = setInterval(run, 4500);
 
 function run() {
   idx++;

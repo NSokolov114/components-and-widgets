@@ -8,7 +8,6 @@ body {
   align-items: center;
   background-color: rgba(57, 168, 168, 0.3);
   display: flex;
-  font-family: 'Poppins', sans-serif;
   height: 100vh;
   justify-content: center;
   margin: 0;
@@ -55,6 +54,8 @@ button {
   border: none;
   color: azure;
   cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
   letter-spacing: 2px;
   outline: none;
   padding: 15px 50px;

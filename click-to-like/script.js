@@ -6,7 +6,7 @@ const times = document.querySelector('#times');
 let clickTime = 0;
 let timesClicked = 0;
 
-// could use doubleclick (dbclick), but creating own custom doubleclick
+// creating custom doubleclick
 loveMe.addEventListener('click', e => {
   if (clickTime === 0) {
     clickTime = new Date().getTime();
