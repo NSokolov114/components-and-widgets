@@ -1,7 +1,9 @@
-const insert = document.getElementById('insert')
+'use strict';
 
-window.addEventListener('keydown', (event) => {
-    insert.innerHTML = `
+const insert = document.getElementById('insert');
+
+window.addEventListener('keydown', event => {
+  insert.innerHTML = `
     <div class="key">
         ${event.key === ' ' ? event.code : event.key}
         <small>event.key</small>
@@ -16,5 +18,5 @@ window.addEventListener('keydown', (event) => {
         ${event.code}
         <small>event.code</small>
       </div>
-    `
-})
+    `;
+});
