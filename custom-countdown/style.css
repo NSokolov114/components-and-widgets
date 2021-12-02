@@ -57,6 +57,10 @@ video {
   position: relative;
   top: 20px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
