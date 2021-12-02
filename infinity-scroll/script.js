@@ -10,7 +10,7 @@ function ready() {
     imagesLoaded = 0,
     totalImages = 0;
 
-  const count = 20,
+  const count = 8,
     p1 = 'W1i5zHnpDxpuvpsZw3tYfOXzrTB2ybH3UUK',
     p2 = '9YPOg' + 14,
     apiKey = `${p1}-${p2}`,
