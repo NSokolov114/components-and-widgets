@@ -1,5 +1,3 @@
-/* ROBOT.GIF from Giphy - https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY */
-
 html {
   box-sizing: border-box;
 }
@@ -13,35 +11,35 @@ body {
 .container {
   align-items: center;
   background: url(./robot.gif);
-  background-size: contain;
   background-position: left center;
   background-repeat: no-repeat;
+  background-size: contain;
+  /* ROBOT.GIF from Giphy - https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY */
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   min-height: 100vh;
   width: 100vw;
 }
 
 button {
-  padding: 15px 25px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none;
-  font-size: 20px;
-  transition: all 0.3s;
-  box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.3);
   background-color: seashell;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 20px;
+  outline: none;
+  padding: 15px 25px;
+  transition: all 0.3s;
 }
 
 .btn-repeat {
   margin-left: 30px;
 }
 
-button:hover,
-button:focus {
-  filter: brightness(1.2);
+button:hover {
+  background-color: #eee;
 }
 
 button:active {
@@ -49,10 +47,10 @@ button:active {
 }
 
 button:disabled {
-  cursor: default;
   background-color: #999;
-  color: azure;
   box-shadow: none;
+  color: seashell;
+  cursor: default;
 }
 
 @media screen and (max-width: 800px) {

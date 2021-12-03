@@ -2,14 +2,20 @@
 document.addEventListener('DOMContentLoaded', ready);
 
 function ready() {
-  const btnNew = document.querySelector('.btn-new');
-  const btnRepeat = document.querySelector('.btn-repeat');
+  const btnNew = document.querySelector('.btn-new'),
+    btnRepeat = document.querySelector('.btn-repeat');
   let joke = '';
 
-  function tellJoke() {
+  function tellJoke(e) {
     const message = new SpeechSynthesisUtterance(`${joke}`);
 
+    btnRepeat.disabled = true;
+    btnNew.disabled = true;
     window.speechSynthesis.speak(message);
+    message.addEventListener('end', function (e) {
+      btnRepeat.disabled = false;
+      btnNew.disabled = false;
+    });
   }
 
   async function getJoke() {
@@ -21,7 +27,6 @@ function ready() {
 
       joke = data.joke ? data.joke : data.setup + '...' + data.delivery;
       tellJoke(joke);
-      btnRepeat.disabled = false;
     } catch (err) {
       console.log(`Oh no, an error: ${err}`);
     }
