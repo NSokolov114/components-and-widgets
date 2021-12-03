@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap');
+
 html {
   box-sizing: border-box;
 }
@@ -6,4 +8,35 @@ body {
   margin: 0;
   min-height: 100vh;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fuzzy Bubbles', sans-serif;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.button {
+  text-transform: uppercase;
+  font-family: inherit;
+  padding: 15px 25px;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  border: none;
+  background-color: lightcoral;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(1.2);
+}
+
+button:focus {
+  outline: none;
+  filter: brightness(1.2);
+}
+
+button:active {
+  transform: scale(0.96);
 }
