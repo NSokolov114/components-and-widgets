@@ -18,12 +18,12 @@ body {
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   min-height: 100vh;
   width: 100vw;
 }
 
-.button {
+button {
   padding: 15px 25px;
   border: none;
   border-radius: 5px;
@@ -35,23 +35,35 @@ body {
   background-color: seashell;
 }
 
-.button:hover,
-.button:focus {
+.btn-repeat {
+  margin-left: 30px;
+}
+
+button:hover,
+button:focus {
   filter: brightness(1.2);
 }
 
-.button:active {
+button:active {
   transform: scale(0.96);
 }
 
 button:disabled {
   cursor: default;
-  filter: brightness(0.5);
+  background-color: #999;
+  color: azure;
+  box-shadow: none;
 }
 
 @media screen and (max-width: 800px) {
   .container {
     background-position: center center;
     background-size: cover;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .btn-repeat {
+    margin-left: 0;
   }
 }
