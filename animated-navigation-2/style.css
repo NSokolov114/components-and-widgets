@@ -14,28 +14,26 @@ html {
 }
 
 body {
-  margin: 0;
   background: #000;
-  /* overflow: hidden; */
-  scroll-behavior: smooth;
   font-family: 'Fuzzy Bubbles', cursive;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
 .overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 100vh;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.75);
-  z-index: 2;
   transform: translateX(-100vw);
   transition: all 0.5s ease-in-out;
+  width: 100vw;
+  z-index: 2;
 }
 
 .nav-item {
   transform: translateX(-100vw);
-  /* transition: all 0.5s ease-in-out; */
 }
 
 #nav-1 {
@@ -58,7 +56,7 @@ body {
   transition: all 1s ease-in-out;
 }
 
-.overlay-slide {
+.slide {
   transform: translateX(0);
 }
 
@@ -104,15 +102,15 @@ nav ul li:nth-of-type(5) {
 
 nav ul li a:link,
 nav ul li a:visited {
-  color: #fff;
-  position: relative;
-  top: 45%;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-decoration: none;
+  color: var(--primaryColor);
   display: block;
-  text-align: center;
   font-size: 24px;
+  letter-spacing: 2px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  top: 45%;
   transition: all 0.3s;
 }
 
@@ -122,13 +120,13 @@ nav ul li a:hover {
 
 nav ul li a:before,
 nav ul li a:after {
+  background-color: var(--primaryColor);
   content: '';
-  width: 25vw;
   height: 3px;
-  background-color: #fff;
+  opacity: 0;
   position: absolute;
   top: 47.5%;
-  opacity: 0;
+  width: 25vw;
 }
 
 nav ul li a:before {
@@ -145,22 +143,22 @@ nav ul li a:hover::after {
 }
 
 .menu-bars {
-  position: fixed;
-  top: 1rem;
-  right: 2rem;
-  z-index: 3;
-  display: inline;
   cursor: pointer;
+  display: inline;
+  position: fixed;
+  right: 2rem;
+  top: 1rem;
+  z-index: 3;
 }
 
 .bar1,
 .bar2,
 .bar3 {
-  width: 35px;
+  background-color: var(--primaryColor);
   height: 2px;
-  background-color: #fff;
   margin: 8px 0;
   transition: 0.4s;
+  width: 35px;
 }
 
 .change .bar1 {
@@ -176,15 +174,15 @@ nav ul li a:hover::after {
 }
 
 section {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   color: var(--primaryColor);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  letter-spacing: 2px;
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
 }
 
 h2 {
@@ -195,23 +193,23 @@ h2 {
 
 h1 a:link,
 h1 a:visited {
-  color: #fff;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-decoration: none;
+  color: var(--primaryColor);
   display: block;
-  text-align: center;
   font-size: 24px;
+  left: 20px;
+  letter-spacing: 2px;
+  position: fixed;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  top: 20px;
   transition: all 0.3s;
 }
 
 section#home {
   background-image: url('https://images.unsplash.com/photo-1634022561215-a3d49c940327?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80');
-  background-size: cover;
   background-position: center center;
+  background-size: cover;
   filter: grayscale(1);
 }
 
@@ -233,7 +231,7 @@ section#contact {
 
 @media (max-width: 600px) {
   .menu-bars {
-    top: 0.5rem;
     right: 1rem;
+    top: 0.5rem;
   }
 }
