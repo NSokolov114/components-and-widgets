@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap');
+
 :root {
   --primaryColor: #fff;
   --navColor1: #012330;
@@ -14,13 +16,139 @@ html {
 body {
   margin: 0;
   background: #000;
+  /* overflow: hidden; */
+  scroll-behavior: smooth;
+  font-family: 'Fuzzy Bubbles', cursive;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 2;
+  transform: translateX(-100vw);
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-item {
+  transform: translateX(-100vw);
+  /* transition: all 0.5s ease-in-out; */
+}
+
+#nav-1 {
+  transition: all 0.2s ease-in-out;
+}
+
+#nav-2 {
+  transition: all 0.4s ease-in-out;
+}
+
+#nav-3 {
+  transition: all 0.6s ease-in-out;
+}
+
+#nav-4 {
+  transition: all 0.8s ease-in-out;
+}
+
+#nav-5 {
+  transition: all 1s ease-in-out;
+}
+
+.overlay-slide {
+  transform: translateX(0);
+}
+
+nav,
+nav ul {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  list-style: none;
+}
+
+nav ul li {
+  height: 20%;
+  overflow: hidden;
+}
+
+nav ul li:nth-of-type(1) {
+  background-color: var(--navColor1);
+}
+
+nav ul li:nth-of-type(2) {
+  background-color: var(--navColor2);
+}
+
+nav ul li:nth-of-type(3) {
+  background-color: var(--navColor3);
+}
+
+nav ul li:nth-of-type(4) {
+  background-color: var(--navColor4);
+}
+
+nav ul li:nth-of-type(5) {
+  background-color: var(--navColor5);
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  color: #fff;
+  position: relative;
+  top: 45%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover {
+  transform: scale(1.2);
+}
+
+nav ul li a:before,
+nav ul li a:after {
+  content: '';
+  width: 25vw;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 47.5%;
+  opacity: 0;
+}
+
+nav ul li a:before {
+  left: 0;
+}
+
+nav ul li a:after {
+  right: 0;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+  opacity: 1;
 }
 
 .menu-bars {
   position: fixed;
   top: 1rem;
   right: 2rem;
-  z-index: 10;
+  z-index: 3;
   display: inline;
   cursor: pointer;
 }
@@ -59,22 +187,32 @@ section {
   color: var(--primaryColor);
 }
 
-section#home {
-  background-image: url('https://images.unsplash.com/photo-1581453904507-626ddb717f14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80');
-  background-size: cover;
-  background-position: center center;
+h2 {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 10px 20px;
 }
 
-section#home a {
-  position: absolute;
-  z-index: 2;
-  top: 1.5rem;
-  left: 1.5rem;
+h1 a:link,
+h1 a:visited {
+  color: #fff;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   text-decoration: none;
-  font-size: 0.8rem;
-  padding-bottom: 5px;
-  color: var(--primaryColor);
-  border-bottom: 1px solid var(--primaryColor);
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  transition: all 0.3s;
+}
+
+section#home {
+  background-image: url('https://images.unsplash.com/photo-1634022561215-a3d49c940327?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80');
+  background-size: cover;
+  background-position: center center;
+  filter: grayscale(1);
 }
 
 section#about {
@@ -94,11 +232,6 @@ section#contact {
 }
 
 @media (max-width: 600px) {
-  section#home a {
-    top: 1rem;
-    left: 1rem;
-  }
-
   .menu-bars {
     top: 0.5rem;
     right: 1rem;
