@@ -3,13 +3,13 @@
 window.addEventListener('DOMContentLoaded', ready);
 
 function ready() {
-  const modal = document.querySelector('.modal-container');
-  const modalShow = document.querySelector('.show-modal');
-  const modalClose = document.querySelector('.close-modal');
-  const bookmarkForm = document.querySelector('.bookmark-form');
-  const websiteNameEl = document.querySelector('#website-name');
-  const bookmarksContainer = document.querySelector('.container');
-  const websiteURLEl = document.querySelector('#website-url');
+  const modal = document.querySelector('.modal-container'),
+    modalShow = document.querySelector('.show-modal'),
+    modalClose = document.querySelector('.close-modal'),
+    bookmarkForm = document.querySelector('.bookmark-form'),
+    websiteNameEl = document.querySelector('#website-name'),
+    bookmarksContainer = document.querySelector('.container'),
+    websiteURLEl = document.querySelector('#website-url');
 
   let bookmarks = [];
 
@@ -44,7 +44,6 @@ function ready() {
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     bookmarkForm.reset();
     hideModal();
-
     buildBookmark(bookmark);
   }
 
@@ -65,6 +64,7 @@ function ready() {
 
   function fetchBookmarks() {
     const fetched = JSON.parse(localStorage.getItem('bookmarks'));
+
     if (fetched) {
       bookmarks = fetched;
     } else {
@@ -78,8 +78,6 @@ function ready() {
 
   function buildBookmark(bookmark) {
     const { name, url } = bookmark;
-    // console.log(name, url);
-
     const html = `
       <div class="item">
         <div class="name">
@@ -92,14 +90,21 @@ function ready() {
         ></i>
       </div>
     `;
+
     bookmarksContainer.insertAdjacentHTML('beforeend', html);
   }
 
-  function deleteBookmark(bookmark) {
-    const closest = element.closest('.item');
+  function deleteBookmark(t) {
+    const closest = t.closest('.item');
+    const closestA = closest.querySelector('a');
+    const idx = bookmarks.findIndex(
+      b => b.name.toLowerCase() === closestA.innerText.toLowerCase()
+    );
+
     closest.remove();
-    const idx = bookmarks.findIndex(name => name === bookmark.name);
-    console.log(idx);
+    bookmarks.splice(idx, 1);
+
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
   }
 
   modalShow.addEventListener('click', showModal);
@@ -109,7 +114,18 @@ function ready() {
       hideModal();
     }
   });
+
   fetchBookmarks();
+
   bookmarkForm.addEventListener('submit', storeBookmark);
-  console.log(bookmarks);
+
+  bookmarksContainer.addEventListener('click', e => {
+    const target = e.target;
+
+    if (target.tagName !== 'I') {
+      return;
+    } else {
+      deleteBookmark(target);
+    }
+  });
 }

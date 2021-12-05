@@ -5,15 +5,15 @@ html {
 }
 
 body {
+  align-items: center;
   background-color: #333;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23ff6300' fill-opacity='0.15' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  box-sizing: inherit;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 0;
   min-height: 100vh;
   padding: 0;
-  box-sizing: inherit;
 }
 
 h1,
@@ -21,15 +21,14 @@ h1,
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   color: #fff;
-
   display: inline-block;
   font-family: 'Merriweather', serif;
   font-size: 24px;
+  margin: 20px;
   padding: 15px 25px;
   text-transform: uppercase;
   transition: all 0.3s;
   user-select: none;
-  margin: 20px;
 }
 
 h1 {
@@ -42,23 +41,22 @@ h1:hover,
 }
 
 .item {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
 }
 
 .name {
-  display: flex;
-
   align-items: center;
+  display: flex;
 }
 
 .name a:link,
 .name a:visited {
-  text-decoration: none;
-  font-size: 16px;
   color: inherit;
   cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
 }
 
 .name a:hover,
@@ -72,102 +70,100 @@ h1:hover,
 
 .container {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .fas {
-  margin-left: 20px;
-  font-size: 24px;
   cursor: pointer;
+  font-size: 24px;
+  margin-left: 20px;
 }
 
 .modal-container {
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
   height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
   width: 100vw;
-  /* overflow: hidden; */
 }
 
 .show-modal {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
 }
 
 .bookmark-form {
-  width: 93%;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 93%;
 }
 
 .modal {
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  overflow: hidden;
-  max-width: 500px;
-  width: 95%;
-  border-radius: 10px;
-  position: relative;
   animation: openModal 2s;
+  background-color: #fff;
+  border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  overflow: hidden;
+  position: relative;
+  width: 95%;
 }
 
 .close-modal {
   position: absolute;
-  top: 10px;
   right: 10px;
+  top: 10px;
 }
 
 .modal-header {
+  background-color: rgba(248, 183, 176, 0.9);
+  font-size: 30px;
+  padding: 10px;
   text-align: center;
   text-transform: uppercase;
-  background-color: rgba(248, 183, 176, 0.9);
-  padding: 10px;
-  font-size: 30px;
 }
 
 .modal-content {
-  padding: 20px;
   background-color: #333;
   color: #fff;
+  padding: 20px;
   width: 100%;
 }
 
 .form-group {
-  height: 55px;
-  width: 90%;
-
-  display: flex;
   align-items: center;
-  justify-content: center;
+  display: flex;
   flex-direction: column;
+  height: 55px;
+  justify-content: center;
   margin-bottom: 15px;
+  width: 90%;
 }
 
 input {
-  display: block;
-  width: 90%;
-  padding: 10px;
-  border: none;
   border-radius: 5px;
+  border: none;
+  display: block;
   outline: none;
+  padding: 10px;
+  width: 90%;
 }
 
 button {
-  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  text-transform: uppercase;
-  font-size: 20px;
   font-family: inherit;
+  font-size: 20px;
   outline: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
   transition: all 0.2s ease;
   user-select: none;
 }
