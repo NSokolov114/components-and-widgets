@@ -69,7 +69,7 @@ h1:hover,
 
 .fas {
   margin-left: 20px;
-  font-size: 20px;
+  font-size: 24px;
   cursor: pointer;
 }
 
@@ -81,6 +81,7 @@ h1:hover,
   top: 0;
   height: 100vh;
   width: 100vw;
+  /* overflow: hidden; */
 }
 
 .show-modal {
@@ -106,7 +107,7 @@ h1:hover,
   width: 95%;
   border-radius: 10px;
   position: relative;
-  animation: openModal 3s;
+  animation: openModal 2s;
 }
 
 .close-modal {
@@ -120,6 +121,7 @@ h1:hover,
   text-transform: uppercase;
   background-color: rgba(248, 183, 176, 0.9);
   padding: 10px;
+  font-size: 30px;
 }
 
 .modal-content {
