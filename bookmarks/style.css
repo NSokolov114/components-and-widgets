@@ -21,7 +21,7 @@ h1,
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   color: #fff;
-  cursor: pointer;
+
   display: inline-block;
   font-family: 'Merriweather', serif;
   font-size: 24px;
@@ -30,6 +30,10 @@ h1,
   transition: all 0.3s;
   user-select: none;
   margin: 20px;
+}
+
+h1 {
+  cursor: pointer;
 }
 
 h1:hover,
@@ -54,11 +58,16 @@ h1:hover,
   text-decoration: none;
   font-size: 16px;
   color: inherit;
+  cursor: pointer;
 }
 
 .name a:hover,
 .name a:active {
   text-decoration: underline;
+}
+
+.name img {
+  margin-right: 10px;
 }
 
 .container {

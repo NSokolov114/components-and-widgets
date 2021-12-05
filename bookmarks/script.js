@@ -8,9 +8,10 @@ function ready() {
   const modalClose = document.querySelector('.close-modal');
   const bookmarkForm = document.querySelector('.bookmark-form');
   const websiteNameEl = document.querySelector('#website-name');
-  const bookmarksContainer = document.querySelector('.bookmarks-container');
+  const bookmarksContainer = document.querySelector('.container');
   const websiteURLEl = document.querySelector('#website-url');
-  const btn = document.querySelector('button');
+
+  let bookmarks = [];
 
   function showModal() {
     modal.classList.add('show-modal');
@@ -26,10 +27,25 @@ function ready() {
 
     const nameValue = e.srcElement[0].value;
     let urlValue = e.srcElement[1].value;
+
     if (!urlValue.includes('http://') && !urlValue.includes('https://')) {
       urlValue = 'https://' + urlValue;
     }
-    validate(nameValue, urlValue);
+    if (!validate(nameValue, urlValue)) {
+      return false;
+    }
+
+    const bookmark = {
+      name: nameValue,
+      url: urlValue,
+    };
+
+    bookmarks.push(bookmark);
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    bookmarkForm.reset();
+    hideModal();
+
+    buildBookmark(bookmark);
   }
 
   function validate(name, url) {
@@ -40,12 +56,50 @@ function ready() {
       alert('Please, enter a valid web address');
       return false;
     }
-
-    if (!name) {
-      alert('Please, enter the bookmark name');
+    if (!name || !url) {
+      alert('Please, fill up the fields');
       return false;
     }
     return true;
+  }
+
+  function fetchBookmarks() {
+    const fetched = JSON.parse(localStorage.getItem('bookmarks'));
+    if (fetched) {
+      bookmarks = fetched;
+    } else {
+      bookmarks.push({
+        name: 'Google',
+        url: 'https://google.com',
+      });
+    }
+    bookmarks.forEach(bookmark => buildBookmark(bookmark));
+  }
+
+  function buildBookmark(bookmark) {
+    const { name, url } = bookmark;
+    // console.log(name, url);
+
+    const html = `
+      <div class="item">
+        <div class="name">
+          <img src="http://www.google.com/s2/favicons?domain=${url}" alt="favicon" />
+          <a href="${url}" target="_blank">${name}</a>
+        </div>
+        <i
+          class="fas fa-times-circle delete-bookmark"
+          title="Delete bookmark"
+        ></i>
+      </div>
+    `;
+    bookmarksContainer.insertAdjacentHTML('beforeend', html);
+  }
+
+  function deleteBookmark(bookmark) {
+    const closest = element.closest('.item');
+    closest.remove();
+    const idx = bookmarks.findIndex(name => name === bookmark.name);
+    console.log(idx);
   }
 
   modalShow.addEventListener('click', showModal);
@@ -55,6 +109,7 @@ function ready() {
       hideModal();
     }
   });
-
+  fetchBookmarks();
   bookmarkForm.addEventListener('submit', storeBookmark);
+  console.log(bookmarks);
 }
