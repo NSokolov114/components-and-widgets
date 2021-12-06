@@ -20,6 +20,17 @@ body {
   margin-bottom: 25px;
 }
 
+.loader {
+  background-color: whitesmoke;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 2;
+  align-items: center;
+}
+
 .navigation-container {
   position: fixed;
   top: 0;
@@ -36,10 +47,32 @@ body {
   right: 0;
   width: 100%;
   height: 60px;
+  z-index: -1;
+}
+
+.clickable,
+h3 {
+  color: dodgerblue;
+
+  user-select: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  filter: brightness(0.8);
 }
 
 .images-container {
   margin-top: 50px;
+  width: 800px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
 }
 
 .card {
@@ -48,6 +81,8 @@ body {
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+  max-width: 1080px;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -65,7 +100,7 @@ body {
 
 .save-confirmed {
   background: white;
-  padding: 8px 16px;
+  padding: 4px 20px;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -74,13 +109,34 @@ body {
   right: 50px;
 }
 
+h1 {
+  font-size: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
 @media screen and (max-width: 800px) {
   body {
     line-height: 1.4rem;
     font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  .images-container {
+    width: 100%;
   }
 
   .card-title {
     font-size: 20px;
+  }
+
+  .save-confirmed {
+    right: 25px;
+  }
+
+  h1 {
+    font-size: 16px;
   }
 }
