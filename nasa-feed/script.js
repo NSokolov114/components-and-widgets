@@ -8,6 +8,8 @@ function ready() {
   const imagesContainer = document.querySelector('.images-container');
   const saveConfirmed = document.querySelector('.save-confirmed');
   const loader = document.querySelector('.loader');
+  const toFavoritesEl = document.querySelector('.to-favorites');
+  const loadMoreEl = document.querySelector('.load-more');
 
   const count = 8;
   const apiKey = 'DEMO_KEY';
@@ -112,15 +114,24 @@ function ready() {
   }
 
   async function getNasaPictures() {
+    loader.classList.remove('hidden');
     try {
       const response = await fetch(apiUrl);
       resultsArray = await response.json();
+      updateDOM('results');
+      window.scrollTo({ top: 0, behavior: 'instant' });
 
-      updateDOM('favorites');
+      loader.classList.add('hidden');
     } catch (error) {
       console.log(error);
     }
   }
 
   getNasaPictures();
+
+  toFavoritesEl.addEventListener('click', () => {
+    updateDOM('favorites');
+  });
+
+  loadMoreEl.addEventListener('click', getNasaPictures);
 }
