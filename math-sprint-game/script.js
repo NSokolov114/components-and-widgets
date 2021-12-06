@@ -3,88 +3,163 @@
 window.addEventListener('DOMContentLoaded', ready);
 
 function ready() {
-  // Pages
-  const gamePage = document.getElementById('game-page');
-  const scorePage = document.getElementById('score-page');
-  const splashPage = document.getElementById('splash-page');
-  const countdownPage = document.getElementById('countdown-page');
-  // Splash Page
-  const startForm = document.getElementById('start-form');
-  const radioContainers = document.querySelectorAll('.radio-container');
-  const radioInputs = document.querySelectorAll('input');
-  const bestScores = document.querySelectorAll('.best-score-value');
-  // Countdown Page
-  const countdown = document.querySelector('.countdown');
-  // Game Page
-  const itemContainer = document.querySelector('.item-container');
-  // Score Page
-  const finalTimeEl = document.querySelector('.final-time');
-  const baseTimeEl = document.querySelector('.base-time');
-  const penaltyTimeEl = document.querySelector('.penalty-time');
-  const playAgainBtn = document.querySelector('.play-again');
+  const gamePage = document.getElementById('game-page'),
+    scorePage = document.getElementById('score-page'),
+    splashPage = document.getElementById('splash-page'),
+    countdownPage = document.getElementById('countdown-page'),
+    startForm = document.getElementById('start-form'),
+    radioContainers = document.querySelectorAll('.radio-container'),
+    radioInputs = document.querySelectorAll('input'),
+    bestScores = document.querySelectorAll('.best-score-value'),
+    countdown = document.querySelector('.countdown'),
+    itemContainer = document.querySelector('.item-container'),
+    finalTimeEl = document.querySelector('.final-time'),
+    baseTimeEl = document.querySelector('.base-time'),
+    penaltyTimeEl = document.querySelector('.penalty-time'),
+    playAgainBtn = document.querySelector('.play-again');
 
-  // Equations
-
+  const wrongFormat = [];
+  let playerGuessArray = [];
   let equationsArray = [];
-
-  // Game Page
   let firstNumber = 0;
   let secondNumber = 0;
   let equationObject = {};
-  const wrongFormat = [];
+  let questionAmount = 10;
+  let valueY = 0;
 
-  // Time
-
-  // Scroll
-
-  // Create Correct/Incorrect Random Equations
-  function createEquations() {
-    // Randomly choose how many correct equations there should be
-    // const correctEquations =
-    // Set amount of wrong equations
-    // const wrongEquations =
-    // Loop through, multiply random numbers up to 9, push to array
-    // for (let i = 0; i < correctEquations; i++) {
-    //   firstNumber =
-    //   secondNumber =
-    //   const equationValue = firstNumber * secondNumber;
-    //   const equation = `${firstNumber} x ${secondNumber} = ${equationValue}`;
-    //   equationObject = { value: equation, evaluated: 'true' };
-    //   equationsArray.push(equationObject);
-    // }
-    // Loop through, mess with the equation results, push to array
-    // for (let i = 0; i < wrongEquations; i++) {
-    //   firstNumber =
-    //   secondNumber =
-    //   const equationValue = firstNumber * secondNumber;
-    //   wrongFormat[0] = `${firstNumber} x ${secondNumber + 1} = ${equationValue}`;
-    //   wrongFormat[1] = `${firstNumber} x ${secondNumber} = ${equationValue - 1}`;
-    //   wrongFormat[2] = `${firstNumber + 1} x ${secondNumber} = ${equationValue}`;
-    //   const formatChoice =
-    //   const equation = wrongFormat[formatChoice];
-    //   equationObject = { value: equation, evaluated: 'false' };
-    //   equationsArray.push(equationObject);
-    // }
+  function showGamePage() {
+    gamePage.hidden = false;
+    countdownPage.hidden = true;
   }
 
-  // Dynamically adding correct/incorrect equations
-  // function populateGamePage() {
-  //   // Reset DOM, Set Blank Space Above
-  //   itemContainer.textContent = '';
-  //   // Spacer
-  //   const topSpacer = document.createElement('div');
-  //   topSpacer.classList.add('height-240');
-  //   // Selected Item
-  //   const selectedItem = document.createElement('div');
-  //   selectedItem.classList.add('selected-item');
-  //   // Append
-  //   itemContainer.append(topSpacer, selectedItem);
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
 
-  //   // Create Equations, Build Elements in DOM
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
 
-  //   // Set Blank Space Below
-  //   const bottomSpacer = document.createElement('div');
-  //   bottomSpacer.classList.add('height-500');
-  //   itemContainer.appendChild(bottomSpacer);
-  // }
+  function createEquations() {
+    const correctEquations = getRandomInt(questionAmount);
+
+    const wrongEquations = questionAmount - correctEquations;
+
+    for (let i = 0; i < correctEquations; i++) {
+      firstNumber = getRandomInt(9);
+      secondNumber = getRandomInt(9);
+      const equationValue = firstNumber * secondNumber;
+      const equation = `${firstNumber} x ${secondNumber} = ${equationValue}`;
+      equationObject = { value: equation, evaluated: 'true' };
+      equationsArray.push(equationObject);
+    }
+
+    for (let i = 0; i < wrongEquations; i++) {
+      firstNumber = getRandomInt(9);
+      secondNumber = getRandomInt(9);
+      const equationValue = firstNumber * secondNumber;
+      wrongFormat[0] = `${firstNumber} x ${
+        secondNumber + 1
+      } = ${equationValue}`;
+      wrongFormat[1] = `${firstNumber} x ${secondNumber} = ${
+        equationValue - 1
+      }`;
+      wrongFormat[2] = `${
+        firstNumber + 1
+      } x ${secondNumber} = ${equationValue}`;
+      const formatChoice = getRandomInt(3);
+      const equation = wrongFormat[formatChoice];
+      equationObject = { value: equation, evaluated: 'false' };
+      equationsArray.push(equationObject);
+    }
+
+    shuffle(equationsArray);
+  }
+
+  function equationsToDOM() {
+    equationsArray.forEach(eq => {
+      const item = document.createElement('div');
+      item.classList.add('item');
+
+      const equationText = document.createElement('h1');
+      equationText.textContent = eq.value;
+
+      item.appendChild(equationText);
+      itemContainer.appendChild(item);
+    });
+  }
+
+  function populateGamePage() {
+    itemContainer.textContent = '';
+
+    const topSpacer = document.createElement('div');
+    topSpacer.classList.add('height-240');
+
+    const selectedItem = document.createElement('div');
+    selectedItem.classList.add('selected-item');
+
+    itemContainer.append(topSpacer, selectedItem);
+
+    createEquations();
+    equationsToDOM();
+
+    const bottomSpacer = document.createElement('div');
+    bottomSpacer.classList.add('height-500');
+    itemContainer.appendChild(bottomSpacer);
+  }
+
+  function countdownStart() {
+    countdown.textContent = '3';
+    setTimeout(() => {
+      countdown.textContent = '2';
+    }, 1000);
+    setTimeout(() => {
+      countdown.textContent = '1';
+    }, 2000);
+    setTimeout(() => {
+      countdown.textContent = 'GO!';
+    }, 3000);
+  }
+
+  function getRadioValue() {
+    let radioValue;
+    radioInputs.forEach(radioInput => {
+      if (radioInput.checked) {
+        radioValue = radioInput.value;
+      }
+    });
+    return radioValue;
+  }
+
+  function showCountdown() {
+    countdownPage.hidden = false;
+    splashPage.hidden = true;
+    countdownStart();
+    populateGamePage();
+    setTimeout(() => {
+      showGamePage();
+    }, 4000);
+  }
+
+  function selectQuestionAmount(e) {
+    e.preventDefault();
+    questionAmount = getRadioValue();
+    if (questionAmount) {
+      showCountdown();
+    }
+  }
+
+  startForm.addEventListener('click', () => {
+    radioContainers.forEach(radioEl => {
+      radioEl.classList.remove('selected-label');
+      if (radioEl.children[1].checked) {
+        radioEl.classList.add('selected-label');
+      }
+    });
+  });
+
+  startForm.addEventListener('submit', selectQuestionAmount);
 }
