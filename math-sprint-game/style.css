@@ -38,7 +38,7 @@ body {
   background: var(--primary-color);
   color: white;
   display: flex;
-  font-family: Oxanium, sans-serif;
+  font-family: 'Oxanium', sans-serif;
   font-size: 24px;
   height: 100px;
   justify-content: center;
