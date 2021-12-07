@@ -5,59 +5,59 @@
 }
 
 :root {
+  --danger: rgb(214, 23, 23);
   --primary-color: dodgerblue;
   --select-color: dodgerblue;
   --success: rgb(15, 158, 2);
-  --danger: rgb(214, 23, 23);
 }
 
 body {
-  margin: 0;
-  font-family: PT Mono, sans-serif;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  background: #e8e8e8;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23161616' fill-opacity='0.1'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+  background: #e8e8e8;
+  display: flex;
+  font-family: PT Mono, sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
 }
 
 .game-container {
+  background: rgba(255, 255, 255, 0.5);
   border: 1px solid black;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
-  width: 530px;
   height: 750px;
-  position: relative;
-  background: rgba(255, 255, 255, 0.5);
-  user-select: none;
   margin-top: 100px;
+  position: relative;
+  user-select: none;
+  width: 530px;
 }
 
 .header {
+  align-items: center;
   background: var(--primary-color);
   color: white;
+  display: flex;
   font-family: Oxanium, sans-serif;
   font-size: 24px;
-  text-shadow: 1px 2px 2px black;
-  letter-spacing: 2px;
   height: 100px;
-  display: flex;
   justify-content: center;
-  align-items: center;
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 2px black;
 }
 
 .card {
-  margin: 5px auto 10px;
   height: 600px;
+  margin: 5px auto 10px;
 }
 
 input[type='radio'] {
-  opacity: 0;
-  width: 100%;
+  cursor: pointer;
   height: 75px;
+  opacity: 0;
   position: relative;
   top: -40px;
-  cursor: pointer;
+  width: 100%;
   z-index: 2;
 }
 
@@ -67,19 +67,19 @@ input[type='radio'] {
 }
 
 .radio-container {
-  width: 90%;
+  border-radius: 5px;
+  border: 2px solid black;
+  cursor: pointer;
   height: 75px;
   margin: 25px;
-  cursor: pointer;
-  border: 2px solid black;
-  border-radius: 5px;
+  width: 90%;
 }
 
 label {
+  font-size: 30px;
+  left: 20px;
   position: relative;
   top: 20px;
-  left: 20px;
-  font-size: 30px;
 }
 
 .selected-label {
@@ -88,15 +88,15 @@ label {
 }
 
 .best-score {
-  position: relative;
-  top: -100px;
-  left: 330px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
   font-size: 18px;
+  justify-content: center;
+  left: 330px;
   max-width: fit-content;
+  position: relative;
+  text-align: center;
+  top: -100px;
 }
 
 .best-score span {
@@ -122,10 +122,10 @@ label {
 }
 
 .item-container {
+  -ms-overflow-style: none;
   height: 552px;
   overflow-y: scroll;
   position: relative;
-  -ms-overflow-style: none;
 }
 
 .item-container::-webkit-scrollbar {
@@ -133,10 +133,10 @@ label {
 }
 
 .item {
-  display: flex;
   align-items: baseline;
-  justify-content: space-between;
+  display: flex;
   height: 80px;
+  justify-content: space-between;
   margin: 0 50px;
   user-select: none;
 }
@@ -147,22 +147,22 @@ label {
 
 .selected-item {
   background: var(--select-color);
+  height: 80px;
   position: fixed;
   top: 443px;
-  z-index: -1;
   width: 529px;
-  height: 80px;
+  z-index: -1;
 }
 
 .item-footer,
 .selection-footer {
-  width: 100%;
-  height: 90px;
+  align-items: center;
   background: rgba(0, 0, 0, 1);
   display: flex;
+  height: 90px;
   justify-content: center;
-  align-items: center;
   position: relative;
+  width: 100%;
 }
 
 .item-footer {
@@ -170,13 +170,13 @@ label {
 }
 
 button {
-  cursor: pointer;
-  height: 50px;
   border-radius: 5px;
-  font-size: 25px;
-  font-family: Oxanium, sans-serif;
-  color: white;
   border: none;
+  color: white;
+  cursor: pointer;
+  font-family: 'Oxanium', sans-serif;
+  font-size: 25px;
+  height: 50px;
   outline: none;
 }
 
@@ -204,33 +204,33 @@ button:active {
 
 .start,
 .play-again {
-  width: 90%;
   background: var(--primary-color);
+  width: 90%;
 }
 
 .countdown {
-  margin-top: 45%;
+  cursor: pointer;
   font-size: 100px;
+  margin-top: 45%;
   text-align: center;
   user-select: none;
-  cursor: pointer;
 }
 
 .score-container {
-  height: 600px;
+  align-items: center;
   display: flex;
   flex-direction: column;
+  height: 600px;
   justify-content: center;
-  align-items: center;
 }
 
 .score-footer {
-  width: 100%;
-  height: 90px;
   display: flex;
+  height: 90px;
   justify-content: center;
   position: relative;
   top: -30px;
+  width: 100%;
 }
 
 .title {
@@ -238,14 +238,14 @@ button:active {
 }
 
 .final-time {
+  color: var(--success);
   font-size: 100px;
   margin: 0;
-  color: var(--success);
 }
 
 .base-time {
-  margin-top: 100px;
   margin-bottom: 0;
+  margin-top: 100px;
 }
 
 .penalty-time {
@@ -264,9 +264,9 @@ button:active {
 
 @media screen and (max-width: 500px) {
   .game-container {
-    width: 100%;
-    margin-top: 0;
     border: none;
+    margin-top: 0;
+    width: 100%;
   }
 
   .selected-item {
@@ -286,8 +286,8 @@ button:active {
   }
 
   .radio-container {
-    width: 93%;
     margin: 15px;
+    width: 93%;
   }
 
   label {
