@@ -44,7 +44,8 @@ body {
   margin: 0;
   padding: 25px;
   font-size: 42px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
 
   overflow-x: auto;
