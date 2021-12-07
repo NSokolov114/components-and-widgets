@@ -16,7 +16,9 @@ function ready() {
     finalTimeEl = document.querySelector('.final-time'),
     baseTimeEl = document.querySelector('.base-time'),
     penaltyTimeEl = document.querySelector('.penalty-time'),
-    playAgainBtn = document.querySelector('.play-again');
+    playAgainBtn = document.querySelector('.play-again'),
+    wrongBtn = document.querySelector('.wrong'),
+    rightBtn = document.querySelector('.right');
 
   const wrongFormat = [];
   let playerGuessArray = [];
@@ -26,6 +28,81 @@ function ready() {
   let equationObject = {};
   let questionAmount = 10;
   let valueY = 0;
+  let timer;
+  let timePlayed = 0;
+  let baseTime = 0;
+  let penaltyTime = 0;
+  let finalTime = 0;
+  let finalTimeDisplay = '0.0s';
+
+  function playAgain() {
+    gamePage.addEventListener('click', startTimer);
+    scorePage.hidden = true;
+    splashPage.hidden = false;
+    equationsArray = [];
+    playerGuessArray = [];
+    valueY = 0;
+    playAgainBtn.hidden = true;
+  }
+
+  function showScorePage() {
+    setTimeout(() => {
+      playAgainBtn.hidden = false;
+    }, 1000);
+    gamePage.hidden = true;
+    scorePage.hidden = false;
+  }
+
+  function scoresToDOM() {
+    finalTimeDisplay = finalTime.toFixed(1);
+    baseTime = timePlayed.toFixed(1);
+    penaltyTime = penaltyTime.toFixed(1);
+    baseTimeEl.textContent = `Base Time: ${baseTime}s`;
+    penaltyTimeEl.textContent = `Penalty: +${penaltyTime}s`;
+    finalTimeEl.textContent = `${finalTimeDisplay}s`;
+    itemContainer.scrollTo({ top: 0, behavior: 'instant' });
+    showScorePage();
+  }
+
+  function checkTime() {
+    console.log(timePlayed);
+    if (playerGuessArray.length == questionAmount) {
+      console.log(playerGuessArray);
+      clearInterval(timer);
+      equationsArray.forEach((eq, idx) => {
+        if (eq.evaluated === playerGuessArray[idx]) {
+        } else {
+          penaltyTime += 1;
+        }
+      });
+
+      finalTime = timePlayed + penaltyTime;
+      console.log(timePlayed, penaltyTime);
+      scoresToDOM();
+    }
+  }
+
+  function addTime() {
+    timePlayed += 0.1;
+    checkTime();
+  }
+
+  function startTimer() {
+    timePlayed = 0;
+    penaltyTime = 0;
+    finalTime = 0;
+    timer = setInterval(addTime, 100);
+    gamePage.removeEventListener('click', startTimer);
+  }
+
+  function select(guessedTrue) {
+    console.log('hey');
+    valueY += 80;
+    itemContainer.scroll(0, valueY);
+    return guessedTrue
+      ? playerGuessArray.push('true')
+      : playerGuessArray.push('false');
+  }
 
   function showGamePage() {
     gamePage.hidden = false;
@@ -162,4 +239,13 @@ function ready() {
   });
 
   startForm.addEventListener('submit', selectQuestionAmount);
+  wrongBtn.addEventListener('click', () => {
+    select(false);
+  });
+  rightBtn.addEventListener('click', () => {
+    select(true);
+  });
+
+  gamePage.addEventListener('click', startTimer);
+  playAgainBtn.addEventListener('click', playAgain);
 }
