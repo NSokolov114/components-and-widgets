@@ -1,9 +1,119 @@
-
 html {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  padding: 0;
   min-height: 100vh;
+
+  background-color: #111927;
+  background-image: radial-gradient(
+      at 47% 33%,
+      hsl(162, 77%, 40%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 82% 65%, hsl(218, 39%, 11%) 0, transparent 55%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+
+  width: 400px;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.4);
+}
+
+.calculator-display {
+  background: rgba(0, 0, 0, 0.8);
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 12px;
+}
+
+.calculator-display h1 {
+  margin: 0;
+  padding: 25px;
+  font-size: 42px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 100;
+
+  overflow-x: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: whitesmoke;
+  border-radius: 10px;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 15px;
+}
+
+button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: all 0.2s;
+}
+
+button:hover,
+button:focus {
+  filter: brightness(0.8);
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.operator {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.clear {
+  background-color: rgba(255, 0, 0, 0.75);
+}
+
+.equal-sign {
+  grid-column: -2;
+  grid-row: 2 / span 4;
+
+  background-color: rgba(0, 255, 0, 0.75);
+}
+
+@media screen and (max-width: 500px) {
+  .calculator {
+    width: 95%;
+  }
 }
