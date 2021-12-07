@@ -3,10 +3,7 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-
+  align-items: center;
   background-color: #111927;
   background-image: radial-gradient(
       at 47% 33%,
@@ -16,39 +13,38 @@ body {
     radial-gradient(at 82% 65%, hsl(218, 39%, 11%) 0, transparent 55%);
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
 }
 
 .calculator {
-  backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(17, 25, 40, 0.75);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
-
-  width: 400px;
   box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.4);
+  width: 400px;
 }
 
 .calculator-display {
+  align-items: center;
   background: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
   color: whitesmoke;
   display: flex;
-  align-items: center;
   justify-content: flex-end;
-  border-radius: 12px;
 }
 
 .calculator-display h1 {
-  margin: 0;
-  padding: 25px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
   font-size: 42px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
-
+  margin: 0;
   overflow-x: auto;
+  padding: 25px;
 }
 
 /* width */
@@ -58,8 +54,8 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
+  box-shadow: inset 0 0 5px grey;
 }
 
 /* Handle */
@@ -70,19 +66,19 @@ body {
 
 .calculator-buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
   padding: 15px;
 }
 
 button {
-  min-height: 50px;
-  font-size: 20px;
-  font-weight: 100;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 5px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.75);
+  font-size: 20px;
+  font-weight: 100;
+  min-height: 50px;
   transition: all 0.2s;
 }
 
@@ -107,10 +103,9 @@ button:active {
 }
 
 .equal-sign {
+  background-color: rgba(0, 255, 0, 0.75);
   grid-column: -2;
   grid-row: 2 / span 4;
-
-  background-color: rgba(0, 255, 0, 0.75);
 }
 
 @media screen and (max-width: 500px) {
