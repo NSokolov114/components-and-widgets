@@ -6,10 +6,10 @@ html {
 }
 
 :root {
-  --column-1: #a2622d;
-  --column-2: #1b6161;
-  --column-3: #248224;
-  --column-4: #a22d22;
+  --column-1: #3104fa;
+  --column-2: #401dd8;
+  --column-3: #412aa7;
+  --column-4: #382c6e;
 }
 
 body {
@@ -23,7 +23,8 @@ body {
   overflow-y: hidden;
 }
 
-h1 {
+h1,
+h2 {
   letter-spacing: 2px;
   text-shadow: 2px 2px 5px black;
 }
@@ -50,6 +51,7 @@ ul {
 
 /* Columns */
 .drag-column {
+  flex: 1;
   margin: 0 10px;
   position: relative;
   background-color: rgba(0, 0, 0, 0.4);

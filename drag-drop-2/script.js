@@ -9,10 +9,10 @@ function ready() {
   const addItems = document.querySelectorAll('.add-item');
   // Item Lists
   const itemLists = document.querySelectorAll('.drag-item-list');
-  const backlogList = document.getElementById('backlog-list');
-  const progressList = document.getElementById('progress-list');
-  const completeList = document.getElementById('complete-list');
-  const onHoldList = document.getElementById('on-hold-list');
+  const backlogList = document.querySelector('.backlog-list');
+  const progressList = document.querySelector('.progress-list');
+  const completeList = document.querySelector('.complete-list');
+  const onHoldList = document.querySelector('.on-hold-list');
 
   // Items
 
