@@ -1,37 +1,35 @@
-/* Trees Image - Pexels: https://www.pexels.com/photo/photo-of-trees-in-forest-3801030/ */
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 html {
   box-sizing: border-box;
 }
 
 :root {
-  --column-1: #3104fa;
-  --column-2: #401dd8;
-  --column-3: #412aa7;
-  --column-4: #382c6e;
+  --column-1: #006cfa;
+  --column-2: #1260c5;
+  --column-3: #174c92;
+  --column-4: #0d3870;
 }
 
 body {
-  margin: 0;
-  background: url('./trees.jpg');
-  background-size: cover;
-  background-position: 50% 60%;
   background-attachment: fixed;
+  background-position: 50% 60%;
+  background-size: cover;
+  background: url('./flower.jpg');
   color: white;
-  font-family: Quicksand, sans-serif;
+  font-family: 'Muli', sans-serif;
+  margin: 0;
   overflow-y: hidden;
 }
 
-h1,
-h2 {
+h1 {
   letter-spacing: 2px;
   text-shadow: 2px 2px 5px black;
 }
 
 .main-title {
-  text-align: center;
   font-size: 3rem;
+  text-align: center;
 }
 
 ul {
@@ -45,18 +43,17 @@ ul {
 }
 
 .drag-list {
-  display: flex;
   align-items: flex-start;
+  display: flex;
 }
 
-/* Columns */
 .drag-column {
-  flex: 1;
-  margin: 0 10px;
-  position: relative;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
+  flex: 1;
+  margin: 0 10px;
   overflow-x: hidden;
+  position: relative;
 }
 
 .backlog-column .header,
@@ -87,16 +84,15 @@ ul {
   background-color: var(--column-4);
 }
 
-/* Custom Scrollbar */
 .custom-scroll {
+  max-height: 52vh;
   overflow-y: auto;
-  max-height: 75vh;
 }
 
 .custom-scroll::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
   margin-right: 5px;
 }
 
@@ -105,15 +101,15 @@ ul {
 }
 
 .custom-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .header {
+  border-radius: 10px;
   display: flex;
   justify-content: center;
-  border-radius: 10px;
   margin: 10px;
 }
 
@@ -121,7 +117,6 @@ ul {
   font-size: 1.25rem;
 }
 
-/* Drag and Drop */
 .over {
   padding: 50px 10px;
 }
@@ -131,20 +126,20 @@ ul {
 }
 
 .drag-item {
-  margin: 10px;
-  padding: 10px;
-  height: fit-content;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
-  line-height: 1.5rem;
-  letter-spacing: 1px;
   cursor: pointer;
+  height: fit-content;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+  margin: 10px;
+  padding: 10px;
 }
 
 .drag-item:focus {
-  outline: none;
   background-color: white;
   color: black;
+  outline: none;
 }
 
 /* Add Button Group */
@@ -154,15 +149,15 @@ ul {
 }
 
 .add-btn {
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
   margin: 10px;
   padding: 5px 10px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  width: fit-content;
-  border-radius: 5px;
   transition: all 0.3s ease-in;
   user-select: none;
+  width: fit-content;
 }
 
 .add-btn:hover {
@@ -179,9 +174,9 @@ ul {
 }
 
 .solid:hover {
-  transition: unset;
-  filter: brightness(95%);
   color: white;
+  filter: brightness(95%);
+  transition: unset;
 }
 
 .plus-sign {
@@ -192,38 +187,36 @@ ul {
 }
 
 .add-container {
-  margin: 10px;
-  padding: 5px 10px;
-  border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.9);
-  min-height: 100px;
+  border-radius: 10px;
   display: none;
+  margin: 10px;
+  min-height: 100px;
+  padding: 5px 10px;
 }
 
 .add-item {
-  width: 100%;
-  min-height: 100px;
-  height: auto;
   background-color: white;
   border-radius: 10px;
-  margin: 5px auto;
-  resize: none;
   color: black;
+  height: auto;
+  margin: 5px auto;
+  min-height: 100px;
   padding: 10px;
+  resize: none;
+  width: 100%;
 }
 
 .add-item:focus {
   outline: none;
 }
 
-/* Media Query: Laptop */
 @media screen and (max-width: 1800px) {
   .main-title {
     font-size: 2rem;
   }
 }
 
-/* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
   body {
     overflow-y: auto;
