@@ -123,15 +123,17 @@ function addToColumn(column) {
   const itemText = addItems[column].textContent;
   const selectedArray = listArrays[column];
 
+  if (!addItems[column].textContent) return;
   selectedArray.push(itemText);
   addItems[column].textContent = '';
   updateDOM(column);
 }
 
-function showInputBox(column) {
+function showInputBox(column, e) {
   addBtns[column].style.visibility = 'hidden';
   saveItemBtns[column].style.display = 'flex';
   addItemContainers[column].style.display = 'flex';
+  addItems[column].focus();
 }
 
 function hideInputBox(column) {
@@ -142,25 +144,14 @@ function hideInputBox(column) {
 }
 
 function rebuildArrays() {
-  backlogListArray = [];
-  for (let i = 0; i < backlogListEl.children.length; i++) {
-    backlogListArray.push(backlogListEl.children[i].textContent);
-  }
-
-  progressListArray = [];
-  for (let i = 0; i < progressListEl.children.length; i++) {
-    progressListArray.push(progressListEl.children[i].textContent);
-  }
-
-  completeListArray = [];
-  for (let i = 0; i < completeListEl.children.length; i++) {
-    completeListArray.push(completeListEl.children[i].textContent);
-  }
-
-  onHoldListArray = [];
-  for (let i = 0; i < onHoldListEl.children.length; i++) {
-    onHoldListArray.push(onHoldListEl.children[i].textContent);
-  }
+  backlogListArray = Array.from(backlogListEl.children).map(i => i.textContent);
+  progressListArray = Array.from(progressListEl.children).map(
+    i => i.textContent
+  );
+  completeListArray = Array.from(completeListEl.children).map(
+    i => i.textContent
+  );
+  onHoldListArray = Array.from(onHoldListEl.children).map(i => i.textContent);
 
   updateDOM();
 }
