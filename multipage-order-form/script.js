@@ -27,22 +27,49 @@ function ready() {
   // const username = form.querySelector('#signup-form__input-username');
   const inputs = form.querySelectorAll('input');
 
-  // const inputNames = ['username', 'email', 'phone', 'address', 'city', 'state', 'zip'];
+  const inputKeys = [
+    'username',
+    'email',
+    'phone',
+    'address',
+    'city',
+    'state',
+    'zip',
+  ];
 
   async function fillForm() {
     const rndUser = await getRndUsers();
 
-    inputs[0].value = `${rndUser.name.first} ${rndUser.name.last}`;
-    inputs[1].value = rndUser.email;
-    inputs[2].value = rndUser.phone;
-    inputs[3].value = `${rndUser.location.street.number} ${rndUser.location.street.name}`;
-    inputs[4].value = rndUser.location.city;
-    inputs[5].value = rndUser.location.state;
-    inputs[6].value =
+    const rndUserArr = [
+      `${rndUser.name.first} ${rndUser.name.last}`,
+      rndUser.email,
+      rndUser.phone,
+      `${rndUser.location.street.number} ${rndUser.location.street.name}`,
+      rndUser.location.city,
+      rndUser.location.state,
       typeof rndUser.location.postcode === 'number'
         ? rndUser.location.postcode
-        : 12345;
+        : 12345,
+    ];
+
+    inputKeys.forEach((_, i) => {
+      inputs[i].value = rndUserArr[i];
+    });
   }
 
   fillBtn && fillBtn.addEventListener('click', fillForm);
+
+  if (!fillBtn) {
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+      get: (searchParams, prop) => searchParams.get(prop),
+    });
+    console.log(params[inputKeys[0]]);
+
+    inputKeys.forEach((key, i) => {
+      inputs[i].value = params[key];
+
+      // tmp, add hidden in HTML
+      inputs[i].closest('p').classList.add('hidden');
+    });
+  }
 }
