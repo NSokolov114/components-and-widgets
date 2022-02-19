@@ -233,3 +233,20 @@ body {
     }
   }
 }
+
+// filling form with rnd data btn
+.fill-form-btn {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: none;
+  transition: all 0.3s;
+  justify-self: center;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  background-color: greenyellow;
+}

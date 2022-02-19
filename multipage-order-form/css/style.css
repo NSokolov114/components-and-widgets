@@ -269,4 +269,21 @@ body {
 .submitted-form div ul li {
   list-style: none;
 }
+
+.fill-form-btn {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  background-color: greenyellow;
+}
 /*# sourceMappingURL=style.css.map */
