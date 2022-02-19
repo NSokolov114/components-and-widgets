@@ -1,32 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 :root {
-  --color-primary: #35611e;
-  --color-primary-semitransparent: #5789d3bd;
-  --color-primary-light: #5789d3;
-  --color-primary-dark: #3a5097;
-  --color-heart: rgb(255, 70, 14);
   --color-white: #fff;
-  --color-grey-light-1: #faf9f9;
-  --color-grey-light-2: #f4f2f2;
-  --color-grey-light-3: #ddd;
-  --color-grey-light-4: #ccc;
-  --color-black: #000;
-  --color-grey-dark-1: #333;
-  --color-grey-dark-2: #777;
-  --color-grey-dark-3: #999;
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.1);
-  --background-gradient-1: linear-gradient(
-    to right bottom,
-    var(--color-grey-light-1),
-    var(--color-grey-light-3)
-  );
-  --background-gradient-2: linear-gradient(
-    to right bottom,
-    var(--color-grey-light-4),
-    var(--color-grey-dark-3)
-  );
-  --line: 1px solid var(--color-grey-light-2);
+  --color-grey-lightest: #f4f2f2;
+  --color-grey-light: #ccc;
+  --color-grey-dark: #777;
+  --color-grey-darkest: #333;
+  --shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+  --line: 1px solid var(--color-grey-lightest);
 }
 
 * {
@@ -52,8 +32,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: var(--color-grey-light-4);
-  color: var(--color-grey-dark-1);
+  background: var(--color-grey-light);
+  color: var(--color-grey-darkest);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,12 +47,20 @@ body {
   padding: 0;
 }
 
+.hidden {
+  display: none !important;
+}
+
+.signup-form {
+  width: 100%;
+}
+
 .signup-form__container {
   border: var(--line);
   border-radius: 5px;
   padding: 2rem;
   max-width: 400px;
-  width: 100%;
+  width: 95%;
   margin: 20px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,6 +72,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
 }
 
 .signup-form__title {
@@ -99,19 +89,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 350px;
+  width: 80%;
   height: 50px;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   overflow: hidden;
   margin-bottom: 20px;
 }
 
 .signup-form__steps-container div {
-  background-color: var(--color-grey-dark-2);
+  background-color: var(--color-grey-dark);
   width: 50%;
   text-align: center;
   padding: 10px 0;
-  color: var(--color-grey-light-2);
+  color: var(--color-grey-lightest);
 }
 
 .signup-form__steps-container div.signup-form__step--1 {
@@ -125,9 +115,9 @@ body {
 }
 
 .signup-form__steps-container div.signup-form__step--active {
-  background-color: var(--color-grey-light-2);
+  background-color: var(--color-grey-lightest);
   border: var(--line);
-  color: var(--color-grey-dark-1);
+  color: var(--color-grey-darkest);
 }
 
 .signup-form p {
@@ -141,10 +131,15 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  margin-bottom: 10px;
 }
 
-.signup-form p:not(:last-child) {
-  margin-bottom: 10px;
+.signup-form p:last-child {
+  margin-bottom: 0;
+}
+
+.signup-form p.signup-form__utility--mb20 {
+  margin-bottom: 20px;
 }
 
 .signup-form p label {
@@ -156,7 +151,7 @@ body {
   border: none;
   width: 75%;
   padding: 2px 5px;
-  background-color: var(--color-grey-light-2);
+  background-color: var(--color-grey-lightest);
 }
 
 .signup-form p input:focus {
@@ -174,8 +169,8 @@ body {
   border: none;
   margin-left: -20px;
   padding: 5px;
-  width: 328px;
-  background-color: var(--color-grey-light-2);
+  width: calc(100% - 2px - 20px);
+  background-color: var(--color-grey-lightest);
 }
 
 .signup-form p textarea:focus {
@@ -186,8 +181,9 @@ body {
 .signup-form fieldset {
   border-radius: 5px;
   margin-bottom: 20px;
-  width: 350px;
+  width: 100%;
   border: var(--line);
+  padding: 5px 0 10px;
 }
 
 .signup-form fieldset p {
@@ -213,13 +209,13 @@ body {
   padding: 10px 20px;
   border-radius: 3px;
   border: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   text-transform: uppercase;
   -ms-grid-column-align: center;
       justify-self: center;
   font-family: inherit;
-  background-color: var(--color-grey-light-2);
+  background-color: var(--color-grey-lightest);
 }
 
 .signup-form button:active {
@@ -227,9 +223,10 @@ body {
           transform: translateY(3px);
 }
 
-.signup-form button:hover, .signup-form button:hover {
-  -webkit-filter: brightness(1.1);
-          filter: brightness(1.1);
+.signup-form button:hover, .signup-form button:focus {
+  background-color: var(--color-white);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
 }
 
 .submitted-form {
@@ -249,6 +246,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
 }
 
 .submitted-form h2 {
@@ -256,7 +255,7 @@ body {
 }
 
 .submitted-form div {
-  background-color: var(--color-grey-light-2);
+  background-color: var(--color-grey-lightest);
   border-radius: 5px;
   width: 100%;
   padding: 10px;
