@@ -1,0 +1,21 @@
+Create two-part (multi-step) order form:
+
+First page collects basic customer information
+Second page that allows users to specify their service preferences  
+Note: Task for JS Managing State Information and Security
+
+Submitting data from multiple forms using *hidden fields*:
+
+Page 1: form part 1
+	Field values are encoded in query string, 
+	then copied to hidden fields on the next page
+Page 2: form part 2
+	ALL field values are encoded in query 
+	string, then submitted to server
+Page 3: submitted data
+
+
+Bonus points:
+outside the form: - button to fill the form with rnd data from rnduserapi
+			- button to reset everything and go to the page 1
+maybe implement the same functionality with a tabbed component ?
