@@ -1,19 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+:root {
+  --color-primary: #35611e;
+  --color-primary-semitransparent: #5789d3bd;
+  --color-primary-light: #5789d3;
+  --color-primary-dark: #3a5097;
+  --color-heart: rgb(255, 70, 14);
+  --color-white: #fff;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #ddd;
+  --color-grey-light-4: #ccc;
+  --color-black: #000;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+  --background-gradient-1: linear-gradient(
+    to right bottom,
+    var(--color-grey-light-1),
+    var(--color-grey-light-3)
+  );
+  --background-gradient-2: linear-gradient(
+    to right bottom,
+    var(--color-grey-light-4),
+    var(--color-grey-dark-3)
+  );
+  --line: 1px solid var(--color-grey-light-2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #ccc;
+  background: var(--color-grey-light-4);
+  color: var(--color-grey-dark-1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
+  font-size: 1.4rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -23,10 +68,12 @@ body {
 }
 
 .signup-form__container {
-  border: 1px solid black;
+  border: var(--line);
   border-radius: 5px;
-  padding: 20px;
-  width: 400px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  margin: 20px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,8 +86,10 @@ body {
           align-items: center;
 }
 
-.signup-form h2 {
+.signup-form__title {
   text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
 }
 
 .signup-form__steps-container {
@@ -50,16 +99,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 60%;
-  height: 30px;
-  margin: 20px 0;
+  width: 350px;
+  height: 50px;
+  font-size: 1.6rem;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .signup-form__steps-container div {
-  background-color: bisque;
+  background-color: var(--color-grey-dark-2);
   width: 50%;
   text-align: center;
   padding: 10px 0;
+  color: var(--color-grey-light-2);
 }
 
 .signup-form__steps-container div.signup-form__step--1 {
@@ -73,8 +125,9 @@ body {
 }
 
 .signup-form__steps-container div.signup-form__step--active {
-  background-color: aqua;
-  border: 1px solid black;
+  background-color: var(--color-grey-light-2);
+  border: var(--line);
+  color: var(--color-grey-dark-1);
 }
 
 .signup-form p {
@@ -90,6 +143,10 @@ body {
   width: 100%;
 }
 
+.signup-form p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .signup-form p label {
   padding-right: 10px;
 }
@@ -99,6 +156,12 @@ body {
   border: none;
   width: 75%;
   padding: 2px 5px;
+  background-color: var(--color-grey-light-2);
+}
+
+.signup-form p input:focus {
+  background-color: var(--color-white);
+  outline: none;
 }
 
 .signup-form p input[type='radio'] {
@@ -109,11 +172,40 @@ body {
   resize: none;
   border-radius: 3px;
   border: none;
-  margin-left: -10px;
+  margin-left: -20px;
+  padding: 5px;
+  width: 328px;
+  background-color: var(--color-grey-light-2);
+}
+
+.signup-form p textarea:focus {
+  background-color: var(--color-white);
+  outline: none;
 }
 
 .signup-form fieldset {
   border-radius: 5px;
+  margin-bottom: 20px;
+  width: 350px;
+  border: var(--line);
+}
+
+.signup-form fieldset p {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.signup-form fieldset p label {
+  margin-left: 10px;
+}
+
+.signup-form fieldset legend {
+  font-size: 1.6rem;
+  margin: 10px;
+  padding: 0 10px;
 }
 
 .signup-form button {
@@ -123,8 +215,11 @@ body {
   border: none;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  margin-top: 20px;
   text-transform: uppercase;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-family: inherit;
+  background-color: var(--color-grey-light-2);
 }
 
 .signup-form button:active {
@@ -135,5 +230,44 @@ body {
 .signup-form button:hover, .signup-form button:hover {
   -webkit-filter: brightness(1.1);
           filter: brightness(1.1);
+}
+
+.submitted-form {
+  border: var(--line);
+  border-radius: 5px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.submitted-form h2 {
+  margin-bottom: 30px;
+}
+
+.submitted-form div {
+  background-color: var(--color-grey-light-2);
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+}
+
+.submitted-form div h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.submitted-form div ul li {
+  list-style: none;
 }
 /*# sourceMappingURL=style.css.map */

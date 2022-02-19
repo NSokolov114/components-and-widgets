@@ -1,15 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+:root {
+  --color-primary: #35611e;
+  --color-primary-semitransparent: #5789d3bd;
+  --color-primary-light: #5789d3;
+  --color-primary-dark: #3a5097;
+
+  --color-heart: rgb(255, 70, 14);
+
+  --color-white: #fff;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #ddd;
+  --color-grey-light-4: #ccc;
+
+  --color-black: #000;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+
+  --background-gradient-1: linear-gradient(
+    to right bottom,
+    var(--color-grey-light-1),
+    var(--color-grey-light-3)
+  );
+  --background-gradient-2: linear-gradient(
+    to right bottom,
+    var(--color-grey-light-4),
+    var(--color-grey-dark-3)
+  );
+
+  --line: 1px solid var(--color-grey-light-2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 html {
   box-sizing: border-box;
+  font-size: 62.5%; // 1 rem = 10 px
+  scroll-behavior: smooth;
 }
 
 body {
   align-items: center;
-  background: #ccc;
+  background: var(--color-grey-light-4);
+  color: var(--color-grey-dark-1);
   display: flex;
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
+  font-size: 1.4rem;
   justify-content: center;
   margin: 0;
   min-height: 100vh;
@@ -18,30 +68,38 @@ body {
 
 .signup-form {
   &__container {
-    border: 1px solid black;
+    border: var(--line);
     border-radius: 5px;
-    padding: 20px;
-    width: 400px;
-
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    margin: 20px auto;
     display: flex;
     // justify-content: center;
     flex-direction: column;
     align-items: center;
   }
-  & h2 {
+
+  &__title {
     text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
   }
+
   &__steps-container {
     display: flex;
     align-items: center;
-    width: 60%;
-    height: 30px;
-    margin: 20px 0;
+    width: 350px;
+    height: 50px;
+    font-size: 1.6rem;
+    overflow: hidden;
+    margin-bottom: 20px;
     & div {
-      background-color: bisque;
+      background-color: var(--color-grey-dark-2);
       width: 50%;
       text-align: center;
       padding: 10px 0;
+      color: var(--color-grey-light-2);
 
       &.signup-form__step {
         &--1 {
@@ -53,8 +111,9 @@ body {
           border-bottom-right-radius: 5px;
         }
         &--active {
-          background-color: aqua;
-          border: 1px solid black;
+          background-color: var(--color-grey-light-2);
+          border: var(--line);
+          color: var(--color-grey-dark-1);
         }
       }
     }
@@ -67,6 +126,10 @@ body {
     justify-content: flex-end;
     align-items: center;
     width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
     & label {
       padding-right: 10px;
     }
@@ -76,6 +139,12 @@ body {
       // min-width: 200px;
       width: 75%;
       padding: 2px 5px;
+      background-color: var(--color-grey-light-2);
+
+      &:focus {
+        background-color: var(--color-white);
+        outline: none;
+      }
 
       &[type='radio'] {
         width: auto;
@@ -87,11 +156,41 @@ body {
       resize: none;
       border-radius: 3px;
       border: none;
-      margin-left: -10px;
+      margin-left: -20px;
+      // margin-right: 20px;
+      // margin-bottom: 10px;
+      padding: 5px;
+      width: 328px;
+      background-color: var(--color-grey-light-2);
+
+      &:focus {
+        background-color: var(--color-white);
+        outline: none;
+      }
     }
   }
   & fieldset {
     border-radius: 5px;
+    margin-bottom: 20px;
+    width: 350px;
+    // width: 100%;
+    border: var(--line);
+
+    & p {
+      justify-content: flex-start;
+      margin-bottom: 10px;
+      margin-left: 10px;
+
+      & label {
+        margin-left: 10px;
+      }
+    }
+
+    & legend {
+      font-size: 1.6rem;
+      margin: 10px;
+      padding: 0 10px;
+    }
   }
 
   & button {
@@ -100,8 +199,12 @@ body {
     border-radius: 3px;
     border: none;
     transition: all 0.2s;
-    margin-top: 20px;
+    // margin-top: 20px;
+    // margin-bottom: 30px;
     text-transform: uppercase;
+    justify-self: center;
+    font-family: inherit;
+    background-color: var(--color-grey-light-2);
 
     &:active {
       transform: translateY(3px);
@@ -110,6 +213,39 @@ body {
     &:hover,
     &:hover {
       filter: brightness(1.1);
+    }
+  }
+}
+
+.submitted-form {
+  border: var(--line);
+  border-radius: 5px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  // justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  & h2 {
+    margin-bottom: 30px;
+  }
+
+  & div {
+    background-color: var(--color-grey-light-2);
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+
+    & h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    & ul li {
+      list-style: none;
     }
   }
 }

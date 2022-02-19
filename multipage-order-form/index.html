@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="signup-form__container">
-      <h2>Sign Up</h2>
+      <h2 class="signup-form__title">Sign Up</h2>
 
       <div class="signup-form__steps-container">
         <div
@@ -71,6 +71,7 @@
               cols="30"
               rows="10"
               maxlength="250"
+              placeholder="Please, tell us if you have any food-related allergies (max. 500 characters)"
             ></textarea>
           </p>
         </fieldset>
@@ -142,6 +143,17 @@
           <button type="submit">Sign Up</button>
         </p>
       </form>
+    </div>
+
+    <div class="submitted-form">
+      <h2>Your form has been submitted</h2>
+      <div>
+        <h3>You've entered the following data:</h3>
+        <ul>
+          <li>name=Cora Gustable</li>
+          <li>email=cora-guastalli@gmail.com</li>
+        </ul>
+      </div>
     </div>
 
     <script src="script.js"></script>
