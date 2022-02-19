@@ -22,7 +22,118 @@ body {
   padding: 0;
 }
 
-textarea {
+.signup-form__container {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup-form h2 {
+  text-align: center;
+}
+
+.signup-form__steps-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  height: 30px;
+  margin: 20px 0;
+}
+
+.signup-form__steps-container div {
+  background-color: bisque;
+  width: 50%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.signup-form__steps-container div.signup-form__step--1 {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.signup-form__steps-container div.signup-form__step--2 {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.signup-form__steps-container div.signup-form__step--active {
+  background-color: aqua;
+  border: 1px solid black;
+}
+
+.signup-form p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.signup-form p label {
+  padding-right: 10px;
+}
+
+.signup-form p input {
+  border-radius: 3px;
+  border: none;
+  width: 75%;
+  padding: 2px 5px;
+}
+
+.signup-form p input[type='radio'] {
+  width: auto;
+}
+
+.signup-form p textarea {
   resize: none;
+  border-radius: 3px;
+  border: none;
+  margin-left: -10px;
+}
+
+.signup-form fieldset {
+  border-radius: 5px;
+}
+
+.signup-form button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.signup-form button:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.signup-form button:hover, .signup-form button:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
 }
 /*# sourceMappingURL=style.css.map */

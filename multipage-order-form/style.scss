@@ -16,7 +16,100 @@ body {
   padding: 0;
 }
 
-// lock textarea resize
-textarea {
-  resize: none;
+.signup-form {
+  &__container {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  & h2 {
+    text-align: center;
+  }
+  &__steps-container {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 30px;
+    margin: 20px 0;
+    & div {
+      background-color: bisque;
+      width: 50%;
+      text-align: center;
+      padding: 10px 0;
+
+      &.signup-form__step {
+        &--1 {
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+        &--2 {
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+        &--active {
+          background-color: aqua;
+          border: 1px solid black;
+        }
+      }
+    }
+  }
+
+  // form itself
+
+  & p {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    & label {
+      padding-right: 10px;
+    }
+    & input {
+      border-radius: 3px;
+      border: none;
+      // min-width: 200px;
+      width: 75%;
+      padding: 2px 5px;
+
+      &[type='radio'] {
+        width: auto;
+      }
+    }
+
+    // lock textarea resize
+    & textarea {
+      resize: none;
+      border-radius: 3px;
+      border: none;
+      margin-left: -10px;
+    }
+  }
+  & fieldset {
+    border-radius: 5px;
+  }
+
+  & button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+    transition: all 0.2s;
+    margin-top: 20px;
+    text-transform: uppercase;
+
+    &:active {
+      transform: translateY(3px);
+    }
+
+    &:hover,
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
 }

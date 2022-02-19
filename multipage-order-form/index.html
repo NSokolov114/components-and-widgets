@@ -23,7 +23,8 @@
         </div>
       </div>
 
-      <form action="/page2.html" class="signup-form__form" autocomplete="off">
+      <form action="/page2.html" class="signup-form" autocomplete="off">
+        <!-- page 1 -->
         <p>
           <label for="signup-form__input-username">Name</label>
           <input type="text" name="username" id="signup-form__input-username" />
@@ -57,17 +58,22 @@
         <p>
           <button type="submit">Next ></button>
         </p>
-
-        <p>
-          <label for="signup-form__input-food-allergies">Food Allergies</label>
-          <textarea
-            name="food-allergies"
-            id="signup-form__input-food-allergies"
-            cols="30"
-            rows="10"
-            maxlength="250"
-          ></textarea>
-        </p>
+        <!-- page 2 -->
+        <fieldset>
+          <legend>Food Allergies</legend>
+          <p>
+            <label for="signup-form__input-food-allergies"
+              ><abbr aria-label="Food Allergies"></abbr
+            ></label>
+            <textarea
+              name="food-allergies"
+              id="signup-form__input-food-allergies"
+              cols="30"
+              rows="10"
+              maxlength="250"
+            ></textarea>
+          </p>
+        </fieldset>
         <fieldset>
           <legend>Frequency</legend>
           <p>
