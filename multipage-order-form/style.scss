@@ -4,7 +4,6 @@
   --color-white: #fff;
   --color-grey-lightest: #f4f2f2;
   --color-grey-light: #ccc;
-
   --color-grey-dark: #777;
   --color-grey-darkest: #333;
 
@@ -51,47 +50,48 @@ body {
   width: 100%;
 
   &__container {
-    border: var(--line);
+    align-items: center;
     border-radius: 5px;
-    padding: 2rem;
-    max-width: 400px;
-    width: 95%;
-    margin: 20px auto;
+    border: var(--line);
+    box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    box-shadow: var(--shadow);
+    margin: 20px auto;
+    max-width: 400px;
+    padding: 2rem;
+    width: 95%;
   }
 
   &__title {
-    text-align: center;
     font-size: 3rem;
     margin-bottom: 30px;
+    text-align: center;
   }
 
   &__steps-container {
-    display: flex;
     align-items: center;
-    width: 80%;
-    height: 50px;
+    display: flex;
     font-size: 1.4rem;
-    overflow: hidden;
+    height: 50px;
     margin-bottom: 20px;
+    overflow: hidden;
+    width: 80%;
+
     & div {
       background-color: var(--color-grey-dark);
-      width: 50%;
-      text-align: center;
-      padding: 10px 0;
       color: var(--color-grey-lightest);
+      padding: 10px 0;
+      text-align: center;
+      width: 50%;
 
       &.signup-form__step {
         &--1 {
-          border-top-left-radius: 5px;
           border-bottom-left-radius: 5px;
+          border-top-left-radius: 5px;
         }
         &--2 {
-          border-top-right-radius: 5px;
           border-bottom-right-radius: 5px;
+          border-top-right-radius: 5px;
         }
         &--active {
           background-color: var(--color-grey-lightest);
@@ -103,11 +103,11 @@ body {
   }
 
   & p {
+    align-items: center;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    width: 100%;
     margin-bottom: 10px;
+    width: 100%;
 
     &:last-child {
       margin-bottom: 0;
@@ -122,11 +122,11 @@ body {
     }
 
     & input {
+      background-color: var(--color-grey-lightest);
       border-radius: 3px;
       border: none;
-      width: 75%;
       padding: 2px 5px;
-      background-color: var(--color-grey-lightest);
+      width: 75%;
 
       &:focus {
         background-color: var(--color-white);
@@ -139,13 +139,13 @@ body {
     }
 
     & textarea {
-      resize: none;
+      background-color: var(--color-grey-lightest);
       border-radius: 3px;
       border: none;
       margin-left: -20px;
       padding: 5px;
+      resize: none;
       width: calc(100% - 2px - 20px);
-      background-color: var(--color-grey-lightest);
 
       &:focus {
         background-color: var(--color-white);
@@ -155,10 +155,10 @@ body {
   }
   & fieldset {
     border-radius: 5px;
-    margin-bottom: 20px;
-    width: 100%;
     border: var(--line);
+    margin-bottom: 20px;
     padding: 5px 0 10px;
+    width: 100%;
 
     & p {
       justify-content: flex-start;
@@ -178,15 +178,15 @@ body {
   }
 
   & button {
-    cursor: pointer;
-    padding: 10px 20px;
+    background-color: var(--color-grey-lightest);
     border-radius: 3px;
     border: none;
-    transition: all 0.3s;
-    text-transform: uppercase;
-    justify-self: center;
+    cursor: pointer;
     font-family: inherit;
-    background-color: var(--color-grey-lightest);
+    justify-self: center;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: all 0.3s;
 
     &:active {
       transform: translateY(3px);
@@ -201,31 +201,31 @@ body {
 }
 
 .submitted-form {
-  border: var(--line);
-  border-radius: 5px;
-  padding: 2rem;
-  max-width: 400px;
-  width: 100%;
-  margin: 20px auto;
-  display: flex;
-  // justify-content: center;
-  flex-direction: column;
   align-items: center;
+  border-radius: 5px;
+  border: var(--line);
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 2rem;
+  width: 95%;
 
   & h2 {
     margin-bottom: 30px;
+    text-align: center;
   }
 
   & div {
     background-color: var(--color-grey-lightest);
     border-radius: 5px;
-    width: 100%;
     padding: 10px;
+    width: 100%;
 
     & h3 {
-      text-align: center;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     & ul li {
@@ -236,17 +236,16 @@ body {
 
 // filling form with rnd data btn
 .fill-form-btn {
-  position: fixed;
-  top: 100px;
-  left: 100px;
-
-  cursor: pointer;
-  padding: 10px 15px;
+  background-color: greenyellow;
   border-radius: 3px;
   border: none;
-  transition: all 0.3s;
-  justify-self: center;
+  cursor: pointer;
   font-family: sans-serif;
   font-size: 1.6rem;
-  background-color: greenyellow;
+  justify-self: center;
+  left: 100px;
+  padding: 10px 15px;
+  position: fixed;
+  top: 100px;
+  transition: all 0.3s;
 }

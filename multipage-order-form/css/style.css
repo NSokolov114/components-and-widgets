@@ -56,12 +56,13 @@ body {
 }
 
 .signup-form__container {
-  border: var(--line);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 5px;
-  padding: 2rem;
-  max-width: 400px;
-  width: 95%;
-  margin: 20px auto;
+  border: var(--line);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,49 +70,48 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 2rem;
+  width: 95%;
 }
 
 .signup-form__title {
-  text-align: center;
   font-size: 3rem;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .signup-form__steps-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
-  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 1.4rem;
-  overflow: hidden;
+  height: 50px;
   margin-bottom: 20px;
+  overflow: hidden;
+  width: 80%;
 }
 
 .signup-form__steps-container div {
   background-color: var(--color-grey-dark);
-  width: 50%;
-  text-align: center;
-  padding: 10px 0;
   color: var(--color-grey-lightest);
+  padding: 10px 0;
+  text-align: center;
+  width: 50%;
 }
 
 .signup-form__steps-container div.signup-form__step--1 {
-  border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 .signup-form__steps-container div.signup-form__step--2 {
-  border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .signup-form__steps-container div.signup-form__step--active {
@@ -121,17 +121,17 @@ body {
 }
 
 .signup-form p {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .signup-form p:last-child {
@@ -147,11 +147,11 @@ body {
 }
 
 .signup-form p input {
+  background-color: var(--color-grey-lightest);
   border-radius: 3px;
   border: none;
-  width: 75%;
   padding: 2px 5px;
-  background-color: var(--color-grey-lightest);
+  width: 75%;
 }
 
 .signup-form p input:focus {
@@ -164,13 +164,13 @@ body {
 }
 
 .signup-form p textarea {
-  resize: none;
+  background-color: var(--color-grey-lightest);
   border-radius: 3px;
   border: none;
   margin-left: -20px;
   padding: 5px;
+  resize: none;
   width: calc(100% - 2px - 20px);
-  background-color: var(--color-grey-lightest);
 }
 
 .signup-form p textarea:focus {
@@ -180,10 +180,10 @@ body {
 
 .signup-form fieldset {
   border-radius: 5px;
-  margin-bottom: 20px;
-  width: 100%;
   border: var(--line);
+  margin-bottom: 20px;
   padding: 5px 0 10px;
+  width: 100%;
 }
 
 .signup-form fieldset p {
@@ -205,17 +205,17 @@ body {
 }
 
 .signup-form button {
-  cursor: pointer;
-  padding: 10px 20px;
+  background-color: var(--color-grey-lightest);
   border-radius: 3px;
   border: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-transform: uppercase;
+  cursor: pointer;
+  font-family: inherit;
   -ms-grid-column-align: center;
       justify-self: center;
-  font-family: inherit;
-  background-color: var(--color-grey-lightest);
+  padding: 10px 20px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .signup-form button:active {
@@ -230,12 +230,13 @@ body {
 }
 
 .submitted-form {
-  border: var(--line);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 5px;
-  padding: 2rem;
-  max-width: 400px;
-  width: 100%;
-  margin: 20px auto;
+  border: var(--line);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,27 +244,27 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 2rem;
+  width: 95%;
 }
 
 .submitted-form h2 {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .submitted-form div {
   background-color: var(--color-grey-lightest);
   border-radius: 5px;
-  width: 100%;
   padding: 10px;
+  width: 100%;
 }
 
 .submitted-form div h3 {
-  text-align: center;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .submitted-form div ul li {
@@ -271,19 +272,19 @@ body {
 }
 
 .fill-form-btn {
-  position: fixed;
-  top: 100px;
-  left: 100px;
-  cursor: pointer;
-  padding: 10px 15px;
+  background-color: greenyellow;
   border-radius: 3px;
   border: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  cursor: pointer;
   font-family: sans-serif;
   font-size: 1.6rem;
-  background-color: greenyellow;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  left: 100px;
+  padding: 10px 15px;
+  position: fixed;
+  top: 100px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 /*# sourceMappingURL=style.css.map */
