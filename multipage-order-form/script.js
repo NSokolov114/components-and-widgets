@@ -25,7 +25,7 @@ function ready() {
   // const username = form.querySelector('#signup-form__input-username');
   // const username = form.querySelector('#signup-form__input-username');
   // const username = form.querySelector('#signup-form__input-username');
-  const inputs = form.querySelectorAll('input');
+  const inputs = document.querySelectorAll('input');
 
   const inputKeys = [
     'username',
@@ -59,7 +59,10 @@ function ready() {
 
   fillBtn && fillBtn.addEventListener('click', fillForm);
 
-  if (!fillBtn) {
+  const submittedForm = document.querySelector('.submitted-form');
+  const submittedList = document.querySelector('ul');
+
+  if (!fillBtn && !submittedForm) {
     const params = new Proxy(new URLSearchParams(window.location.search), {
       get: (searchParams, prop) => searchParams.get(prop),
     });
@@ -70,6 +73,24 @@ function ready() {
 
       // tmp, add hidden in HTML
       inputs[i].closest('p').classList.add('hidden');
+    });
+  }
+
+  if (submittedForm) {
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+      get: (searchParams, prop) => searchParams.get(prop),
+    });
+    inputKeys.push('food-allergies', 'frequency', 'package-size');
+    console.log(params[inputKeys[0]]);
+    inputKeys.forEach((key, i) => {
+      // inputs[i].value = params[key];
+      console.log(`${key}=${params[key]}`);
+      const item = document.createElement('li');
+      item.innerText = `${key}=${params[key]}`;
+      submittedList.appendChild(item);
+
+      // tmp, add hidden in HTML
+      // inputs[i].closest('p').classList.add('hidden');
     });
   }
 }
