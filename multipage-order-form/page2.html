@@ -22,32 +22,31 @@
 
       <form action="/page3.html" class="signup-form" autocomplete="off">
         <!-- page 1 -->
-        <p>
+        <p class="hidden">
           <label for="signup-form__input-username">Name</label>
           <input type="text" name="username" id="signup-form__input-username" />
         </p>
-        <p>
+        <p class="hidden">
           <label for="signup-form__input-email">Email</label>
           <input type="email" name="email" id="signup-form__input-email" />
         </p>
-        <p>
+        <p class="hidden">
           <label for="signup-form__input-phone">Phone</label>
           <input type="tel" name="phone" id="signup-form__input-phone" />
         </p>
-
-        <p>
+        <p class="hidden">
           <label for="signup-form__input-address">Address</label>
           <input type="text" name="address" id="signup-form__input-address" />
         </p>
-        <p>
+        <p class="hidden">
           <label for="signup-form__input-city">City</label>
           <input type="text" name="city" id="signup-form__input-city" />
         </p>
-        <p>
+        <p class="hidden">
           <label for="signup-form__input-state">State</label>
           <input type="text" name="state" id="signup-form__input-state" />
         </p>
-        <p class="signup-form__utility--mb20">
+        <p class="signup-form__utility--mb20 hidden">
           <label for="signup-form__input-zip">Zip</label>
           <input type="number" name="zip" id="signup-form__input-zip" />
         </p>
@@ -77,6 +76,7 @@
               name="frequency"
               id="signup-form__input-weekly"
               value="weekly"
+              required
             />
             <label for="signup-form__input-weekly">Weekly</label>
           </p>
@@ -86,6 +86,7 @@
               name="frequency"
               id="signup-form__input-biweekly"
               value="biweekly"
+              required
             />
             <label for="signup-form__input-biweekly">Biweekly</label>
           </p>
@@ -95,6 +96,7 @@
               name="frequency"
               id="signup-form__input-monthly"
               value="monthly"
+              required
             />
             <label for="signup-form__input-monthly">Monthly</label>
           </p>
@@ -108,6 +110,7 @@
               name="package-size"
               id="signup-form__input-taste-test"
               value="taste-test"
+              required
             />
             <label for="signup-form__input-taste-test">Taste Test</label>
           </p>
@@ -117,6 +120,7 @@
               name="package-size"
               id="signup-form__input-healthy-highlight"
               value="healthy-highlight"
+              required
             />
             <label for="signup-form__input-healthy-highlight"
               >Healthy Highlight</label
@@ -128,6 +132,7 @@
               name="package-size"
               id="signup-form__input-full-plate"
               value="full-plate"
+              required
             />
             <label for="signup-form__input-full-plate">Full Plate</label>
           </p>
