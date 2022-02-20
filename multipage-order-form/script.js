@@ -9,15 +9,15 @@ function ready() {
 
   ///// page 1
   if (inputs.length === inputKeys.length) {
+    // btn to fill the form with rnd data for testing purposes
     const fillBtn = document.querySelector('.fill-form-btn');
 
     // fetching random user data
     async function getRndUsers() {
-      let api;
-
       try {
-        api = await fetch(`https://randomuser.me/api/`);
+        const api = await fetch(`https://randomuser.me/api/`);
         const data = await api.json();
+
         return data.results[0];
       } catch (err) {
         console.log(`Error fetching rnd users data: ${err.message}`);
@@ -43,8 +43,10 @@ function ready() {
     }
 
     fillBtn && fillBtn.addEventListener('click', fillForm);
+    return;
   }
 
+  // get data from the query string
   const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
   });
