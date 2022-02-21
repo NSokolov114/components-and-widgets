@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Multi-page form 1</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>Multi-page form 2/3</title>
+    <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -13,15 +13,11 @@
 
       <div class="signup-form__steps-container">
         <div class="signup-form__step signup-form__step--1">Your Info</div>
-        <div
-          class="signup-form__step signup-form__step--2 signup-form__step--active"
-        >
-          Your Preferences
-        </div>
+        <div class="signup-form__step signup-form__step--2 signup-form__step--active">Your Preferences</div>
       </div>
 
-      <form action="/page3.html" class="signup-form" autocomplete="off">
-        <!-- page 1 -->
+      <form action="./page3.html" class="signup-form" autocomplete="off">
+        <!-- form inputs from page 1 -->
         <p class="hidden">
           <label for="signup-form__input-username">Name</label>
           <input type="text" name="username" id="signup-form__input-username" />
@@ -51,13 +47,11 @@
           <input type="number" name="zip" id="signup-form__input-zip" />
         </p>
 
-        <!-- page 2 -->
+        <!-- new form inputs -->
         <fieldset>
           <legend>Food Allergies</legend>
           <p>
-            <label for="signup-form__input-food-allergies"
-              ><abbr aria-label="Food Allergies"></abbr
-            ></label>
+            <label for="signup-form__input-food-allergies"><abbr aria-label="Food Allergies"></abbr></label>
             <textarea
               name="food-allergies"
               id="signup-form__input-food-allergies"
@@ -71,33 +65,15 @@
         <fieldset>
           <legend>Frequency</legend>
           <p>
-            <input
-              type="radio"
-              name="frequency"
-              id="signup-form__input-weekly"
-              value="weekly"
-              required
-            />
+            <input type="radio" name="frequency" id="signup-form__input-weekly" value="weekly" required />
             <label for="signup-form__input-weekly">Weekly</label>
           </p>
           <p>
-            <input
-              type="radio"
-              name="frequency"
-              id="signup-form__input-biweekly"
-              value="biweekly"
-              required
-            />
+            <input type="radio" name="frequency" id="signup-form__input-biweekly" value="biweekly" required />
             <label for="signup-form__input-biweekly">Biweekly</label>
           </p>
           <p>
-            <input
-              type="radio"
-              name="frequency"
-              id="signup-form__input-monthly"
-              value="monthly"
-              required
-            />
+            <input type="radio" name="frequency" id="signup-form__input-monthly" value="monthly" required />
             <label for="signup-form__input-monthly">Monthly</label>
           </p>
         </fieldset>
@@ -105,13 +81,7 @@
         <fieldset>
           <legend>Package Size</legend>
           <p>
-            <input
-              type="radio"
-              name="package-size"
-              id="signup-form__input-taste-test"
-              value="taste-test"
-              required
-            />
+            <input type="radio" name="package-size" id="signup-form__input-taste-test" value="taste-test" required />
             <label for="signup-form__input-taste-test">Taste Test</label>
           </p>
           <p>
@@ -122,18 +92,10 @@
               value="healthy-highlight"
               required
             />
-            <label for="signup-form__input-healthy-highlight"
-              >Healthy Highlight</label
-            >
+            <label for="signup-form__input-healthy-highlight">Healthy Highlight</label>
           </p>
           <p>
-            <input
-              type="radio"
-              name="package-size"
-              id="signup-form__input-full-plate"
-              value="full-plate"
-              required
-            />
+            <input type="radio" name="package-size" id="signup-form__input-full-plate" value="full-plate" required />
             <label for="signup-form__input-full-plate">Full Plate</label>
           </p>
         </fieldset>
