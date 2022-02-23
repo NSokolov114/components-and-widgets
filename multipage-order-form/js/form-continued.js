@@ -7,12 +7,11 @@ function ready() {
   const urlSearchParams = new URLSearchParams(window.location.search);
 
   for (const [key, value] of urlSearchParams.entries()) {
-    for (let i = 0; i < inputs.length; i++) {
-      if (inputs[i].id.includes(key)) {
-        inputs[i].value = value;
-        inputs[i].closest('p').classList.add('hidden');
-        break;
+    inputs.forEach(input => {
+      if (input.id.includes(key)) {
+        input.value = value;
+        input.closest('p').classList.add('hidden');
       }
-    }
+    });
   }
 }
