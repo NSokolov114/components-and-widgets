@@ -3,15 +3,13 @@
 window.addEventListener('DOMContentLoaded', ready);
 
 function ready() {
-  const prevInputsContainer = document.querySelector('.signup-form__previous-inputs');
+  const form = document.querySelector('.signup-form');
   const urlSearchParams = new URLSearchParams(window.location.search);
+  let html = '';
 
   for (const [key, value] of urlSearchParams.entries()) {
-    const input = document.createElement('input');
-
-    input.type = 'hidden';
-    input.name = key;
-    input.value = value;
-    prevInputsContainer.appendChild(input);
+    html += `<input type="hidden" name="${key}" value="${value}">`;
   }
+
+  form.insertAdjacentHTML('afterbegin', html);
 }
