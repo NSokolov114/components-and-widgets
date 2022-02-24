@@ -3,16 +3,14 @@
 document.addEventListener('DOMContentLoaded', ready);
 
 function ready() {
-  console.log('hey');
   const container = document.querySelector('.container');
 
-  // fetching posts
   async function getPosts(num) {
     try {
-      const api = await fetch(
-        `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=${num}`
-      );
+      const url = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=${num}`;
+      const api = await fetch(url);
       const posts = await api.json();
+
       return posts;
     } catch (err) {
       console.log(`Error fetching posts: ${err.message}`);
@@ -26,11 +24,12 @@ function ready() {
       .split('.')
       .at(0)
       .replaceAll('_', ' ');
+
     return `
       <article class="post">
-        <h3 class="post__title">${post.title}</h3>
+        <h3 class="post__title sticky">${post.title}</h3>
         <div class="post__img-container">
-          <a href="${post.hdurl}">
+          <a href="${post.hdurl}" target="_blank">
             <img
               src="${post.url}"
               alt="${alt}"
@@ -46,26 +45,33 @@ function ready() {
     `;
   }
 
-  // getPosts();
-
   async function renderPosts(num) {
     const posts = await getPosts(num);
-    // let html = '';
-    // posts.forEach(post => {
-    //   html += generatePostHtml(post);
-    // });
-    const html = posts.reduce((acc, post) => acc + generatePostHtml(post));
+    const html = posts.reduce((acc, post) => acc + generatePostHtml(post), '');
 
     container.insertAdjacentHTML('afterbegin', html);
-    console.log('test2');
   }
 
-  console.log('test1');
-  // renderPosts(3);
-  console.log('test3');
+  renderPosts(7);
 
-  const postEls = container.querySelectorAll('.post');
-  const titleEls = container.querySelectorAll('.post__title');
+  // tmp
+  // const postEls = container.querySelectorAll('.post');
+  // const titleEls = container.querySelectorAll('.post__title');
 
-  titleEls[0].classList.add('sticky');
+  // titleEls[0].classList.add('sticky');
+  // const toggleStickyTitle = function (entries) {
+  //   const [entry] = entries;
+  //   if (entry.isIntersecting) {
+  //     console.log(entry, 'in', entry.boundingClientRect.top);
+  //   } else {
+  //     console.log(entry, 'out', entry.boundingClientRect.top);
+  //   }
+  // };
+
+  // const observer = new IntersectionObserver(toggleStickyTitle, {
+  //   root: null,
+  //   threshold: 0,
+  // });
+  // postEls.forEach(postEl => observer.observe(postEl));
+  // observer.observe(...postEls);
 }

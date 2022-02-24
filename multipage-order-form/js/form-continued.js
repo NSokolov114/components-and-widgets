@@ -11,9 +11,12 @@ function ready() {
     // html += `<input type="hidden" name="${key}" value="${value}">`;
     // const inputTmpl = ;
     // const input = document.createElement(`input type="hidden" name="${key}" value="${value}"`);
-    const input = document.createElement('input', { type: 'hidden', name: key, value: value });
-    form.appendChild(input);
-    console.log(input);
+    const inputTmpl = `<input type="hidden" name="${key}" value="${value}">`;
+    // const input = document.createElement(inputTmpl);
+    const parser = new DOMParser();
+    form.appendChild(parser.parseFromString(inputTmpl, 'text/xml').firstChild);
+    // form.append(inputTmpl);
+    // console.log(input);
   }
 
   // form.insertAdjacentHTML('afterbegin', html);
