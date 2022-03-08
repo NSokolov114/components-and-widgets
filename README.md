@@ -30,10 +30,17 @@ Progressively removing blur from a picture while [something] is loading
 - **[bookmarks](https://nsokolov114.github.io/components-and-widgets/bookmarks/)**  
 Small bookmarks app with local storage
 
-- **[button ripple](https://nsokolov114.github.io/components-and-widgets/button-ripple/)**: 
-- **[calculator](https://nsokolov114.github.io/components-and-widgets/calculator/)**: 
-- **[checkboxes](https://nsokolov114.github.io/components-and-widgets/checkboxes/)**: 
-- **[click to like](https://nsokolov114.github.io/components-and-widgets/click-to-like/)**: 
+- **[button ripple](https://nsokolov114.github.io/components-and-widgets/button-ripple/)**  
+Ripple effect on click - circle that grows and fades out
+
+- **[calculator](https://nsokolov114.github.io/components-and-widgets/calculator/)**  
+Classic calculator app
+
+- **[checkboxes](https://nsokolov114.github.io/components-and-widgets/checkboxes/)**  
+Good & cheap & fast checkboxes - you can't get all three at the same time
+
+- **[click to like](https://nsokolov114.github.io/components-and-widgets/click-to-like/)**  
+Custom double click, heart icon appears on click, grows and fades out
 
 
 
