@@ -16,12 +16,20 @@ Burger button with horizontal navigation bar
 Waterfall animtaion for burger menu
 
 - **[animated template](https://nsokolov114.github.io/components-and-widgets/animated-template/)**  
-Full website template with animated cards / blocks / titles / images using Tailwind and AOS (animate on scroll).
+Full website template with animated cards / blocks / titles / images using Tailwind and AOS (animate on scroll)
 
-- **[autotext](https://nsokolov114.github.io/components-and-widgets/autotext/)**: 
-- **[background slider](https://nsokolov114.github.io/components-and-widgets/background-slider/)**: 
-- **[blurry loading](https://nsokolov114.github.io/components-and-widgets/blurry-loading/)**: 
-- **[bookmarks](https://nsokolov114.github.io/components-and-widgets/bookmarks/)**: 
+- **[autotext](https://nsokolov114.github.io/components-and-widgets/autotext/)**  
+Auto typing a string one character at a time + a change speed option
+
+- **[background slider](https://nsokolov114.github.io/components-and-widgets/background-slider/)**  
+Image slider with the same picture on the background
+
+- **[blurry loading](https://nsokolov114.github.io/components-and-widgets/blurry-loading/)** (???)  
+Progressively removing blur from a picture while [something] is loading
+
+- **[bookmarks](https://nsokolov114.github.io/components-and-widgets/bookmarks/)**  
+Small bookmarks app with local storage
+
 - **[button ripple](https://nsokolov114.github.io/components-and-widgets/button-ripple/)**: 
 - **[calculator](https://nsokolov114.github.io/components-and-widgets/calculator/)**: 
 - **[checkboxes](https://nsokolov114.github.io/components-and-widgets/checkboxes/)**: 
