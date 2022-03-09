@@ -40,7 +40,40 @@ Classic calculator app
 Good & cheap & fast checkboxes - you can't get all three at the same time
 
 - **[click to like](https://nsokolov114.github.io/components-and-widgets/click-to-like/)**  
-Custom double click, heart icon appears on click, grows and fades out
+Custom double click; heart icon appears on click, grows and fades out; counter
+
+
+
+
+- **[collapsing faq](https://nsokolov114.github.io/components-and-widgets/collapsing-faq/)**  
+Custom double click; heart icon appears on click, grows and fades out; counter
+
+- **[content placeholder](https://nsokolov114.github.io/components-and-widgets/content-placeholder/)**  
+Custom double click; heart icon appears on click, grows and fades out; counter
+
+- **[custom countdown](https://nsokolov114.github.io/components-and-widgets/custom-countdown/)**  
+Custom double click; heart icon appears on click, grows and fades out; counter
+
+- **[custom range slider](https://nsokolov114.github.io/components-and-widgets/custom-range-slider/)**  
+Custom double click; heart icon appears on click, grows and fades out; counter
+
+- **[dad jokes](https://nsokolov114.github.io/components-and-widgets/dad-jokes/)**  
+Custom double click; heart icon appears on click, grows and fades out; counter
+
+- **[double vertical slider](https://nsokolov114.github.io/components-and-widgets/double-vertical-slider/)**  
+Custom double click; heart icon appears on click, grows and fades out; counter
+
+- **[drag and drop list](https://nsokolov114.github.io/components-and-widgets/drag-and-drop-list/)**  
+Custom double click; heart icon appears on click, grows and fades out; counter
+
+- **[drag and drop](https://nsokolov114.github.io/components-and-widgets/drag-drop/)**  
+Custom double click; heart icon appears on click, grows and fades out; counter
+
+- **[drag and drop v2](https://nsokolov114.github.io/components-and-widgets/drag-drop-2/)**  
+Custom double click; heart icon appears on click, grows and fades out; counter
+
+- **[drawing app](https://nsokolov114.github.io/components-and-widgets/drawing-app/)**  
+Custom double click; heart icon appears on click, grows and fades out; counter
 
 
 
