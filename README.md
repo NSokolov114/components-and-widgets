@@ -45,35 +45,35 @@ Custom double click; heart icon appears on click, grows and fades out; counter
 
 
 
-- **[collapsing faq](https://nsokolov114.github.io/components-and-widgets/collapsing-faq/)**  
-Custom double click; heart icon appears on click, grows and fades out; counter
+- **[collapsing faq](https://nsokolov114.github.io/components-and-widgets/collapsing-faq/)** (???)  
+Collapsing cards
 
 - **[content placeholder](https://nsokolov114.github.io/components-and-widgets/content-placeholder/)**  
-Custom double click; heart icon appears on click, grows and fades out; counter
+Placeholder for the data (while the data is fetching show placeholders with animation)
 
 - **[custom countdown](https://nsokolov114.github.io/components-and-widgets/custom-countdown/)**  
-Custom double click; heart icon appears on click, grows and fades out; counter
+Custom countdown, saving user data in local storage
 
 - **[custom range slider](https://nsokolov114.github.io/components-and-widgets/custom-range-slider/)**  
-Custom double click; heart icon appears on click, grows and fades out; counter
+Custom range slider with % tooltip
 
-- **[dad jokes](https://nsokolov114.github.io/components-and-widgets/dad-jokes/)**  
-Custom double click; heart icon appears on click, grows and fades out; counter
+- **[dad jokes](https://nsokolov114.github.io/components-and-widgets/dad-jokes/)**  (???)  
+Not funny jokes
 
 - **[double vertical slider](https://nsokolov114.github.io/components-and-widgets/double-vertical-slider/)**  
-Custom double click; heart icon appears on click, grows and fades out; counter
+One part going up while the other part going down
 
 - **[drag and drop list](https://nsokolov114.github.io/components-and-widgets/drag-and-drop-list/)**  
-Custom double click; heart icon appears on click, grows and fades out; counter
+Quiz drag and drop list with data validation
 
 - **[drag and drop](https://nsokolov114.github.io/components-and-widgets/drag-drop/)**  
-Custom double click; heart icon appears on click, grows and fades out; counter
+Simple drag and drop component
 
 - **[drag and drop v2](https://nsokolov114.github.io/components-and-widgets/drag-drop-2/)**  
-Custom double click; heart icon appears on click, grows and fades out; counter
+Kanban board with local storage
 
 - **[drawing app](https://nsokolov114.github.io/components-and-widgets/drawing-app/)**  
-Custom double click; heart icon appears on click, grows and fades out; counter
+Drawing board with reset and brush width and color
 
 
 
