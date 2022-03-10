@@ -77,6 +77,38 @@ Drawing board with reset and brush width and color
 
 
 
+
+- **[drink water](https://nsokolov114.github.io/components-and-widgets/drink-water/)**  
+Drawing board with reset and brush width and color
+
+- **[event key codes](https://nsokolov114.github.io/components-and-widgets/event-key-codes/)**  
+Drawing board with reset and brush width and color
+
+- **[expanding cards](https://nsokolov114.github.io/components-and-widgets/expanding-cards/)**  
+Drawing board with reset and brush width and color
+
+- **[feedback ui](https://nsokolov114.github.io/components-and-widgets/feedback-ui/)**  
+Drawing board with reset and brush width and color
+
+- **[form validation](https://nsokolov114.github.io/components-and-widgets/form-validation/)**  
+Drawing board with reset and brush width and color
+
+- **[form wave animation](https://nsokolov114.github.io/components-and-widgets/form-wave-animation/)**  
+Drawing board with reset and brush width and color
+
+- **[full page scroll](https://nsokolov114.github.io/components-and-widgets/full-page-scroll/)**  
+Drawing board with reset and brush width and color
+
+- **[github profiles](https://nsokolov114.github.io/components-and-widgets/github-profiles/)**  
+Drawing board with reset and brush width and color
+
+- **[glassmorphism test](https://nsokolov114.github.io/components-and-widgets/glassmorphism-test/)**  
+Drawing board with reset and brush width and color
+
+- **[guess my number](https://nsokolov114.github.io/components-and-widgets/guess-my-number/)**  
+Drawing board with reset and brush width and color
+
+
 Ideas for projects (or projects as a whole) are taken from numerous courses, guildes, tutorials or my imagination. I want to mention 2 great courses on Udemy that I highly recommend for all beginning web developers:  
 - [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/) by Brad Traversy  
 - [JavaScript Web Projects: 20 Projects to Build Your Portfolio](https://www.udemy.com/course/javascript-web-projects-to-build-your-portfolio-resume/) by Jacinto Wong and ZTM.
