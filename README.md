@@ -79,34 +79,34 @@ Drawing board with reset and brush width and color
 
 
 - **[drink water](https://nsokolov114.github.io/components-and-widgets/drink-water/)**  
-Drawing board with reset and brush width and color
+Simple filling the glass visualization
 
-- **[event key codes](https://nsokolov114.github.io/components-and-widgets/event-key-codes/)**  
-Drawing board with reset and brush width and color
+- **[event key codes](https://nsokolov114.github.io/components-and-widgets/event-key-codes/)** (???)  
+Show key code on press
 
 - **[expanding cards](https://nsokolov114.github.io/components-and-widgets/expanding-cards/)**  
-Drawing board with reset and brush width and color
+Expanding cards, image slider analogue
 
-- **[feedback ui](https://nsokolov114.github.io/components-and-widgets/feedback-ui/)**  
-Drawing board with reset and brush width and color
+- **[feedback UI](https://nsokolov114.github.io/components-and-widgets/feedback-ui/)**  
+Leave a review component (choose review card, thank you card)
 
 - **[form validation](https://nsokolov114.github.io/components-and-widgets/form-validation/)**  
-Drawing board with reset and brush width and color
+Form with basic validation and messages
 
 - **[form wave animation](https://nsokolov114.github.io/components-and-widgets/form-wave-animation/)**  
-Drawing board with reset and brush width and color
+Wave form label animation
 
 - **[full page scroll](https://nsokolov114.github.io/components-and-widgets/full-page-scroll/)**  
 Drawing board with reset and brush width and color
 
 - **[github profiles](https://nsokolov114.github.io/components-and-widgets/github-profiles/)**  
-Drawing board with reset and brush width and color
+Fetch user data, show user card (github API)
 
-- **[glassmorphism test](https://nsokolov114.github.io/components-and-widgets/glassmorphism-test/)**  
-Drawing board with reset and brush width and color
+- **[glassmorphism](https://nsokolov114.github.io/components-and-widgets/glassmorphism-test/)**  
+Glassmorphism card sample
 
 - **[guess my number](https://nsokolov114.github.io/components-and-widgets/guess-my-number/)**  
-Drawing board with reset and brush width and color
+Guess my number game
 
 
 Ideas for projects (or projects as a whole) are taken from numerous courses, guildes, tutorials or my imagination. I want to mention 2 great courses on Udemy that I highly recommend for all beginning web developers:  
