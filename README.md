@@ -96,9 +96,6 @@ Form with basic validation and messages
 - **[form wave animation](https://nsokolov114.github.io/components-and-widgets/form-wave-animation/)**  
 Wave form label animation
 
-- **[full page scroll](https://nsokolov114.github.io/components-and-widgets/full-page-scroll/)**  
-Drawing board with reset and brush width and color
-
 - **[github profiles](https://nsokolov114.github.io/components-and-widgets/github-profiles/)**  
 Fetch user data, show user card (github API)
 
