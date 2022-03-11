@@ -1,7 +1,7 @@
-***Small projects, components and widgets to test and use in my commercial projects***
+# Small projects, components and widgets
 
 
-List of project / widgets:
+## List of project / widgets:
 
 - **[3d background boxed](https://nsokolov114.github.io/components-and-widgets/3d-background-boxes/)**  
 Breaking an image into small pieces and adding some animation on click
@@ -42,9 +42,6 @@ Good & cheap & fast checkboxes - you can't get all three at the same time
 - **[click to like](https://nsokolov114.github.io/components-and-widgets/click-to-like/)**  
 Custom double click; heart icon appears on click, grows and fades out; counter
 
-
-
-
 - **[collapsing faq](https://nsokolov114.github.io/components-and-widgets/collapsing-faq/)** (???)  
 Collapsing cards
 
@@ -75,9 +72,6 @@ Kanban board with local storage
 - **[drawing app](https://nsokolov114.github.io/components-and-widgets/drawing-app/)**  
 Drawing board with reset and brush width and color
 
-
-
-
 - **[drink water](https://nsokolov114.github.io/components-and-widgets/drink-water/)**  
 Simple filling the glass visualization
 
@@ -106,6 +100,41 @@ Glassmorphism card sample
 Guess my number game
 
 
+
+- **[hexagonal grid](https://nsokolov114.github.io/components-and-widgets/hexagonal-grid/)**  
+Guess my number game
+
+- **[hidden search](https://nsokolov114.github.io/components-and-widgets/hidden-search/)**  
+Guess my number game
+
+- **[hoverboard](https://nsokolov114.github.io/components-and-widgets/hoverboard/)**  
+Guess my number game
+
+- **[image carousel](https://nsokolov114.github.io/components-and-widgets/image-carousel/)**  
+Guess my number game
+
+- **[incrementing counter](https://nsokolov114.github.io/components-and-widgets/incrementing-counter/)**  
+Guess my number game
+
+- **[infinity scroll](https://nsokolov114.github.io/components-and-widgets/infinity-scroll/)**  
+Guess my number game
+
+- **[insect game](https://nsokolov114.github.io/components-and-widgets/insect-game/)**  
+Guess my number game
+
+- **[joke teller](https://nsokolov114.github.io/components-and-widgets/joke-teller/)**  
+Guess my number game
+
+- **[kinetic loader](https://nsokolov114.github.io/components-and-widgets/kinetic-loader/)**  
+Guess my number game
+
+- **[light dark mode](https://nsokolov114.github.io/components-and-widgets/light-dark-mode/)**  
+Guess my number game
+
+
+
+
+## Notes
 Ideas for projects (or projects as a whole) are taken from numerous courses, guildes, tutorials or my imagination. I want to mention 2 great courses on Udemy that I highly recommend for all beginning web developers:  
 - [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/) by Brad Traversy  
 - [JavaScript Web Projects: 20 Projects to Build Your Portfolio](https://www.udemy.com/course/javascript-web-projects-to-build-your-portfolio-resume/) by Jacinto Wong and ZTM.
