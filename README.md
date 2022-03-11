@@ -108,7 +108,7 @@ Show hexagonal cells on hover (CSS)
 Hidden search component
 
 - **[hoverboard](https://nsokolov114.github.io/components-and-widgets/hoverboard/)**  
-Random cell color on hover
+Highlighting cell with rnd color on hover (no event delegation, no optimization on purpose, expect lags)
 
 - **[image carousel](https://nsokolov114.github.io/components-and-widgets/image-carousel/)**  
 Simple horizontal image carousel with timer
