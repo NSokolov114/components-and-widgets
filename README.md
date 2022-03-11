@@ -102,34 +102,34 @@ Guess my number game
 
 
 - **[hexagonal grid](https://nsokolov114.github.io/components-and-widgets/hexagonal-grid/)**  
-Guess my number game
+Show hexagonal cells on hover (CSS)
 
-- **[hidden search](https://nsokolov114.github.io/components-and-widgets/hidden-search/)**  
-Guess my number game
+- **[hidden search](https://nsokolov114.github.io/components-and-widgets/hidden-search/)** (???)  
+Hidden search component
 
 - **[hoverboard](https://nsokolov114.github.io/components-and-widgets/hoverboard/)**  
-Guess my number game
+Random cell color on hover
 
 - **[image carousel](https://nsokolov114.github.io/components-and-widgets/image-carousel/)**  
-Guess my number game
+Simple horizontal image carousel with timer
 
 - **[incrementing counter](https://nsokolov114.github.io/components-and-widgets/incrementing-counter/)**  
-Guess my number game
+Count to the number on load
 
 - **[infinity scroll](https://nsokolov114.github.io/components-and-widgets/infinity-scroll/)**  
-Guess my number game
+Fetching more and more of my photos from Unsplash on scroll
 
 - **[insect game](https://nsokolov114.github.io/components-and-widgets/insect-game/)**  
-Guess my number game
+Unbeatable clicking game
 
 - **[joke teller](https://nsokolov114.github.io/components-and-widgets/joke-teller/)**  
-Guess my number game
+Fetch and read aloud silly IT jokes
 
 - **[kinetic loader](https://nsokolov114.github.io/components-and-widgets/kinetic-loader/)**  
-Guess my number game
+Simplest but cool kinetic loader
 
-- **[light dark mode](https://nsokolov114.github.io/components-and-widgets/light-dark-mode/)**  
-Guess my number game
+- **[light/dark mode](https://nsokolov114.github.io/components-and-widgets/light-dark-mode/)**  
+Toggle light and dark more
 
 
 
