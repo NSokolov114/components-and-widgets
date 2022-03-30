@@ -134,34 +134,34 @@ Toggle light and dark more
 
 
 - **[live user filter](https://nsokolov114.github.io/components-and-widgets/live-user-filter/)**  
-Toggle light and dark more
+Filter users from the list on the fly
 
 - **[math sprint game](https://nsokolov114.github.io/components-and-widgets/math-sprint-game/)**  
-Toggle light and dark more
+Simple math problems, old school
 
 - **[mobile tab navigation](https://nsokolov114.github.io/components-and-widgets/mobile-tab-navigation/)**  
-Toggle light and dark more
+Mobile app-like navigation
 
 - **[modal window](https://nsokolov114.github.io/components-and-widgets/modal-window/)**  
-Toggle light and dark more
+Toggle modal window
 
 - **[movie app](https://nsokolov114.github.io/components-and-widgets/movie-app/)**  
-Toggle light and dark more
+Pull movies, show cards
 
 - **[multipage order form](https://nsokolov114.github.io/components-and-widgets/multipage-order-form/)**  
-Toggle light and dark more
+Multipage order form with data transfer via URL
 
 - **[music player](https://nsokolov114.github.io/components-and-widgets/music-player/)**  
-Toggle light and dark more
+Simple music player
 
 - **[nasa feed](https://nsokolov114.github.io/components-and-widgets/nasa-feed/)**  
-Toggle light and dark more
+Pull NASA images and articles
 
 - **[netflix navigation](https://nsokolov114.github.io/components-and-widgets/netflix-navigation/)**  
-Toggle light and dark more
+Animated Netflix-style navigation
 
 - **[notes app](https://nsokolov114.github.io/components-and-widgets/notes-app/)**  
-Toggle light and dark more
+Basic notes app
 
 
 
