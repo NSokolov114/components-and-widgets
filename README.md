@@ -133,6 +133,38 @@ Toggle light and dark more
 
 
 
+- **[live user filter](https://nsokolov114.github.io/components-and-widgets/live-user-filter/)**  
+Toggle light and dark more
+
+- **[math sprint game](https://nsokolov114.github.io/components-and-widgets/math-sprint-game/)**  
+Toggle light and dark more
+
+- **[mobile tab navigation](https://nsokolov114.github.io/components-and-widgets/mobile-tab-navigation/)**  
+Toggle light and dark more
+
+- **[modal window](https://nsokolov114.github.io/components-and-widgets/modal-window/)**  
+Toggle light and dark more
+
+- **[movie app](https://nsokolov114.github.io/components-and-widgets/movie-app/)**  
+Toggle light and dark more
+
+- **[multipage order form](https://nsokolov114.github.io/components-and-widgets/multipage-order-form/)**  
+Toggle light and dark more
+
+- **[music player](https://nsokolov114.github.io/components-and-widgets/music-player/)**  
+Toggle light and dark more
+
+- **[nasa feed](https://nsokolov114.github.io/components-and-widgets/nasa-feed/)**  
+Toggle light and dark more
+
+- **[netflix navigation](https://nsokolov114.github.io/components-and-widgets/netflix-navigation/)**  
+Toggle light and dark more
+
+- **[notes app](https://nsokolov114.github.io/components-and-widgets/notes-app/)**  
+Toggle light and dark more
+
+
+
 
 ## Notes
 Ideas for projects (or projects as a whole) are taken from numerous courses, guildes, tutorials or my imagination. I want to mention 2 great courses on Udemy that I highly recommend for all beginning web developers:  
