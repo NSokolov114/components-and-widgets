@@ -166,6 +166,24 @@ Basic notes app
 
 
 
+- **[password strength background](https://nsokolov114.github.io/components-and-widgets/password-strength-background/)**  
+Basic notes app
+
+- **[picture in picture](https://nsokolov114.github.io/components-and-widgets/picture-in-picture/)**  
+Basic notes app
+
+- **[pokedex](https://nsokolov114.github.io/components-and-widgets/pokedex/)**  
+Basic notes app
+
+- **[progress steps](https://nsokolov114.github.io/components-and-widgets/progress-steps/)**  
+Basic notes app
+
+- **[projects list](https://nsokolov114.github.io/components-and-widgets/projects_list/)**  
+Basic notes app
+
+
+
+
 ## Notes
 Ideas for projects (or projects as a whole) are taken from numerous courses, guildes, tutorials or my imagination. I want to mention 2 great courses on Udemy that I highly recommend for all beginning web developers:  
 - [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/) by Brad Traversy  
