@@ -173,8 +173,49 @@ Pokemon cards built on data from Pokemon API
 - **[progress steps](https://nsokolov114.github.io/components-and-widgets/progress-steps/)**  
 Dynamic progress steps feature
 
+
+
+
+- **[password generator](https://nsokolov114.github.io/components-and-widgets/pwd-generator/)**  
+Dynamic progress steps feature
+
+- **[quiz app](https://nsokolov114.github.io/components-and-widgets/quiz-app/)**  
+Dynamic progress steps feature
+
+- **[quote generator](https://nsokolov114.github.io/components-and-widgets/quote-generator/)**  
+Dynamic progress steps feature
+
+- **[rnd choice picker](https://nsokolov114.github.io/components-and-widgets/rnd-choice-picker/)**  
+Dynamic progress steps feature
+
+- **[rnd image feed](https://nsokolov114.github.io/components-and-widgets/rnd-image-feed/)**  
+Dynamic progress steps feature
+
+- **[rotating navigation](https://nsokolov114.github.io/components-and-widgets/rotating-navigation/)**  
+Dynamic progress steps feature
+
+- **[scroll animation](https://nsokolov114.github.io/components-and-widgets/scroll-animation/)**  
+Dynamic progress steps feature
+
+- **[small weather app](https://nsokolov114.github.io/components-and-widgets/small-weather-app/)**  
+Dynamic progress steps feature
+
+- **[sound board](https://nsokolov114.github.io/components-and-widgets/sound-board/)**  
+Dynamic progress steps feature
+
+
+
+
+
+
+
+
+
 - **[projects list](https://nsokolov114.github.io/components-and-widgets/projects_list/)**  
-tmp folder
+*tmp* folder listing the projects
+
+- **[rs cv](https://nsokolov114.github.io/components-and-widgets/rs-cv/)**  
+*tmp* cv
 
 
 
