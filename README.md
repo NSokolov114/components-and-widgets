@@ -131,8 +131,6 @@ Simplest but cool kinetic loader
 - **[light/dark mode](https://nsokolov114.github.io/components-and-widgets/light-dark-mode/)**  
 Toggle light and dark more
 
-
-
 - **[live user filter](https://nsokolov114.github.io/components-and-widgets/live-user-filter/)**  
 Filter users from the list on the fly
 
@@ -163,23 +161,20 @@ Animated Netflix-style navigation
 - **[notes app](https://nsokolov114.github.io/components-and-widgets/notes-app/)**  
 Basic notes app
 
-
-
-
 - **[password strength background](https://nsokolov114.github.io/components-and-widgets/password-strength-background/)**  
-Basic notes app
+Changing background based on the password length
 
 - **[picture in picture](https://nsokolov114.github.io/components-and-widgets/picture-in-picture/)**  
-Basic notes app
+Basic picture-in-picture feature
 
 - **[pokedex](https://nsokolov114.github.io/components-and-widgets/pokedex/)**  
-Basic notes app
+Pokemon cards built on data from Pokemon API
 
 - **[progress steps](https://nsokolov114.github.io/components-and-widgets/progress-steps/)**  
-Basic notes app
+Dynamic progress steps feature
 
 - **[projects list](https://nsokolov114.github.io/components-and-widgets/projects_list/)**  
-Basic notes app
+tmp folder
 
 
 
