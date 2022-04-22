@@ -99,8 +99,6 @@ Glassmorphism card sample
 - **[guess my number](https://nsokolov114.github.io/components-and-widgets/guess-my-number/)**  
 Guess my number game
 
-
-
 - **[hexagonal grid](https://nsokolov114.github.io/components-and-widgets/hexagonal-grid/)**  
 Show hexagonal cells on hover (CSS)
 
@@ -173,35 +171,32 @@ Pokemon cards built on data from Pokemon API
 - **[progress steps](https://nsokolov114.github.io/components-and-widgets/progress-steps/)**  
 Dynamic progress steps feature
 
-
-
-
 - **[password generator](https://nsokolov114.github.io/components-and-widgets/pwd-generator/)**  
-Dynamic progress steps feature
+Generating a password based on length and symbols
 
 - **[quiz app](https://nsokolov114.github.io/components-and-widgets/quiz-app/)**  
-Dynamic progress steps feature
+Simple quiz app with some sample questions
 
 - **[quote generator](https://nsokolov114.github.io/components-and-widgets/quote-generator/)**  
-Dynamic progress steps feature
+Random quote generator with Twitter button
 
-- **[rnd choice picker](https://nsokolov114.github.io/components-and-widgets/rnd-choice-picker/)**  
-Dynamic progress steps feature
+- **[rnd choice picker](https://nsokolov114.github.io/components-and-widgets/rnd-choice-picker/)** (???)  
+Random choice picker
 
 - **[rnd image feed](https://nsokolov114.github.io/components-and-widgets/rnd-image-feed/)**  
-Dynamic progress steps feature
+Load random pictures from my Unsplash profile
 
-- **[rotating navigation](https://nsokolov114.github.io/components-and-widgets/rotating-navigation/)**  
-Dynamic progress steps feature
+- **[rotating navigation](https://nsokolov114.github.io/components-and-widgets/rotating-navigation/)** (???)  
+Weird rotating navigation
 
-- **[scroll animation](https://nsokolov114.github.io/components-and-widgets/scroll-animation/)**  
-Dynamic progress steps feature
+- **[scroll animation](https://nsokolov114.github.io/components-and-widgets/scroll-animation/)** (???)  
+Basic scroll animation
 
 - **[small weather app](https://nsokolov114.github.io/components-and-widgets/small-weather-app/)**  
-Dynamic progress steps feature
+The most simple weather widget
 
 - **[sound board](https://nsokolov114.github.io/components-and-widgets/sound-board/)**  
-Dynamic progress steps feature
+Small sound board
 
 
 
@@ -209,8 +204,7 @@ Dynamic progress steps feature
 
 
 
-
-
+----- tmp (work in progress) -----  
 - **[projects list](https://nsokolov114.github.io/components-and-widgets/projects_list/)**  
 *tmp* folder listing the projects
 
